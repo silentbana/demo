@@ -72,12 +72,40 @@
   </section>
 
   <section class="section-2">
-    <img src="../assets/image/campaign@3x.png" class="w-100" alt="background">
+    <div class="container">
+      <div class="section-2-1">
+        <div class="text-41dec2 font-50 text-center">
+          千元預訂成為LUXGEN綠能代言人 先享受再享售！
+        </div>
+        <div class="text-white font-30 text-center">
+          多項預購禮遇 2022/10/17前下訂還能優先賞車!
+        </div>
+      </div>
+      <div class="horizontal-line"></div>
+      <div class="section-2-2">
+        <div class="d-flex pb-3">
+          <div class="vertical-line"></div>
+          <div class="text-white font-30">先享受再享售 預購活動說明</div>
+        </div>
+        <div class="text-white font-18 pb-4">2022/9/1起完成線上支付1,000元預訂，先享受多項預購獨享禮遇，並將於2023年下半年優先受邀選擇你的THE NEXT新世代純電休旅車車規，搶先交車
+        </div>
+        <div class="d-flex align-items-center section-2-2-1">
+          <article class="col">
+            <img src="../assets/image/news@3x.png" alt="開發日誌">
+            <div class="text-white font-18">優先收到開發日誌、產品最新消息</div>
+          </article>
+          <article class="col">
+            <img src="../assets/image/money@3x.png" alt="訂金">
+            <div class="text-white font-18">1,000訂金可折抵車價</div>
+          </article>
+          <article class="col">
+            <img src="../assets/image/car_component@3x.png" alt="限量款">
+            <div class="text-white font-18">預售期間購車者獨享預售限量款(限量顏色、升級前行李廂空間、消光黑貼模、車內客製化花紋飾板、椅墊不同材質、特殊色尾翼)</div>
+          </article>
+        </div>
+      </div>
+    </div>
   </section>
-
-  <video class="w-100" playsinline webkit-playsinline preload="auto" autoplay muted>
-    <source src="./assets/video/main.mp4" type="video/mp4" />
-  </video>
 
   <div class="navigation-left"></div>
   <div class="navigation-right d-flex flex-column">
@@ -94,13 +122,13 @@
     </div>
   </div>
 
-  <footer class="bg-232323 text-center text-lg-start text-white">
+  <footer class="footer bg-232323 text-center text-lg-start text-white">
     <div class="container footer-container">
       <div class="d-block d-md-flex align-items-center justify-content-between">
         <div class="font-14">
-          <div class="d-inline-block pe-2 pe-md-5" role="button">版權說明</div>
-          <div class="d-inline-block pe-2 pe-md-5" role="button">服務條款與隱私說明</div>
-          <div class="d-inline-block pe-2 pe-md-5" role="button">環保署政策宣導</div>
+          <a class="d-inline-block pe-2 pe-md-5" href="https://www.luxgen-motor.com.tw/Home/Copyrights">版權說明</a>
+          <a class="d-inline-block pe-2 pe-md-5" href="https://www.luxgen-motor.com.tw/Home/Privacy">服務條款與隱私說明</a>
+          <a class="d-inline-block pe-2 pe-md-5" href="https://www.luxgen-motor.com.tw/Home/EPA">環保署政策宣導</a>
         </div>
         <div class="text-center">LUXGEN@2022</div>
       </div>
@@ -131,8 +159,12 @@
   const handleScroll = () => {
     if (window.pageYOffset > 0) {
       $('.navbar').css('background-color', 'rgba(0, 0, 0, 0.4)');
+      $('.scroll-top').css('opacity', '1');
+      $('.scroll-top').css('height', '60px');
     } else {
       $('.navbar').css("background-color", 'rgba(0, 0, 0, 0)');
+      $('.scroll-top').css('opacity', '0');
+      $('.scroll-top').css('height', '0px');
     }
 
     if ($('.section-1').height() > window.pageYOffset) {
@@ -227,6 +259,7 @@
 
   .scroll-top {
     height: 60px;
+    transition: all 0.2s;
   }
 
   .scroll-top>img {
@@ -243,10 +276,59 @@
 
   .section-2 {
     width: 100%;
+    background-image: url('../assets/image/campaign@3x.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+  }
+
+  .section-2-1 {
+    padding: 122px 0 47px 0;
+  }
+
+  .section-2-2 {
+    padding: 64px 0 55px 0;
+  }
+
+  .section-2-2-1 {
+    grid-gap: 20px;
+  }
+
+  .section-2-2-1 > article {
+    border: 1px solid #fff;
+    border-radius: 8px;
+    text-align: center;
+    height: 277px;
+    padding: 10px 20px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+  }
+
+  .section-2-2-1 img {
+    width: 154px;
+    height: 154px;
+  }
+
+  .horizontal-line {
+    width: 100%;
+    border-bottom: 1px solid #fff;
+  }
+
+  .vertical-line {
+    height: auto;
+    border-left: 5px solid #41dec2;
+    padding-right: 10px;
   }
 
   .footer-container {
     padding: 24px;
+  }
+
+  .footer a{
+    color: #fff !important;
+    text-decoration: none !important;
   }
 
   @media (min-width: 1200px) {
