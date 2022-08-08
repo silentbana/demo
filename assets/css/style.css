@@ -1,0 +1,65 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  color: black;
+  background-color: white;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #d8d8d8;
+  border-radius: 6px;
+  border: 2px solid #fff;
+}
+
+a,
+a:hover,
+a:visited,
+a:link,
+a:active {
+  color: #000 !important;
+  text-decoration: none;
+  outline: none;
+}
+
+.mix-blend-mode-d {
+  mix-blend-mode: difference;
+}
+
+/* custom text & background */
+.text-232323 {
+  color: #232323;
+}
+
+.text-ff9900 {
+  color: #ff9900;
+}
+
+.bg-232323 {
+  background-color: #232323;
+}
+
+.bg-41dec2 {
+  background-color: #41dec2;
+}
+
+.font-14 {
+  font-size: 14px !important;
+  line-height: 24px !important;
+}
+
+.font-18 {
+  font-size: 18px !important;
+  line-height: 32px !important;
+}
+
+/* custom dialog */
+.custom-dialog {
+}
