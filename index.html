@@ -15,20 +15,20 @@
 <body>
   <nav class="navbar fixed-top"">
     <div class=" container-fluid">
-    <div class="d-flex align-items-center text-black">
+    <div class="d-flex align-items-center text-white">
       <a href="https://www.luxgen-motor.com.tw/" target="_blank">
         <img class="logo" src="../assets/image/logo@3x.png" alt="logo">
       </a>
 
       <ul class="d-none d-md-flex nav">
         <li class="nav-item">
-          <a class="nav-link active font-14" aria-current="page" href="/">入主純電未來</a>
+          <a class="nav-link active" aria-current="page" href="/">入主純電未來</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link font-14" href="/activity">活動專區</a>
+          <a class="nav-link" href="/activity">活動專區</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link font-14" href="/order">訂單查詢</a>
+          <a class="nav-link" href="/order">訂單查詢</a>
         </li>
       </ul>
     </div>
@@ -40,8 +40,8 @@
     </button>
 
     <div class="login-area d-flex align-items-center">
-      <img class="login-icon" src="../assets/image/user_black@3x.png" alt="登入">
-      <div class="text-black" role="button">登入</div>
+      <img class="login-icon" src="../assets/image/icon_user.png" alt="登入">
+      <div class="text-white" role="button">登入</div>
     </div>
 
     <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
@@ -67,11 +67,13 @@
     </div>
   </nav>
 
-  <img src="../assets/image/9.png" class="w-100" alt="">
+  <section class="section-1">
+    <img class="w-100 h-100" src="../assets/image/group_9@3x.png" alt="banner">
+  </section>
 
-  <div style="height: 600px;background-color: #f2f2f2;"></div>
-
-  <img src="../assets/image/13.png" class="w-100" alt="">
+  <section class="section-2">
+    <img src="../assets/image/campaign@3x.png" class="w-100" alt="background">
+  </section>
 
   <video class="w-100" playsinline webkit-playsinline preload="auto" autoplay muted>
     <source src="./assets/video/main.mp4" type="video/mp4" />
@@ -82,8 +84,8 @@
     <div class="col d-flex flex-column">
       <div class="navigation-right-line col"></div>
       <div class="dot-area">
-        <div></div>
-        <div></div>
+        <div class="dot-seleted"></div>
+        <div class="dot"></div>
       </div>
       <div class="navigation-right-line col"></div>
     </div>
@@ -115,12 +117,34 @@
     });
 
     window.addEventListener('scroll', handleScroll, false);
+
+    const section = [1, 2]
+    section.forEach((item) => {
+      $(`.dot-area > div:nth-child(${item})`).click(function () {
+        $('html, body').animate({
+          scrollTop: $(`.section-${item}`).offset().top
+        }, 1);
+      });
+    })
   });
+
   const handleScroll = () => {
     if (window.pageYOffset > 0) {
-      $('.navbar').css('background-color', 'rgba(242, 242, 242, 0.3)');
+      $('.navbar').css('background-color', 'rgba(0, 0, 0, 0.4)');
     } else {
       $('.navbar').css("background-color", 'rgba(0, 0, 0, 0)');
+    }
+
+    if ($('.section-1').height() > window.pageYOffset) {
+      $(`.dot-area > div:nth-child(1)`).addClass('dot-seleted');
+      $(`.dot-area > div:nth-child(1)`).removeClass('dot');
+      $(`.dot-area > div:nth-child(2)`).addClass('dot');
+      $(`.dot-area > div:nth-child(2)`).removeClass('dot-seleted');
+    } else if (window.pageYOffset >= $('.section-1').height()) {
+      $(`.dot-area > div:nth-child(1)`).addClass('dot');
+      $(`.dot-area > div:nth-child(1)`).removeClass('dot-seleted');
+      $(`.dot-area > div:nth-child(2)`).addClass('dot-seleted');
+      $(`.dot-area > div:nth-child(2)`).removeClass('dot');
     }
   };
 </script>
@@ -128,6 +152,18 @@
 <style>
   .navbar {
     backdrop-filter: blur(5px);
+  }
+
+  .nav-item .nav-link {
+    color: #fff;
+    font-weight: 400;
+    padding: 4px 4px;
+    margin: 8px 16px;
+  }
+
+  .nav-item .active {
+    font-weight: 600;
+    border-bottom: 2px solid #41dec2;
   }
 
   .logo {
@@ -151,7 +187,7 @@
     width: 0px;
     left: 40px;
     top: 15vh;
-    border: 1px solid #fff;
+    border-left: 1px solid #fff;
   }
 
   .navigation-right {
@@ -164,7 +200,7 @@
 
   .navigation-right-line {
     width: 0px;
-    border: 1px solid #fff;
+    border-left: 1px solid #fff;
   }
 
   .dot-area {
@@ -174,9 +210,19 @@
   .dot-area>div {
     width: 14px;
     height: 14px;
-    margin: 7px -7px;
-    background-color: #fff;
+    margin: 14px -7px;
     border-radius: 7px;
+    cursor: pointer;
+  }
+
+  .dot-seleted {
+    background-image: url('../assets/image/icon_dot_seleted.png');
+    background-size: 100%;
+  }
+
+  .dot {
+    background-image: url('../assets/image/icon_dot.png');
+    background-size: 100%;
   }
 
   .scroll-top {
@@ -189,6 +235,14 @@
     position: absolute;
     left: -20px;
     top: 20px;
+  }
+
+  .section-1 {
+    width: 100%;
+  }
+
+  .section-2 {
+    width: 100%;
   }
 
   .footer-container {
