@@ -116,7 +116,7 @@ a:active {
   backdrop-filter: blur(4px);
   background-color: rgba(35, 35, 35, 0.2);
 }
-  
+
 .custom-dialog {
   width: 424px !important;
 }
@@ -146,10 +146,18 @@ a:active {
   background-color: rgba(255, 255, 255, 0.3) !important;
 }
 
-.form-control{
+.form-control {
   height: 40px;
   border-radius: 4px;
   border: solid 1px #ddd;
+}
+
+.btn-md {
+  height: 52px;
+}
+
+.btn-lg {
+  height: 60px;
 }
 
 .h6,
