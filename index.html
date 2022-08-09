@@ -277,6 +277,12 @@
         }, 1);
       });
     })
+
+    $('.form-select').change(function (e) {
+      console.log(e.target.id);
+      console.log(this.value);
+      $(`#${e.target.id}`).attr('style', 'color: #232323 !important');
+    });
   });
 
   const handleScroll = () => {
@@ -303,7 +309,7 @@
     }
   };
 
-  const forms = document.querySelectorAll('#order-form')
+  const forms = document.querySelectorAll('#order-form');
   Array.prototype.slice.call(forms)
     .forEach(function (form) {
       form.addEventListener('submit', function (event) {
