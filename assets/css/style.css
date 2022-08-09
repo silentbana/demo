@@ -89,11 +89,34 @@ a:active {
   background-image: linear-gradient(to bottom, #55ffe0 -38%, #41dec2 135%);
 }
 
+.progress-active::after {
+  content: '';
+  height: 16px;
+  border-left: 1px solid #41dec2;
+  position: absolute;
+  right: 0;
+  top: -4px;
+}
+
 .progress-inactive {
   background-color: #f2f2f2;
 }
 
+.progress-inactive::after {
+  content: '';
+  height: 16px;
+  border-left: 1px solid #232323;
+  position: absolute;
+  right: 0;
+  top: -4px;
+}
+
 /* custom bootstrap css */
+.modal {
+  backdrop-filter: blur(4px);
+  background-color: rgba(35, 35, 35, 0.2);
+}
+  
 .custom-dialog {
   width: 424px !important;
 }
@@ -117,7 +140,13 @@ a:active {
   font-weight: bold;
 }
 
-.form-control {
+.btn-return-purchase {
+  color: #a1a1a1 !important;
+  border: 1px solid #ddd !important;
+  background-color: rgba(255, 255, 255, 0.3) !important;
+}
+
+.form-control{
   height: 40px;
   border-radius: 4px;
   border: solid 1px #ddd;

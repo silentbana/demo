@@ -81,12 +81,12 @@
             <div class="name font-30 fw-bold">全新上市 Luxgen Model C</div>
             <div class="cancel d-flex flex-row">
               <div class="align-self-center">X1</div>
-              <button type="button" class="btn btn-light align-self-center" data-bs-toggle="modal"
+              <button type="button" class="align-self-center" data-bs-toggle="modal"
                 data-bs-target="#exampleModal">
                 <img src="/assets/image/delete.png" alt="">
               </button>
               <!-- dialog -->
-              <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+              <div class="modal" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
                 aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered custom-dialog">
                   <div class="modal-content p-4">
@@ -95,8 +95,70 @@
                       提醒您，您所要退訂的訂單編號為「ECW20220707000002」，車款為「全新上市 Luxgen Model C」。請確認您是否要退訂？
                     </div>
                     <div class="custom-modal-footer justify-content-between d-flex flex-row">
-                      <button type="button" class="btn btn-outline-secondary" onclick="returnedPurchase()">我要退訂</button>
-                      <button type="button" class="btn bg-41dec2 text-black col-6" data-bs-dismiss="modal">取消</button>
+                      <button type="button" class="btn btn-return-purchase" onclick="returnedPurchase()">我要退訂</button>
+                      <button type="button" class="btn bg-41dec2 text-black" data-bs-dismiss="modal">取消</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="details font-18 d-flex flex-row justify-content-between">
+            <div class="detail align-self-center">
+              <div class="numero">訂單編號：ECW20220707000002</div>
+              <div class="date">訂購日期：2022/09/14</div>
+              <div class="state">付款狀態：<span class="text-ff9900">待付款</span></div>
+            </div>
+            <div class="price align-self-center">
+              <h3>$935,000</h3>
+            </div>
+          </div>
+
+          <div class="pro">
+            <ul class="d-flex m-0 p-0">
+              <li>
+                <div class="square progress-active"></div> 完成預訂
+              </li>
+              <li>
+                <div class="square progress-inactive"></div> 探索體驗
+              </li>
+              <li>
+                <div class="square progress-inactive"></div> 選擇車規
+              </li>
+              <li>
+                <div class="square progress-inactive"></div> 交車
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="item d-flex flex-row">
+        <img src="https://fakeimg.pl/231x163" alt="">
+        <div class="des flex-grow-1">
+
+          <div class="title d-flex flex-row justify-content-between">
+            <div class="name font-30 fw-bold">全新上市 Luxgen Model C</div>
+            <div class="cancel d-flex flex-row">
+              <div class="align-self-center">X1</div>
+              <button type="button" class="align-self-center" data-bs-toggle="modal"
+                data-bs-target="#exampleModal">
+                <img src="/assets/image/delete.png" alt="">
+              </button>
+              <!-- dialog -->
+              <div class="modal" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered custom-dialog">
+                  <div class="modal-content p-4">
+                    <h5 class="custom-modal-title">請問是否要進行退訂？</h5>
+                    <div class="custom-modal-body">
+                      提醒您，您所要退訂的訂單編號為「ECW20220707000002」，車款為「全新上市 Luxgen Model C」。請確認您是否要退訂？
+                    </div>
+                    <div class="custom-modal-footer justify-content-between d-flex flex-row">
+                      <button type="button" class="btn btn-return-purchase" onclick="returnedPurchase()">我要退訂</button>
+                      <button type="button" class="btn bg-41dec2 text-black" data-bs-dismiss="modal">取消</button>
                     </div>
                   </div>
                 </div>
@@ -190,6 +252,7 @@
     background-color: #f2f2f2;
     background-image: url(/assets/image/order-background1.png), url(/assets/image/order-background2.png);
     background-position: 0 70px, right bottom 30px;
+    background-size: 18%, 18%;
     background-repeat: no-repeat;
     height: 100vh;
   }
@@ -203,6 +266,8 @@
     border-radius: 8px;
     background: #fff;
     border-left: #41dec2 solid 10px;
+    margin-top: 20px;
+    box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.1);
   }
 
   .item>img {
@@ -212,6 +277,12 @@
   .des>.title {
     border-bottom: 1px solid #ddd;
     padding-bottom: 12px;
+  }
+
+  .cancel>button {
+    background-color: #fff;
+    padding-left: 16px;
+    border: none;
   }
 
   .details {
@@ -237,18 +308,17 @@
     width: 100%;
     height: 8px;
     margin-bottom: 10px;
-    border-left: 1px solid;
     position: relative;
   }
 
-  li>.square::before {
+  li:first-child>.square::before {
     content: '';
-
+    height: 16px;
+    border-left: 1px solid #41dec2;
+    position: absolute;
+    left: 0;
+    top: -4px;
   }
-
-  /* .progress {
-    border-radius: 0;
-  } */
 
   .calc {
     width: 100%;
