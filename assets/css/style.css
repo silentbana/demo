@@ -197,15 +197,9 @@ a:active {
 
 .form-select {
   color: #a1a1a1 !important;
-<<<<<<< HEAD
-  background-image: url('../image/icon_arrow_down.svg'), url('icon_select_line.svg') !important;
-  background-size: 30px 30px !important;
-  background-position: right 2px top 6px !important;
-=======
   background-image: url('/assets/image/icon_select_line.svg'), url('/assets/image/icon_arrow_down.svg') !important;
   background-size: 28px 28px, 30px 30px !important;
   background-position: right 20px top 6px, right top 8px  !important;
->>>>>>> ae5421310f3e587d1971f7630d88d26bc8cb9ef8
 }
 
 .h6,
