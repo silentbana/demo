@@ -13,7 +13,7 @@
 </head>
 
 <body>
-  <nav class="navbar fixed-top"">
+  <nav class="navbar fixed-top">
     <div class=" container-fluid">
     <div class="d-flex align-items-center text-black">
       <a href="https://www.luxgen-motor.com.tw/" target="_blank">
@@ -40,7 +40,7 @@
     </button>
 
     <div class="login-area d-flex align-items-center">
-      <img class="login-icon" src="../assets/image/user_black@3x.png" alt="登入">
+      <img class="login-icon" src="../assets/image/icon_user_black.svg" alt="登入">
       <div class="text-black" role="button">登入</div>
     </div>
 
@@ -66,8 +66,31 @@
     </div>
     </div>
   </nav>
-  <main>
-    <h1>login page</h1>
+  <main class="login text-232323">
+    <div class="login-input">
+      <h1 class="text-center">VIP會員登入</h1>
+      <form action="">
+        <div>
+          <label for="email" class="form-label">帳號</label>
+          <input id="email" class="form-control" placeholder="請輸入您的Email信箱" type="text">
+        </div>
+        <div>
+          <label for="password" class="form-label d-flex flex-row justify-content-between">
+            <div>密碼</div>
+            <button type="button" class="text-169a82"></button>忘記密碼</button>
+          </label>
+          <input id="password" class="form-control" placeholder="請輸入8-32字元，須包含英文大寫、小寫及數字" type="text">
+        </div>
+        <div>
+          <label for="ver" class="form-label">驗證碼</label>
+          <input id="ver" class="form-control" placeholder="請輸入圖片中的數字" type="text">
+        </div>
+        <div class="custom-modal-footer justify-content-between d-flex flex-row">
+          <button type="button" class="btn btn-secondary">加入會員</button>
+          <button type="button" class="btn btn-primary">確認登入</button>
+        </div>
+      </form>
+    </div>
   </main>
 </body>
 
@@ -79,6 +102,56 @@
 </script>
 
 <style>
+  /* navbar */
+  .navbar {
+    backdrop-filter: blur(5px);
+    background: rgba(255, 255, 255, 0.4);
+  }
+
+  .logo {
+    height: 24px;
+    padding: 0 10px;
+  }
+
+  .login-area {
+    padding-right: 10px;
+  }
+
+  .login-icon {
+    width: 18px;
+    height: 18px;
+    margin-right: 10px;
+  }
+  
+  /* login */
+  .login {
+    height: 100vh;
+    padding-top: 60px;
+    background-color: #f2f2f2;
+    background-image: url(/assets/image/login_background.png);
+    background-position: left bottom;
+    background-repeat: no-repeat;
+  }
+
+  .login-input {
+    margin: 80px 170px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    /* backdrop-filter: blur(58px); */
+    background-color: rgba(255, 255, 255, 0.3);
+    padding: 40px 211px 58px;
+  }
+
+  form>div {
+    margin-top: 40px;
+  }
+
+  label>button {
+    background-color: #fff;
+    padding-left: 16px;
+    border: none;
+  }
+
   @media (min-width: 1200px) {}
 
   @media (min-width: 768px) and (max-width: 1199px) {}

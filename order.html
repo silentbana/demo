@@ -40,7 +40,7 @@
       </button>
 
       <div class="login-area d-flex align-items-center">
-        <img class="login-icon" src="../assets/image/icon_user_black.png" alt="登入">
+        <img class="login-icon" src="../assets/image/icon_user_black.svg" alt="登入">
         <div class="text-black" role="button">登入</div>
       </div>
 
@@ -74,7 +74,7 @@
       </div>
 
       <div class="item d-flex flex-row">
-        <img src="https://fakeimg.pl/231x163" alt="">
+        <img src="/assets/image/order_car.png" alt="">
         <div class="des flex-grow-1">
 
           <div class="title d-flex flex-row justify-content-between">
@@ -83,7 +83,7 @@
               <div class="align-self-center">X1</div>
               <button type="button" class="align-self-center" data-bs-toggle="modal"
                 data-bs-target="#exampleModal">
-                <img src="/assets/image/delete.png" alt="">
+                <img src="/assets/image/delete.svg" alt="">
               </button>
             </div>
           </div>
@@ -120,7 +120,7 @@
       </div>
 
       <div class="item d-flex flex-row">
-        <img src="https://fakeimg.pl/231x163" alt="">
+        <img src="/assets/image/order_car.png" alt="">
         <div class="des flex-grow-1">
 
           <div class="title d-flex flex-row justify-content-between">
@@ -129,7 +129,7 @@
               <div class="align-self-center">X1</div>
               <button type="button" class="align-self-center" data-bs-toggle="modal"
                 data-bs-target="#exampleModal">
-                <img src="/assets/image/delete.png" alt="">
+                <img src="/assets/image/delete.svg" alt="">
               </button>
             </div>
           </div>
@@ -168,7 +168,7 @@
     </div>
     <!-- calc -->
     <div class="calc d-flex flex-row justify-content-between">
-      <div class="statement font-18 d-flex flex-row align-self-center">
+      <div class="statement font-18 d-flex flex-row align-self-center fw-semibold">
         <div class="subtotal">小計：1,870,000</div>
         <div class="shipping-fee">運費：60</div>
         <div class="point">L Point折抵：-1,500</div>
@@ -248,7 +248,7 @@
   .order {
     padding-top: 60px;
     background-color: #f2f2f2;
-    background-image: url(/assets/image/order-background1.png), url(/assets/image/order-background2.png);
+    background-image: url(/assets/image/order_background1.png), url(/assets/image/order_background2.png);
     background-position: 0 70px, right bottom 30px;
     background-size: 18%, 18%;
     background-repeat: no-repeat;
@@ -272,6 +272,7 @@
 
   .item>img {
     margin: 40px 36px auto 0;
+    width: 231px;
   }
 
   .des>.title {
@@ -302,6 +303,7 @@
   .pro>ul>li {
     width: 25%;
     text-align: center;
+    font-size: 14px;
   }
 
   li>.square {
@@ -327,6 +329,7 @@
     padding: 31px 170px;
     background: #fff;
     box-shadow: 0 -2px 11px 0 rgba(0, 0, 0, 0.1);
+    font-family: NotoSans;
   }
 
   .subtotal,
@@ -334,6 +337,9 @@
     margin-right: 32px;
   }
 
+  .total>span {
+    padding-left: 4px;
+  }
 
   @media (min-width: 1200px) {
     .logo {

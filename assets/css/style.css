@@ -63,6 +63,14 @@ a:active {
   color: #ffd335;
 }
 
+.text-169a82 {
+  color: #169a82;
+}
+
+.text-a1a1a1 {
+  color: #a1a1a1;
+}
+
 .bg-232323 {
   background-color: #232323;
 }
@@ -145,7 +153,7 @@ a:active {
 .custom-modal-title {
   color: #3f3f3f;
   text-align: center;
-  margin: 8px 0 7px;
+  margin: 8px 0 7px !important;
 }
 
 .custom-modal-body {
@@ -162,8 +170,9 @@ a:active {
 }
 
 .btn-primary {
-  background-color: #41dec2 !important;
+  color: #000 !important;
   border: none !important;
+  background-color: #41dec2 !important;
 }
 
 .btn-secondary {
