@@ -24,7 +24,7 @@ a:hover,
 a:visited,
 a:link,
 a:active {
-  color: #000;
+  color: unset;
   text-decoration: none;
   outline: none;
 }
@@ -44,6 +44,10 @@ a:active {
 
 .text-ff9900 {
   color: #ff9900;
+}
+
+.text-ffd335 {
+  color: #ffd335;
 }
 
 .bg-232323 {
@@ -68,8 +72,16 @@ a:active {
   font-size: 30px !important;
 }
 
+.font-40{
+  font-size: 40px !important;
+}
+
 .font-50 {
   font-size: 50px !important;
+}
+
+.font-56 {
+  font-size: 56px !important;
 }
 
 /* custom component css */
@@ -91,16 +103,37 @@ a:active {
   text-align: center;
   margin: 8px 0 7px;
 }
-  
+
 .custom-modal-body {
   text-align: center;
   padding: 0 8px;
 }
-  
-.custom-modal-footer  .btn{
+
+.custom-modal-footer .btn {
   width: calc(50% - 8px);
   margin: 24px 0 8px;
   padding: 10px;
   font-size: 20px;
   font-weight: bold;
+}
+
+.form-control{
+  height: 40px;
+  border-radius: 4px;
+  border: solid 1px #ddd;
+}
+
+.h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1{
+  margin-bottom: 0 !important;
+}
+
+@media (min-width: 1400px) {
+  .container-xxl,
+  .container-xl,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container {
+    max-width: 1220px !important;
+  }
 }
