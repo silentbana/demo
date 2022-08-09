@@ -22,13 +22,13 @@
 
         <ul class="d-none d-md-flex nav">
           <li class="nav-item">
-            <a class="nav-link active font-14" aria-current="page" href="/">入主純電未來</a>
+            <a class="nav-link font-14" aria-current="page" href="/">入主純電未來</a>
           </li>
           <li class="nav-item">
             <a class="nav-link font-14" href="/activity">活動專區</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link font-14" href="/order">訂單查詢</a>
+            <a class="nav-link active font-14" href="/order">訂單查詢</a>
           </li>
         </ul>
       </div>
@@ -40,7 +40,7 @@
       </button>
 
       <div class="login-area d-flex align-items-center">
-        <img class="login-icon" src="../assets/image/icon_user.png" alt="登入">
+        <img class="login-icon" src="../assets/image/icon_user_black.png" alt="登入">
         <div class="text-black" role="button">登入</div>
       </div>
 
@@ -67,146 +67,20 @@
     </div>
   </nav>
   <main class="order text-232323">
-    <div class="items">
-      <div class="page-title mb-4 d-flex flex-row justify-content-between">
-        <div class="font-30 fw-bold">我的訂單</div>
-        <div class="count font-18 align-self-end">總計：共2筆</div>
-      </div>
-
-      <div class="item d-flex flex-row">
-        <img src="https://fakeimg.pl/231x163" alt="">
-        <div class="des flex-grow-1">
-
-          <div class="title d-flex flex-row justify-content-between">
-            <div class="name font-30 fw-bold">全新上市 Luxgen Model C</div>
-            <div class="cancel d-flex flex-row">
-              <div class="align-self-center">X1</div>
-              <button type="button" class="align-self-center" data-bs-toggle="modal"
-                data-bs-target="#exampleModal">
-                <img src="/assets/image/delete.png" alt="">
-              </button>
-              <!-- dialog -->
-              <div class="modal" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-                aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered custom-dialog">
-                  <div class="modal-content p-4">
-                    <h5 class="custom-modal-title">請問是否要進行退訂？</h5>
-                    <div class="custom-modal-body">
-                      提醒您，您所要退訂的訂單編號為「ECW20220707000002」，車款為「全新上市 Luxgen Model C」。請確認您是否要退訂？
-                    </div>
-                    <div class="custom-modal-footer justify-content-between d-flex flex-row">
-                      <button type="button" class="btn btn-return-purchase" onclick="returnedPurchase()">我要退訂</button>
-                      <button type="button" class="btn bg-41dec2 text-black" data-bs-dismiss="modal">取消</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="details font-18 d-flex flex-row justify-content-between">
-            <div class="detail align-self-center">
-              <div class="numero">訂單編號：ECW20220707000002</div>
-              <div class="date">訂購日期：2022/09/14</div>
-              <div class="state">付款狀態：<span class="text-ff9900">待付款</span></div>
-            </div>
-            <div class="price align-self-center">
-              <h3>$935,000</h3>
-            </div>
-          </div>
-
-          <div class="pro">
-            <ul class="d-flex m-0 p-0">
-              <li>
-                <div class="square progress-active"></div> 完成預訂
-              </li>
-              <li>
-                <div class="square progress-inactive"></div> 探索體驗
-              </li>
-              <li>
-                <div class="square progress-inactive"></div> 選擇車規
-              </li>
-              <li>
-                <div class="square progress-inactive"></div> 交車
-              </li>
-            </ul>
-          </div>
-
-        </div>
-      </div>
-
-      <div class="item d-flex flex-row">
-        <img src="https://fakeimg.pl/231x163" alt="">
-        <div class="des flex-grow-1">
-
-          <div class="title d-flex flex-row justify-content-between">
-            <div class="name font-30 fw-bold">全新上市 Luxgen Model C</div>
-            <div class="cancel d-flex flex-row">
-              <div class="align-self-center">X1</div>
-              <button type="button" class="align-self-center" data-bs-toggle="modal"
-                data-bs-target="#exampleModal">
-                <img src="/assets/image/delete.png" alt="">
-              </button>
-              <!-- dialog -->
-              <div class="modal" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-                aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered custom-dialog">
-                  <div class="modal-content p-4">
-                    <h5 class="custom-modal-title">請問是否要進行退訂？</h5>
-                    <div class="custom-modal-body">
-                      提醒您，您所要退訂的訂單編號為「ECW20220707000002」，車款為「全新上市 Luxgen Model C」。請確認您是否要退訂？
-                    </div>
-                    <div class="custom-modal-footer justify-content-between d-flex flex-row">
-                      <button type="button" class="btn btn-return-purchase" onclick="returnedPurchase()">我要退訂</button>
-                      <button type="button" class="btn bg-41dec2 text-black" data-bs-dismiss="modal">取消</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="details font-18 d-flex flex-row justify-content-between">
-            <div class="detail align-self-center">
-              <div class="numero">訂單編號：ECW20220707000002</div>
-              <div class="date">訂購日期：2022/09/14</div>
-              <div class="state">付款狀態：<span class="text-ff9900">待付款</span></div>
-            </div>
-            <div class="price align-self-center">
-              <h3>$935,000</h3>
-            </div>
-          </div>
-
-          <div class="pro">
-            <ul class="d-flex m-0 p-0">
-              <li>
-                <div class="square progress-active"></div> 完成預訂
-              </li>
-              <li>
-                <div class="square progress-inactive"></div> 探索體驗
-              </li>
-              <li>
-                <div class="square progress-inactive"></div> 選擇車規
-              </li>
-              <li>
-                <div class="square progress-inactive"></div> 交車
-              </li>
-            </ul>
-          </div>
-
-        </div>
-      </div>
-
+    <div class="no-order position-absolute top-50 start-50 translate-middle">
+      <img src="/assets//image/no_order.png" class="m-auto d-block" alt="no-order">
+      <div class="title font-30 fw-bold">您目前還沒有訂單喔</div>
+      <div class="subtitle font-18 text-a1a1a1">快去活動網頁看看，並進行下訂吧！</div>
     </div>
     <!-- calc -->
     <div class="calc d-flex flex-row justify-content-between">
       <div class="statement font-18 d-flex flex-row align-self-center">
-        <div class="subtotal">小計：1,870,000</div>
-        <div class="shipping-fee">運費：60</div>
-        <div class="point">L Point折抵：-1,500</div>
+        <div class="subtotal">小計：0</div>
+        <div class="shipping-fee">運費：0</div>
+        <div class="point">L Point折抵：0</div>
       </div>
       <div class="total font-30 fw-bold align-self-center">
-        總金額：<span class="text-41dec2">1,868,560</span>
+        總金額：<span class="text-41dec2">0</span>
       </div>
     </div>
   </main>
@@ -229,6 +103,17 @@
   .navbar {
     backdrop-filter: blur(5px);
     background: rgba(255, 255, 255, 0.4);
+  }
+
+  .nav-item .nav-link {
+    font-weight: 400;
+    padding: 4px 4px;
+    margin: 8px 16px;
+  }
+
+  .nav-item .active {
+    font-weight: 600;
+    border-bottom: 2px solid #41dec2;
   }
 
   .logo {
@@ -255,69 +140,6 @@
     background-size: 18%, 18%;
     background-repeat: no-repeat;
     height: 100vh;
-  }
-
-  .items {
-    margin: 36px 170px;
-  }
-
-  .item {
-    padding: 20px 36px 24px 44px;
-    border-radius: 8px;
-    background: #fff;
-    border-left: #41dec2 solid 10px;
-    margin-top: 20px;
-    box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.1);
-  }
-
-  .item>img {
-    margin: 40px 36px auto 0;
-  }
-
-  .des>.title {
-    border-bottom: 1px solid #ddd;
-    padding-bottom: 12px;
-  }
-
-  .cancel>button {
-    background-color: #fff;
-    padding-left: 16px;
-    border: none;
-  }
-
-  .details {
-    margin: 12px 0;
-  }
-
-  .pro {
-    border: 1px solid #ddd;
-    border-radius: 6px;
-    padding: 32px 16px 20px;
-  }
-
-  .pro>ul {
-    list-style-type: none;
-  }
-
-  .pro>ul>li {
-    width: 25%;
-    text-align: center;
-  }
-
-  li>.square {
-    width: 100%;
-    height: 8px;
-    margin-bottom: 10px;
-    position: relative;
-  }
-
-  li:first-child>.square::before {
-    content: '';
-    height: 16px;
-    border-left: 1px solid #41dec2;
-    position: absolute;
-    left: 0;
-    top: -4px;
   }
 
   .calc {

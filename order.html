@@ -22,13 +22,13 @@
 
         <ul class="d-none d-md-flex nav">
           <li class="nav-item">
-            <a class="nav-link active font-14" aria-current="page" href="/">入主純電未來</a>
+            <a class="nav-link font-14" aria-current="page" href="/">入主純電未來</a>
           </li>
           <li class="nav-item">
             <a class="nav-link font-14" href="/activity">活動專區</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link font-14" href="/order">訂單查詢</a>
+            <a class="nav-link active font-14" href="/order">訂單查詢</a>
           </li>
         </ul>
       </div>
@@ -40,7 +40,7 @@
       </button>
 
       <div class="login-area d-flex align-items-center">
-        <img class="login-icon" src="../assets/image/icon_user.png" alt="登入">
+        <img class="login-icon" src="../assets/image/icon_user_black.png" alt="登入">
         <div class="text-black" role="button">登入</div>
       </div>
 
@@ -85,22 +85,6 @@
                 data-bs-target="#exampleModal">
                 <img src="/assets/image/delete.png" alt="">
               </button>
-              <!-- dialog -->
-              <div class="modal" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-                aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered custom-dialog">
-                  <div class="modal-content p-4">
-                    <h5 class="custom-modal-title">請問是否要進行退訂？</h5>
-                    <div class="custom-modal-body">
-                      提醒您，您所要退訂的訂單編號為「ECW20220707000002」，車款為「全新上市 Luxgen Model C」。請確認您是否要退訂？
-                    </div>
-                    <div class="custom-modal-footer justify-content-between d-flex flex-row">
-                      <button type="button" class="btn btn-secondary" onclick="returnedPurchase()">我要退訂</button>
-                      <button type="button" class="btn btn-primary text-black" data-bs-dismiss="modal">取消</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
 
@@ -147,22 +131,6 @@
                 data-bs-target="#exampleModal">
                 <img src="/assets/image/delete.png" alt="">
               </button>
-              <!-- dialog -->
-              <div class="modal" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-                aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered custom-dialog">
-                  <div class="modal-content p-4">
-                    <h5 class="custom-modal-title">請問是否要進行退訂？</h5>
-                    <div class="custom-modal-body">
-                      提醒您，您所要退訂的訂單編號為「ECW20220707000002」，車款為「全新上市 Luxgen Model C」。請確認您是否要退訂？
-                    </div>
-                    <div class="custom-modal-footer justify-content-between d-flex flex-row">
-                      <button type="button" class="btn btn-secondary" onclick="returnedPurchase()">我要退訂</button>
-                      <button type="button" class="btn bg-41dec2 text-black" data-bs-dismiss="modal">取消</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
 
@@ -209,6 +177,24 @@
         總金額：<span class="text-41dec2">1,868,560</span>
       </div>
     </div>
+    
+    <!-- dialog -->
+    <div class="modal" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered custom-dialog">
+      <div class="modal-content p-4">
+        <h5 class="custom-modal-title">請問是否要進行退訂？</h5>
+        <div class="custom-modal-body">
+          提醒您，您所要退訂的訂單編號為「ECW20220707000002」，車款為「全新上市 Luxgen Model C」。請確認您是否要退訂？
+        </div>
+        <div class="custom-modal-footer justify-content-between d-flex flex-row">
+          <button type="button" class="btn btn-secondary" onclick="returnedPurchase()">我要退訂</button>
+          <button type="button" class="btn btn-primary" data-bs-dismiss="modal">取消</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   </main>
 </body>
 
@@ -229,6 +215,17 @@
   .navbar {
     backdrop-filter: blur(5px);
     background: rgba(255, 255, 255, 0.4);
+  }
+
+  .nav-item .nav-link {
+    font-weight: 400;
+    padding: 4px 4px;
+    margin: 8px 16px;
+  }
+
+  .nav-item .active {
+    font-weight: 600;
+    border-bottom: 2px solid #41dec2;
   }
 
   .logo {
@@ -254,11 +251,13 @@
     background-position: 0 70px, right bottom 30px;
     background-size: 18%, 18%;
     background-repeat: no-repeat;
-    height: 100vh;
+    background-attachment: fixed;
+    min-height: 100vh;
   }
 
   .items {
     margin: 36px 170px;
+    padding-bottom: 150px;
   }
 
   .item {
