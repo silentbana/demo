@@ -200,6 +200,7 @@ a:active {
   background-image: url('/assets/image/icon_select_line.svg'), url('/assets/image/icon_arrow_down.svg') !important;
   background-size: 28px 28px, 30px 30px !important;
   background-position: right 20px top 6px, right top 8px  !important;
+  cursor: pointer;
 }
 
 .h6,
