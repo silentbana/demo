@@ -132,6 +132,10 @@ a:active {
   top: -4px;
 }
 
+.btn-sm {
+  height: 40px;
+}
+
 .btn-md {
   height: 52px;
 }
@@ -177,7 +181,7 @@ a:active {
 
 .btn-secondary {
   color: #a1a1a1 !important;
-  border: 1px solid #ddd !important;
+  border: 1px solid #a1a1a1 !important;
   background-color: rgba(255, 255, 255, 0.3) !important;
 }
 
@@ -199,8 +203,19 @@ a:active {
   color: #a1a1a1 !important;
   background-image: url('/assets/image/icon_select_line.svg'), url('/assets/image/icon_arrow_down.svg') !important;
   background-size: 28px 28px, 30px 30px !important;
-  background-position: right 20px top 5px, right top 8px  !important;
+  background-position: right 20px top 5px, right top 8px !important;
   cursor: pointer;
+}
+
+.form-check,
+.form-check-input,
+.form-check-label {
+  cursor: pointer;
+}
+
+.form-check-input:checked {
+  background-color: #41dec2 !important;
+  border-color: #41dec2 !important;
 }
 
 .h6,

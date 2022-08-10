@@ -138,23 +138,24 @@
         </h2>
       </div>
 
-      <div class="horizontal-line pt-2"></div>
+      <div class="horizontal-line" style="margin: 7px 0 154px 0;"></div>
 
       <div class="section-2-4">
-        <div class="d-flex pb-4 pt-5">
-          <div class="vertical-line"></div>
-          <h2 class="text-white font-30">訂購資訊填寫</h2>
-        </div>
-        <div class="order-area">
+        <div class="order-area position-relative">
           <form id="order-form" action="javascript:submitForm()" novalidate>
+            <div class="d-flex pb-4 pt-1 mb-2">
+              <div class="vertical-line"></div>
+              <h2 class="text-232323 font-30">訂購資訊</h2>
+            </div>
+
             <div class="row mb-4">
-              <div class="col-4">
-                <label for="name" class="form-label">姓名</label>
+              <div class="col-3">
+                <div class="form-label">姓名</div>
                 <input id="name" class="form-control" placeholder="請輸入您的真實姓名" type="text" required>
                 <div class="invalid-feedback">*請輸入姓名</div>
               </div>
-              <div class="col-4">
-                <div for="gender" class="form-label">性別</div>
+              <div class="col-2">
+                <div class="form-label">性別</div>
                 <select id="gender" class="form-select form-control" required>
                   <option value="" selected disabled>請選擇</option>
                   <option value="1">男</option>
@@ -162,15 +163,27 @@
                 </select>
                 <div class="invalid-feedback">*請選擇性別</div>
               </div>
-              <div class="col-4">
-                <div for="phone" class="form-label">手機號碼</div>
+              <div class="col-3">
+                <div class="form-label">手機號碼</div>
                 <input id="phone" class="form-control" placeholder="請輸入手機號碼十碼" type="tel" required>
                 <div class="invalid-feedback">*請輸入手機號碼</div>
               </div>
+              <div class="col-4 row">
+                <div class="col-7">
+                  <div class="form-label">簡訊驗證碼</div>
+                  <input id="sms" class="form-control" placeholder="請輸入六碼驗證碼" type="tel" required>
+                  <div class="invalid-feedback">*請輸入簡訊驗證碼</div>
+                </div>
+                <div class="col-5 p-0">
+                  <div class="form-label" style="height: 24px;"></div>
+                  <button class="w-100 btn btn-secondary btn-sm" type="button">發送驗證碼</button>
+                </div>
+              </div>
             </div>
+
             <div class="row mb-4">
               <div class="col-2">
-                <div for="county" class="form-label">地址</div>
+                <div class="form-label">地址</div>
                 <select id="county" class="form-select form-control" required>
                   <option value="" selected disabled>請選擇縣市</option>
                   <option value="台北市" data-index="0">台北市</option>
@@ -199,14 +212,15 @@
                 <div class="invalid-feedback">*請選擇縣市</div>
               </div>
               <div class="col-10">
-                <div for="address" class="form-label" style="height: 24px;"></div>
+                <div class="form-label" style="height: 24px;"></div>
                 <input id="address" class="form-control" placeholder="請輸入地址" type="text" required>
                 <div class="invalid-feedback">*請輸入地址</div>
               </div>
             </div>
+
             <div class="row mb-4">
               <div class="col-6">
-                <label for="promo-code" class="form-label">邀請碼輸入</label>
+                <div class="form-label">邀請碼輸入</div>
                 <input id="promo-code" class="form-control" placeholder="請輸入邀請碼" type="text" required>
                 <div class="invalid-feedback">*請輸入邀請碼</div>
               </div>
@@ -216,10 +230,82 @@
                 <div class="invalid-feedback">*請輸入業代手機號碼</div>
               </div>
             </div>
+
+            <div class="pt-2 pb-5">
+              <div class="form-check vip">
+                <input class="form-check-input" type="checkbox" value="" id="vip-checkbox">
+                <label class="form-check-label" for="vip-checkbox">我要同時註冊成為VIP會員</label>
+              </div>
+            </div>
+
+            <div class="register-area">
+              <div class="horizontal-line position-absolute start-0"></div>
+
+              <div class="d-flex pb-4 pt-1 pt-5">
+                <div class="vertical-line"></div>
+                <h2 class="text-232323 font-30">註冊資訊</h2>
+              </div>
+
+              <div class="row mb-4">
+                <div class="col-4">
+                  <div class="form-label">Email</div>
+                  <input id="email" class="form-control" placeholder="請輸入您的Email" type="email" required disabled>
+                  <div class="invalid-feedback">*請輸入Email</div>
+                </div>
+                <div class="col-4">
+                  <div class="form-label">設定密碼</div>
+                  <input id="password" class="form-control" placeholder="8-32字元，須包含英文大寫、小寫及數字" type="password" required disabled>
+                  <div class="invalid-feedback">*請輸入密碼</div>
+                </div>
+                <div class="col-4">
+                  <div class="form-label">再次輸入密碼</div>
+                  <input id="password-again" class="form-control" placeholder="8-32字元，須包含英文大寫、小寫及數字" type="password"
+                    required disabled>
+                  <div class="invalid-feedback">*請再次輸入密碼</div>
+                </div>
+              </div>
+
+              <div class="pt-2 pb-3 mb-1">
+                <div class="form-check car-owner">
+                  <input class="form-check-input" type="checkbox" value="" id="car-owner-checkbox">
+                  <label class="form-check-label" for="car-owner-checkbox">我是車主/駕駛</label>
+                </div>
+              </div>
+
+              <div class="row pb-3 mb-1 car-owner-area">
+                <div class="col-6">
+                  <div class="form-label">身分證或公司統一編號</div>
+                  <input id="identity-card" class="form-control car-owner-input" placeholder="請輸入身分證字號，公司車請輸入公司編號" type="text" required disabled>
+                  <div class="invalid-feedback">*請輸入身分證或公司統一編號</div>
+                </div>
+                <div class="col-6 row">
+                  <div class="license-plate col-6 position-relative pe-1">
+                    <div for="license-plate-1" class="form-label">車牌號碼</div>
+                    <input id="license-plate-1" class="form-control car-owner-input" type="tel" required disabled>
+                    <div class="invalid-feedback">*請輸入車牌號碼</div>
+                  </div>
+                  <div class="col-6 ps-1">
+                    <div class="form-label" style="height: 24px;"></div>
+                    <input id="license-plate-2" class="form-control car-owner-input" type="tel" required disabled>
+                    <div class="invalid-feedback">*請輸入車牌號碼</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="pt-2 pb-5">
+                <div class="form-check car-owner">
+                  <input class="form-check-input" type="checkbox" value="" id="privacy-checkbox" required disabled>
+                  <label class="form-check-label" for="privacy-checkbox">我已閱讀並同意
+                    <a href="https://www.luxgen-motor.com.tw/Home/Privacy" target="_blank"
+                      rel="noopener noreferrer">服務條款與隱私權聲明</a>
+                  </label>
+                </div>
+              </div>
+            </div>
+
             <div class="row pt-5">
               <div class="col-4"></div>
-              <button type="submit" class="btn btn-lg bg-41dec2 text-black col-4">入主THE
-                NEXT百萬內純電休旅</button>
+              <button type="submit" class="btn btn-lg bg-41dec2 text-black col-4">入主THE NEXT百萬內純電休旅</button>
               <div class="col-4"></div>
             </div>
           </form>
@@ -279,6 +365,26 @@
 
     $('.form-select').change(function (e) {
       $(`#${e.target.id}`).attr('style', 'color: #232323 !important');
+    });
+
+    $('#vip-checkbox').change(function (e) {
+      if ($(e.target).is(':checked')) {
+        $('.register-area').show();
+        $('.register-area input:not(.car-owner-input)').attr('disabled', false);
+      } else {
+        $('.register-area').hide();
+        $('.register-area input:not(.car-owner-input)').attr('disabled', true);
+      }
+    });
+
+    $('#car-owner-checkbox').change(function (e) {
+      if ($(e.target).is(':checked')) {
+        $('.car-owner-area').show();
+        $('.car-owner-area input').attr('disabled', false);
+      } else {
+        $('.car-owner-area').hide();
+        $('.car-owner-area input').attr('disabled', true);
+      }
     });
   });
 
@@ -457,13 +563,36 @@
   }
 
   .order-area {
-    background-color: rgba(255, 255, 255, 0.7);
-    padding: 40px 32px 52px 32px;
+    padding: 48px 32px 52px 32px;
     border-radius: 8px;
     backdrop-filter: blur(58px);
     border: solid 1px #fff;
     background-color: rgba(255, 255, 255, 0.7);
   }
+
+  .vip {
+    margin: auto;
+    width: fit-content;
+  }
+
+  .license-plate::after {
+    content: '-';
+    position: absolute;
+    right: -4px;
+    top: 40px;
+  }
+
+  .register-area, .car-owner-area{
+    display: none;
+  }
+
+  .car-owner a {
+    text-decoration: underline;
+  }
+
+  /* .car-owner a:hover {
+    color: #41dec2;
+  } */
 
   .horizontal-line {
     width: 100%;
