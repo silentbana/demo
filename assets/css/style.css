@@ -199,7 +199,7 @@ a:active {
   color: #a1a1a1 !important;
   background-image: url('/assets/image/icon_select_line.svg'), url('/assets/image/icon_arrow_down.svg') !important;
   background-size: 28px 28px, 30px 30px !important;
-  background-position: right 20px top 6px, right top 8px  !important;
+  background-position: right 20px top 5px, right top 8px  !important;
   cursor: pointer;
 }
 
