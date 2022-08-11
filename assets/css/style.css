@@ -51,8 +51,8 @@ a:active {
   color: #232323;
 }
 
-.text-41dec2 {
-  color: #41dec2;
+.text-caff86 {
+  color: #caff86;
 }
 
 .text-ff9900 {
@@ -75,8 +75,8 @@ a:active {
   background-color: #232323;
 }
 
-.bg-41dec2 {
-  background-color: #41dec2 !important;
+.bg-caff86 {
+  background-color: #caff86 !important;
 }
 
 .font-14 {
@@ -107,13 +107,13 @@ a:active {
 
 /* custom component css */
 .progress-active {
-  background-image: linear-gradient(to bottom, #55ffe0 -38%, #41dec2 135%);
+  background-image: linear-gradient(to bottom, #55ffe0 -38%, #caff86 135%);
 }
 
 .progress-active::after {
   content: '';
   height: 16px;
-  border-left: 1px solid #41dec2;
+  border-left: 1px solid #caff86;
   position: absolute;
   right: 0;
   top: -4px;
@@ -176,7 +176,7 @@ a:active {
 .btn-primary {
   color: #000 !important;
   border: none !important;
-  background-color: #41dec2 !important;
+  background-color: #caff86 !important;
 }
 
 .btn-secondary {
@@ -214,8 +214,8 @@ a:active {
 }
 
 .form-check-input:checked {
-  background-color: #41dec2 !important;
-  border-color: #41dec2 !important;
+  background-color: #caff86 !important;
+  border-color: #caff86 !important;
 }
 
 .h6,

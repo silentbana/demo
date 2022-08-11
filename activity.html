@@ -13,9 +13,57 @@
 </head>
 
 <body>
-  <main>
-    <h1>activity page</h1>
-  </main>
+  <nav class="navbar fixed-top"">
+    <div class=" container-fluid">
+    <button class="d-block d-lg-none navbar-toggler" type="button" data-bs-toggle="offcanvas"
+      data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="d-flex align-items-center text-white">
+      <a href="https://www.luxgen-motor.com.tw/" target="_blank">
+        <img class="logo" src="../assets/image/logo@3x.png" alt="logo">
+      </a>
+
+      <ul class="d-none d-lg-flex nav">
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="/">入主純電未來</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="/activity">活動專區</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="login-area d-flex align-items-center">
+      <img class="login-icon" src="../assets/image/Icon_order_white.svg" alt="訂單查詢">
+      <a href="/order">
+        <div class="text-white" role="button">訂單查詢</div>
+      </a>
+    </div>
+
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn-lg btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+    </div>
+  </nav>
 </body>
 
 </html>
@@ -26,6 +74,39 @@
 </script>
 
 <style>
+  /* navbar */
+  .navbar {
+    backdrop-filter: blur(5px);
+    background: rgba(255, 255, 255, 0.4);
+  }
+
+  .nav-item .nav-link {
+    color: #fff;
+    font-weight: 400;
+    padding: 4px 4px;
+    margin: 8px 16px;
+  }
+
+  .nav-item .active {
+    font-weight: 600;
+    border-bottom: 2px solid #caff86;
+  }
+
+  .logo {
+    height: 24px;
+    padding: 0 10px;
+  }
+
+  .login-area {
+    padding-right: 10px;
+  }
+
+  .login-icon {
+    width: 18px;
+    height: 18px;
+    margin-right: 10px;
+  }
+
   @media (min-width: 1200px) {}
 
   @media (min-width: 768px) and (max-width: 1199px) {}

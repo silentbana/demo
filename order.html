@@ -27,9 +27,6 @@
           <li class="nav-item">
             <a class="nav-link" href="/activity">活動專區</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link active" href="/order">訂單查詢</a>
-          </li>
         </ul>
       </div>
 
@@ -40,8 +37,10 @@
       </button>
 
       <div class="login-area d-flex align-items-center">
-        <img class="login-icon" src="../assets/image/icon_user_black.svg" alt="登入">
-        <div class="text-black" role="button">登入</div>
+        <img class="login-icon" src="../assets/image/Icon_order_white.svg" alt="訂單查詢">
+        <a href="/order">
+          <div class="text-white" role="button">訂單查詢</div>
+        </a>
       </div>
 
       <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
@@ -81,8 +80,7 @@
             <div class="name font-30 fw-bold">全新上市 Luxgen Model C</div>
             <div class="cancel d-flex flex-row">
               <div class="align-self-center">X1</div>
-              <button type="button" class="align-self-center" data-bs-toggle="modal"
-                data-bs-target="#exampleModal">
+              <button type="button" class="align-self-center" data-bs-toggle="modal" data-bs-target="#exampleModal">
                 <img src="/assets/image/icon_delete.svg" alt="">
               </button>
             </div>
@@ -127,8 +125,7 @@
             <div class="name font-30 fw-bold">全新上市 Luxgen Model C</div>
             <div class="cancel d-flex flex-row">
               <div class="align-self-center">X1</div>
-              <button type="button" class="align-self-center" data-bs-toggle="modal"
-                data-bs-target="#exampleModal">
+              <button type="button" class="align-self-center" data-bs-toggle="modal" data-bs-target="#exampleModal">
                 <img src="/assets/image/icon_delete.svg" alt="">
               </button>
             </div>
@@ -174,26 +171,25 @@
         <div class="point">L Point折抵：-1,500</div>
       </div>
       <div class="total font-30 fw-bold align-self-center">
-        總金額：<span class="text-41dec2">1,868,560</span>
+        總金額：<span class="text-caff86">1,868,560</span>
       </div>
     </div>
-    
+
     <!-- dialog -->
-    <div class="modal" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-    aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered custom-dialog">
-      <div class="modal-content p-4">
-        <h5 class="custom-modal-title">請問是否要進行退訂？</h5>
-        <div class="custom-modal-body">
-          提醒您，您所要退訂的訂單編號為「ECW20220707000002」，車款為「全新上市 Luxgen Model C」。請確認您是否要退訂？
-        </div>
-        <div class="custom-modal-footer justify-content-between d-flex flex-row">
-          <button type="button" class="btn btn-secondary" onclick="returnedPurchase()">我要退訂</button>
-          <button type="button" class="btn btn-primary" data-bs-dismiss="modal">取消</button>
+    <div class="modal" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered custom-dialog">
+        <div class="modal-content p-4">
+          <h5 class="custom-modal-title">請問是否要進行退訂？</h5>
+          <div class="custom-modal-body">
+            提醒您，您所要退訂的訂單編號為「ECW20220707000002」，車款為「全新上市 Luxgen Model C」。請確認您是否要退訂？
+          </div>
+          <div class="custom-modal-footer justify-content-between d-flex flex-row">
+            <button type="button" class="btn btn-secondary" onclick="returnedPurchase()">我要退訂</button>
+            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">取消</button>
+          </div>
         </div>
       </div>
     </div>
-  </div>
 
   </main>
 </body>
@@ -218,7 +214,7 @@
   }
 
   .nav-item .nav-link {
-    color: #232323;
+    color: #fff;
     font-weight: 400;
     padding: 4px 4px;
     margin: 8px 16px;
@@ -226,7 +222,7 @@
 
   .nav-item .active {
     font-weight: 600;
-    border-bottom: 2px solid #41dec2;
+    border-bottom: 2px solid #caff86;
   }
 
   .logo {
@@ -265,7 +261,7 @@
     padding: 20px 36px 24px 44px;
     border-radius: 8px;
     background: #fff;
-    border-left: #41dec2 solid 10px;
+    border-left: #caff86 solid 10px;
     margin-top: 20px;
     box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.1);
   }
@@ -316,7 +312,7 @@
   li:first-child>.square::before {
     content: '';
     height: 16px;
-    border-left: 1px solid #41dec2;
+    border-left: 1px solid #caff86;
     position: absolute;
     left: 0;
     top: -4px;
