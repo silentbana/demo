@@ -146,6 +146,7 @@ a:active {
 
 .btn-lg {
   height: 60px;
+  padding: 16px 32px !important;
 }
 
 /* custom bootstrap css */
