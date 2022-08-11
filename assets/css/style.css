@@ -75,6 +75,10 @@ a:active {
   background-color: #232323;
 }
 
+.bg-0a0a0a{
+  background-color: #0a0a0a;
+}
+
 .bg-caff86 {
   background-color: #caff86 !important;
 }
@@ -204,6 +208,12 @@ a:active {
   background-color: #5e5e5e !important;
 }
 
+.btn {
+  font-weight: bold !important;
+  border-radius: 4px !important;
+}
+
+
 .btn:hover {
   border: 1px solid #000 !important;
 }
@@ -236,8 +246,8 @@ a:active {
 }
 
 .form-check-input:checked {
-  background-color: #caff86 !important;
-  border-color: #caff86 !important;
+  background-color: #699a2a !important;
+  border-color: #699a2a !important;
 }
 
 .h6,
