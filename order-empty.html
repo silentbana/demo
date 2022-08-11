@@ -15,58 +15,57 @@
 <body>
   <nav class="navbar fixed-top">
     <div class=" container-fluid">
-      <div class="d-flex align-items-center text-black">
-        <a href="https://www.luxgen-motor.com.tw/" target="_blank">
-          <img class="logo" src="../assets/image/logo@3x.png" alt="logo">
-        </a>
+    <button class="d-block d-lg-none navbar-toggler" type="button" data-bs-toggle="offcanvas"
+      data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-        <ul class="d-none d-md-flex nav">
+    <div class="d-flex align-items-center text-white">
+      <a href="https://www.luxgen-motor.com.tw/" target="_blank">
+        <img class="logo" src="../assets/image/logo@3x.png" alt="logo">
+      </a>
+
+      <ul class="d-none d-lg-flex nav">
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="/">入主純電未來</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/activity">活動專區</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="login-area d-flex align-items-center">
+      <img class="login-icon" src="../assets/image/Icon_order_white.svg" alt="訂單查詢">
+      <a href="/order">
+        <div class="text-white" role="button">訂單查詢</div>
+      </a>
+    </div>
+
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
           <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="/">入主純電未來</a>
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/activity">活動專區</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" href="/order">訂單查詢</a>
+            <a class="nav-link" href="#">Link</a>
           </li>
         </ul>
-      </div>
-
-
-      <button class="d-block d-md-none navbar-toggler" type="button" data-bs-toggle="offcanvas"
-        data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="login-area d-flex align-items-center">
-        <img class="login-icon" src="../assets/image/icon_user_black.svg" alt="登入">
-        <div class="text-black" role="button">登入</div>
-      </div>
-
-      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-        <div class="offcanvas-header">
-          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        </div>
-        <div class="offcanvas-body">
-          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
-            </li>
-          </ul>
-          <form class="d-flex" role="search">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Search</button>
-          </form>
-        </div>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn-lg btn btn-outline-success" type="submit">Search</button>
+        </form>
       </div>
     </div>
+    </div>
   </nav>
-  <main class="order text-232323">
+  <main class="order text-white">
+    <div class="font-30 fw-bold order-title">我的訂單</div>
     <div class="no-order position-absolute top-50 start-50 translate-middle">
       <img src="/assets//image/no_order.png" class="m-auto d-block" alt="no-order">
       <div class="title font-30 fw-bold">您目前還沒有訂單喔</div>
@@ -102,11 +101,10 @@
   /* navbar */
   .navbar {
     backdrop-filter: blur(5px);
-    background: rgba(255, 255, 255, 0.4);
   }
 
   .nav-item .nav-link {
-    color: #232323;
+    color: #fff;
     font-weight: 400;
     padding: 4px 4px;
     margin: 8px 16px;
@@ -135,7 +133,7 @@
   /* order */
   .order {
     padding-top: 60px;
-    background-color: #f2f2f2;
+    background-color: #0a0a0a;
     background-image: url(/assets/image/order_background1.png), url(/assets/image/order_background2.png);
     background-position: 0 70px, right bottom 30px;
     background-size: 18%, 18%;
@@ -143,12 +141,18 @@
     height: 100vh;
   }
 
+  .order-title {
+    position: absolute;
+    top: 100px;
+    left: 170px;
+  }
+
   .calc {
     width: 100%;
     position: fixed;
     bottom: 0;
     padding: 31px 170px;
-    background: #fff;
+    background: #232223;
     box-shadow: 0 -2px 11px 0 rgba(0, 0, 0, 0.1);
     font-family: NotoSans;
   }

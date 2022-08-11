@@ -154,8 +154,12 @@ a:active {
   width: 424px !important;
 }
 
+.modal-content {
+  background-color: #232323 !important;
+}
+
 .custom-modal-title {
-  color: #3f3f3f;
+  color: #fff;
   text-align: center;
   margin: 8px 0 7px !important;
 }
@@ -181,22 +185,36 @@ a:active {
 
 .btn-secondary {
   color: #a1a1a1 !important;
-  border: 1px solid #a1a1a1 !important;
-  background-color: rgba(255, 255, 255, 0.3) !important;
+  border: 1px solid #4e4e4e !important;
+  background-color: #232323 !important;
 }
+
+.btn-success {
+  color: #caff86 !important;
+  backdrop-filter: blur(5px);
+  border: solid 1px #caff86 !important;
+  background-color: #232323 !important;
+}
+
+.btn-success:disabled {
+  color: #a1a1a1 !important;
+  font-weight: 600;
+  border: none !important;
+  backdrop-filter: blur(5px) !important;
+  background-color: #5e5e5e !important;
+}
+
 
 .btn:hover {
   border: 1px solid #000 !important;
 }
 
-.form-label {
-  color: #232323;
-}
-
 .form-control {
   height: 40px !important;
   border-radius: 4px !important;
-  border: solid 1px #ddd !important;
+  border: solid 1px #000 !important;
+  background-color: #000 !important;
+  color: #a1a1a1 !important;
 }
 
 .form-select {

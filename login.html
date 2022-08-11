@@ -15,33 +15,31 @@
 <body>
   <nav class="navbar fixed-top">
     <div class=" container-fluid">
-    <div class="d-flex align-items-center text-black">
-      <a href="https://www.luxgen-motor.com.tw/" target="_blank">
-        <img class="logo" src="../assets/image/logo@3x.png" alt="logo">
-      </a>
-
-      <ul class="d-none d-md-flex nav">
-        <li class="nav-item">
-          <a class="nav-link active font-14" aria-current="page" href="/">入主純電未來</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link font-14" href="/activity">活動專區</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link font-14" href="/order">訂單查詢</a>
-        </li>
-      </ul>
-    </div>
-
-
-    <button class="d-block d-md-none navbar-toggler" type="button" data-bs-toggle="offcanvas"
+    <button class="d-block d-lg-none navbar-toggler" type="button" data-bs-toggle="offcanvas"
       data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
       <span class="navbar-toggler-icon"></span>
     </button>
 
+    <div class="d-flex align-items-center text-white">
+      <a href="https://www.luxgen-motor.com.tw/" target="_blank">
+        <img class="logo" src="../assets/image/logo@3x.png" alt="logo">
+      </a>
+
+      <ul class="d-none d-lg-flex nav">
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="/">入主純電未來</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/activity">活動專區</a>
+        </li>
+      </ul>
+    </div>
+
     <div class="login-area d-flex align-items-center">
-      <img class="login-icon" src="../assets/image/icon_user_black.svg" alt="登入">
-      <div class="text-black" role="button">登入</div>
+      <img class="login-icon" src="../assets/image/Icon_order_white.svg" alt="訂單查詢">
+      <a href="/order">
+        <div class="text-white" role="button">訂單查詢</div>
+      </a>
     </div>
 
     <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
@@ -60,13 +58,13 @@
         </ul>
         <form class="d-flex" role="search">
           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
+          <button class="btn-lg btn btn-outline-success" type="submit">Search</button>
         </form>
       </div>
     </div>
     </div>
   </nav>
-  <main class="login text-232323">
+  <main class="login text-white">
     <div class="login-input">
       <h1 class="text-center mb-5">訂單查詢</h1>
       <form id="login-form" action="javascript:submitForm()" novalidate>
@@ -84,9 +82,9 @@
           </div>
           <div class="v-code-btn">
             <div class="form-label" style="height: 24px;"></div>
-            <button type="button" class="btn bg-caff86" id="send" onclick="sendMessages()" disabled>發送驗證碼</button>
-            <button type="button" class="btn bg-caff86" id="countdown" hidden disabled>02:30</button>
-            <button type="button" class="btn bg-caff86" id="resend" onclick="resendMessages()" hidden>重新發送</button>
+            <button type="button" class="btn btn-success" id="send" onclick="sendMessages()" disabled>發送驗證碼</button>
+            <button type="button" class="btn btn-success" id="countdown" hidden disabled>02:30</button>
+            <button type="button" class="btn btn-success" id="resend" onclick="resendMessages()" hidden>重新發送</button>
           </div>
         </div>
         
@@ -94,6 +92,18 @@
       </form>
     </div>
   </main>
+  <footer class="footer bg-232323 text-center text-lg-start text-white">
+    <div class="container footer-container">
+      <div class="d-block d-md-flex align-items-center justify-content-between">
+        <div class="font-14">
+          <a class="d-inline-block pe-2 pe-md-5" href="https://www.luxgen-motor.com.tw/Home/Copyrights">版權說明</a>
+          <a class="d-inline-block pe-2 pe-md-5" href="https://www.luxgen-motor.com.tw/Home/Privacy">服務條款與隱私說明</a>
+          <a class="d-inline-block pe-2 pe-md-5" href="https://www.luxgen-motor.com.tw/Home/EPA">環保署政策宣導</a>
+        </div>
+        <div class="text-center">LUXGEN@2022</div>
+      </div>
+    </div>
+  </footer>
 </body>
 
 </html>
@@ -165,7 +175,6 @@
   /* navbar */
   .navbar {
     backdrop-filter: blur(5px);
-    background: rgba(255, 255, 255, 0.4);
   }
 
   .logo {
@@ -187,7 +196,7 @@
   .login {
     height: 100vh;
     padding-top: 60px;
-    background-color: #f2f2f2;
+    background-color: #0a0a0a;
     background-image: url(/assets/image/login_background.png);
     background-position: left bottom;
     background-repeat: no-repeat;
@@ -196,8 +205,9 @@
   .login-input {
     margin: 80px 170px;
     border-radius: 10px;
-    border: 1px solid #ddd;
-    background-color: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(5px);
+    border: solid 1px #4e4e4e;
+    background-color: rgba(35, 35, 35, 0.7);
     padding: 40px 0 72px;
   }
 
@@ -222,6 +232,16 @@
     background-color: #fff;
     padding-left: 16px;
     border: none;
+  }
+
+  .footer-container {
+    padding: 24px;
+    margin-top: -72px;
+  }
+
+  .footer a {
+    color: #fff !important;
+    text-decoration: none !important;
   }
 
   @media (min-width: 1200px) {}
