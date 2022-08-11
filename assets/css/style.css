@@ -204,9 +204,13 @@ a:active {
   background-color: #5e5e5e !important;
 }
 
-
 .btn:hover {
   border: 1px solid #000 !important;
+}
+
+.form-label,
+.form-check-label {
+  color: #fff;
 }
 
 .form-control {
