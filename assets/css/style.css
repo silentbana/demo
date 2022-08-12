@@ -206,14 +206,20 @@ a:active {
   background-color: #232323 !important;
 }
 
-.btn-success {
+.btn-tertiary {
+  color: #a1a1a1 !important;
+  background-color: #232323 !important;
+  border: solid 1px #4e4e4e !important;
+}
+
+.btn-outline-primary {
   color: #caff86 !important;
   backdrop-filter: blur(5px);
   border: solid 1px #caff86 !important;
   background-color: #232323 !important;
 }
 
-.btn-success:disabled {
+.btn-outline-primary:disabled {
   color: #a1a1a1 !important;
   font-weight: 600;
   border: none !important;
