@@ -293,6 +293,10 @@ h1,
   margin-bottom: 0 !important;
 }
 
+.container-fluid{
+  padding: 0 !important;
+}
+
 @media (min-width: 1400px) {
   .container-xxl,
   .container-xl,
