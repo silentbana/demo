@@ -273,6 +273,11 @@ a:active {
   cursor: pointer;
 }
 
+.form-check-input[type=checkbox]{
+  background-color: unset;
+  border-color: #7e7e7e;
+}
+
 .form-check-input:checked {
   background-color: #699a2a !important;
   border-color: #699a2a !important;
