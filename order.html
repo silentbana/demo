@@ -67,12 +67,12 @@
   </nav>
   <main class="order text-white">
     <div class="items">
-      <div class="page-title mb-4 d-flex flex-row justify-content-between">
+      <div class="page-title mb-3 d-flex flex-row justify-content-between">
         <div class="font-30 fw-bold">我的訂單</div>
         <div class="count font-18 align-self-end">總計：共2筆</div>
       </div>
 
-      <div style="height: calc(100vh - 257px); overflow: scroll;">
+      <div class="order-items">
         <div class="item d-flex flex-row">
           <img src="/assets/image/order_car.png" alt="">
           <div class="des flex-grow-1">
@@ -191,9 +191,10 @@
                 </li>
               </ul>
             </div>
-
           </div>
         </div>
+
+        <div style="height: 28px;"></div>
       </div>
     </div>
     <!-- calc -->
@@ -298,6 +299,15 @@
     background-repeat: no-repeat;
     background-attachment: fixed;
     min-height: 100vh;
+  }
+
+  .order-items {
+    height: calc(100vh - 257px);
+    overflow: scroll;
+  }
+
+  .order-items::-webkit-scrollbar {
+    display: none;
   }
 
   .items {
