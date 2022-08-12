@@ -200,6 +200,12 @@ a:active {
   background-color: #caff86 !important;
 }
 
+.btn-primary:hover {
+  border: none !important;
+  background-color: #deffb4 !important;
+  border: none !important;
+}
+
 .btn-secondary {
   color: #a1a1a1 !important;
   border: 1px solid #4e4e4e !important;
@@ -212,11 +218,19 @@ a:active {
   border: solid 1px #4e4e4e !important;
 }
 
+.btn-tertiary:hover {
+  background-color: rgba(78, 78, 78, 0.2) !important;
+}
+
 .btn-outline-primary {
   color: #caff86 !important;
   backdrop-filter: blur(5px);
   border: solid 1px #caff86 !important;
   background-color: #232323 !important;
+}
+
+.btn-outline-primary:hover {
+  background-color: rgba(105, 154, 42, 0.2) !important;
 }
 
 .btn-outline-primary:disabled {
@@ -230,10 +244,6 @@ a:active {
 .btn {
   font-weight: bold !important;
   border-radius: 4px !important;
-}
-
-.btn:hover {
-  border: 1px solid #000 !important;
 }
 
 .form-label,

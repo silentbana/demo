@@ -68,7 +68,7 @@
   <section class="section-1">
     <img class="w-100 h-100" src="../assets/image/section_1_bg.png" alt="bg">
     <div class="section-1-btn">
-      <button type="button" class="scroll-to-order btn btn-lg bg-caff86 text-black">入主純電未來</button>
+      <button type="button" class="scroll-to-order btn btn-lg btn-primary">入主純電未來</button>
     </div>
   </section>
 
@@ -78,7 +78,7 @@
         <div class="col-5 text-white">
           <h2 class="font-56 mb-4">群山共創 全新高標</h2>
           <div class="font-14 mb-5 pb-2">集結裕隆造車經驗X鴻海國際 級供應鏈，搭配台積電芯片，世界將再次在台灣發現「新高 山」，國際目光為之一亮。</div>
-          <button type="button" class="scroll-to-order btn btn-lg bg-caff86 text-black">入主純電未來</button>
+          <button type="button" class="scroll-to-order btn btn-lg btn-primary">入主純電未來</button>
         </div>
         <div class="col-7">
           <img class="w-100 h-100" src="../assets/image/section_2_bg.png" alt="bg">
@@ -96,7 +96,7 @@
         <div class="col-5 text-white">
           <h2 class="font-56 mb-4">以風塑形 如風前行</h2>
           <div class="font-14 mb-5 pb-2">簡約俐落設計語彙，打造如風般的流線外型，生活質感升級，同時滿足日常通勤與駕馭樂趣。</div>
-          <button type="button" class="scroll-to-order btn btn-lg bg-caff86 text-black">入主純電未來</button>
+          <button type="button" class="scroll-to-order btn btn-lg btn-primary">入主純電未來</button>
         </div>
       </div>
     </div>
@@ -108,7 +108,7 @@
         <div class="col-5 text-white">
           <h2 class="font-56 mb-4">恆綠感動 純電生活</h2>
           <div class="font-14 mb-5 pb-2">環境恆綠理念，純電感動實踐， LUXGEN邀您一同啟程永續之旅。</div>
-          <button type="button" class="scroll-to-order btn btn-lg bg-caff86 text-black">入主純電未來</button>
+          <button type="button" class="scroll-to-order btn btn-lg btn-primary">入主純電未來</button>
         </div>
         <div class="col-7">
           <img class="w-100 h-100" src="../assets/image/section_4_bg.png" alt="bg">
@@ -226,15 +226,15 @@
               <input id="phone" class="form-control" placeholder="請輸入十碼手機號碼" type="tel" required>
               <div class="invalid-feedback">*請輸入手機號碼</div>
             </div>
-            <div class="col-4 row">
+            <div class="sms-area col-4 row">
               <div class="col-7">
                 <div class="form-label">簡訊驗證碼</div>
-                <input id="sms" class="form-control" placeholder="請輸入六碼驗證碼" type="tel" required>
+                <input id="sms" class="form-control" placeholder="請輸入六碼驗證碼" type="tel" required disabled>
                 <div class="invalid-feedback">*請輸入簡訊驗證碼</div>
               </div>
               <div class="col-5 p-0">
                 <div class="form-label" style="height: 24px;"></div>
-                <button class="w-100 btn btn-outline-primary btn-sm" type="button">發送驗證碼</button>
+                <button id="sms-btn" class="w-100 btn btn-outline-primary btn-sm" type="button">發送驗證碼</button>
               </div>
             </div>
             <div class="col-3">
@@ -277,7 +277,7 @@
           </div>
 
           <div class="row pt-3">
-            <button type="submit" class="btn btn-lg bg-caff86 text-black m-auto" style="width: fit-content;">入主THE
+            <button type="submit" class="btn btn-lg btn-primary m-auto" style="width: fit-content;">入主THE
               NEXT百萬內純電休旅</button>
           </div>
         </form>
@@ -351,6 +351,8 @@
 </html>
 
 <script>
+  let smsCount = 150;
+
   $(document).ready(function () {
     $('.scroll-top').click(() => {
       $(window).scrollTop(0);
@@ -395,7 +397,50 @@
     $('.form-select').change(function (e) {
       $(`#${e.target.id}`).attr('style', 'color: #a1a1a1 !important');
     });
+
+    $('#phone').on('input', function () {
+      // 檢核格式，驗證是否已經是會員
+      if (this.value.length === 10) {
+        // 是會員，自動帶入其他資訊
+        // ...
+        // 非會員，簡訊驗證流程
+        $('.sms-area').css('display', 'flex');
+        $('.sms-area input').attr('disabled', false);
+      } else {
+        $('.sms-area').css('display', 'none');
+        $('.sms-area input').attr('disabled', 'disabled');
+        $('#sms').val('');
+      }
+    });
+
+    smsInit();
   });
+
+  const smsInit = () => {
+    $('#sms-btn').off('click').on('click', function () {
+      $('#sms-btn').attr('disabled', 'disabled');
+      smsCount = 150;
+      // 後端發簡訊驗證碼
+      startSmsCount();
+    })
+  }
+
+  const startSmsCount = () => {
+    let timer = setInterval(function () {
+      if (smsCount < 0) {
+        clearInterval(timer);
+        $('#sms-btn').text('重新發送')
+        $('#sms-btn').attr('disabled', false);
+        smsInit();
+      } else {
+        const minutes = parseInt(smsCount / 60);
+        const seconds = parseInt(smsCount % 60);
+        $('#sms-btn').text(minutes.toString().padStart(2, '0') + ':' + seconds.toString().padStart(2, '0'))
+        $('#sms-btn').attr('disabled', 'disabled');
+        smsCount--;
+      }
+    }, 1000);
+  }
 
   const handleScroll = () => {
     if (window.pageYOffset > 0) {
@@ -620,6 +665,10 @@
     border-radius: 8px;
     backdrop-filter: blur(58px);
     background-color: rgba(35, 35, 35, 0.9);
+  }
+
+  .sms-area {
+    display: none;
   }
 
   .privacy {
