@@ -251,6 +251,10 @@ a:active {
   color: #fff;
 }
 
+.was-validated .form-control:valid, .form-control.is-valid{
+  background-image:url('/assets/image/icon_check.svg') !important;
+}
+
 .form-control {
   height: 40px !important;
   border-radius: 4px !important;
