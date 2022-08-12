@@ -221,7 +221,7 @@
           </div>
 
           <div class="row mb-4">
-            <div class="col-3">
+            <div class="col-6">
               <div class="form-label">手機號碼</div>
               <input id="phone" class="form-control" placeholder="請輸入十碼手機號碼" type="tel" required>
               <div class="invalid-feedback">*請輸入手機號碼</div>
@@ -237,12 +237,15 @@
                 <button id="sms-btn" class="w-100 btn btn-outline-primary btn-sm" type="button">發送驗證碼</button>
               </div>
             </div>
+          </div>
+
+          <div class="row mb-4">
             <div class="col-3">
               <div class="form-label">姓名</div>
               <input id="name" class="form-control" placeholder="請輸入您的真實姓名" type="text" required>
               <div class="invalid-feedback">*請輸入姓名</div>
             </div>
-            <div class="col-2">
+            <div class="col-3">
               <div class="form-label">性別</div>
               <select id="gender" class="form-select form-control" required>
                 <option value="" selected disabled>請選擇</option>
@@ -251,9 +254,37 @@
               </select>
               <div class="invalid-feedback">*請選擇性別</div>
             </div>
+            <div class="col-6">
+              <div class="form-label">Email</div>
+              <input id="email" class="form-control" placeholder="請輸入Email" type="email" required>
+              <div class="invalid-feedback">*請輸入Email</div>
+            </div>
           </div>
 
-          <div class="row mb-4">
+          <div class="horizontal-line"></div>
+
+          <div class="pt-4 pb-3">
+            <div class="form-check juridical">
+              <input class="form-check-input" type="checkbox" value="" id="juridical-checkbox" required>
+              <label class="form-check-label" for="juridical-checkbox">法人(公司行號/機關)</label>
+            </div>
+          </div>
+
+          <div class="row mb-4 juridical-area">
+            <div class="col-6">
+              <div class="form-label">公司名稱</div>
+              <input id="company" class="form-control" placeholder="請輸入公司名稱" type="text" required disabled>
+              <div class="invalid-feedback">*請輸入公司名稱</div>
+            </div>
+            <div class="col-6">
+              <div class="form-label">統一編號</div>
+              <input id="tax-ID" class="form-control" placeholder="請輸入統一編號" type="tel" required disabled>
+              <div class="invalid-feedback">*請輸入統一編號</div>
+            </div>
+          </div>
+
+          <!-- 10/18開放 -->
+          <!-- <div class="row mb-4">
             <div class="col-6">
               <div class="form-label">邀請碼輸入</div>
               <input id="promo-code" class="form-control" placeholder="請輸入邀請碼" type="text" required>
@@ -264,9 +295,9 @@
               <input id="representative" class="form-control" placeholder="請輸入業代手機號碼十碼" type="tel" required>
               <div class="invalid-feedback">*請輸入業代手機號碼</div>
             </div>
-          </div>
+          </div> -->
 
-          <div class="pt-5 pb-3">
+          <div class="pt-3 pb-3">
             <div class="form-check privacy">
               <input class="form-check-input" type="checkbox" value="" id="privacy-checkbox" required>
               <label class="form-check-label" for="privacy-checkbox">我已閱讀並同意
@@ -669,11 +700,6 @@
 
   .sms-area {
     display: none;
-  }
-
-  .privacy {
-    margin: auto;
-    width: fit-content;
   }
 
   .privacy a {
