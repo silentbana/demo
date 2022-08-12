@@ -30,7 +30,8 @@
           <a class="nav-link" aria-current="page" href="/">入主純電未來</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/activity">活動專區</a>
+          <a class="nav-link" data-bs-toggle="modal" data-bs-target="#activityModal">活動專區</a>
+          <!-- <a class="nav-link" href="/activity">活動專區</a> -->
         </li>
       </ul>
     </div>
@@ -83,6 +84,22 @@
       </div>
     </div>
   </main>
+
+  <!-- activity dialog -->
+  <div class="modal" id="activityModal" tabindex="-1" aria-labelledby="activityModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered custom-dialog">
+      <div class="modal-content p-4">
+        <h5 class="custom-modal-title">COMING SOON</h5>
+        <div class="custom-modal-body text-white">
+          10/20 之後，活動消息將陸續釋出，敬請期待！
+        </div>
+        <div class="custom-modal-footer d-flex justify-content-center">
+          <button type="button" class="btn btn-primary" data-bs-dismiss="modal">我瞭解了</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
 </body>
 
 </html>
@@ -108,6 +125,7 @@
     font-weight: 400;
     padding: 4px 4px;
     margin: 8px 16px;
+    cursor: pointer;
   }
 
   .nav-item .active {
