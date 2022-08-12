@@ -64,16 +64,78 @@
       </div>
     </div>
   </nav>
+
+  <main class="order">
+    <div class="content">
+      <img src="/assets/image/done.png" class="m-auto d-block" alt="done">
+      <h1 class="order-title text-white text-center mt-4">恭喜你完成<br>《 LUXGEN THE NEXT 》專案訂購</h1>
+      <div class="subtitle font-18 text-a1a1a1 text-center mt-4">感謝您成為LUXGEN VIP會員，將會發送簡訊提供您的 VIP會員預設密碼，記得至 會員專區登入完成密碼修改，未來若忘記密碼，則使用忘記密碼進行手機驗證，調整密碼即可登入，後續可至訂購查詢區登入LUXGEN VIP會員，確認您的訂購資訊，並未來將開啟最新資訊區， 已會員的身份可以查看更多第一手資訊!</div>
+      <div class="line text-white d-flex flex-row justify-content-between">
+        <div class="des align-self-center font-18">
+          歡迎加入LINE官方帳號，關注LUXGEN相關動態<br>
+          <a href="https://r.botbonnie.com/6ojE3">https://r.botbonnie.com/6ojE3</a>
+        </div>
+        <img src="http://via.placeholder.com//150" alt="">
+      </div>
+      <button type="button" class="btn bg-caff86 d-block" data-bs-toggle="modal" data-bs-target="#shareModal">我要分享</button>
+    </div>
+  </main>
+
+  <!-- dialog -->
+  <div class="modal" id="shareModal" tabindex="-1" aria-labelledby="shareModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered custom-dialog">
+      <div class="modal-content p-3">
+        <div class="close-dialog-btn" data-bs-dismiss="modal" aria-label="Close"><img src="/assets/image/icon_close.svg" alt=""></div>
+        <h5 class="custom-modal-title text-white p-2">分享至以下社群</h5>
+        <div class="custom-modal-body mt-4 mb-2">
+          <img src="/assets/image/facebook.webp" alt="facebook">
+          <img src="/assets/image/instagram.webp" alt="instagram">
+          <img src="/assets/image/line.webp" alt="line">
+        </div>
+        <div class="custom-modal-footer p-3">
+          <div class="share-url d-flex flex-row justify-content-between">
+            <div class="text-a1a1a1" id="url">https://www.luxgen-motor.com.tw/Hom</div>
+            <button type="button" id="copy-btn"><img src="/assets/image/icon_copy.svg" alt=""></button>
+          </div>
+          <div class="remind text-caff86 text-center" hidden>
+            <img src="/assets/image/icon_check.svg" alt="">
+            已複製網址
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer bg-232323 text-center text-lg-start text-white">
+    <div class="container footer-container">
+      <div class="d-block d-md-flex align-items-center justify-content-between">
+        <div class="font-14">
+          <a class="d-inline-block pe-2 pe-md-5" href="https://www.luxgen-motor.com.tw/Home/Copyrights">版權說明</a>
+          <a class="d-inline-block pe-2 pe-md-5" href="https://www.luxgen-motor.com.tw/Home/Privacy">服務條款與隱私說明</a>
+          <a class="d-inline-block pe-2 pe-md-5" href="https://www.luxgen-motor.com.tw/Home/EPA">環保署政策宣導</a>
+        </div>
+        <div class="text-center">LUXGEN@2022</div>
+      </div>
+    </div>
+  </footer>
 </body>
 
 </html>
 
 <script>
   $(document).ready(function () {
+    $('#copy-btn').on('click', function () {
+      urlStr = document.getElementById('url');
+      window.getSelection().selectAllChildren(urlStr);
+      document.execCommand("Copy");
+      $('.remind').removeAttr('hidden');
+    })
+
   });
 </script>
 
 <style>
+  /* nav-abr */
   .navbar {
     backdrop-filter: blur(5px);
   }
@@ -103,6 +165,77 @@
     width: 18px;
     height: 18px;
     margin-right: 10px;
+  }
+
+  /* oder-completed */
+  .order {
+    padding-top: 60px;
+    background-image: url('/assets/image/order_background3.png'), url('/assets/image/order_background4.png');
+    background-position: 210px 175px, right 16px bottom 130px;
+    background-size: 18%, 18%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+  }
+
+  .content {
+    margin: 70px 20% auto;
+    padding-bottom: 96px;
+  }
+
+  .content>button {
+    font-size: 20px;
+    margin: 32px auto 0;
+    padding: 14px 52px;
+  }
+
+  .line {
+    margin-top: 40px;
+    padding: 22px 15%;
+    backdrop-filter: blur(58px);
+    border: solid 1px #4e4e4e;
+    background-color: rgba(35, 35, 35, 0.5);
+  }
+
+  .des>a {
+    color: #caff86;
+    text-decoration: underline;
+  }
+
+  /* share-dialog */
+  .close-dialog-btn {
+    position: absolute;
+    background-color: transparent;
+    border: none;
+  }
+
+  .share-url {
+    background-color: #000;
+    border-radius: 4px;
+    padding: 9.5px 10px 8.5px 12px;
+  }
+
+  .share-url>button {
+    background-color: transparent;
+    border: none;
+  }
+
+  .custom-modal-body>img:not(:first-child) {
+    margin-left: 20px !important;
+  }
+
+  .remind {
+    margin: 12px auto 2px;
+  }
+
+  .footer-container {
+    padding: 24px;
+    margin-top: -72px;
+  }
+
+  .footer a {
+    color: #fff !important;
+    text-decoration: none !important;
   }
 
   @media (min-width: 1200px) {
