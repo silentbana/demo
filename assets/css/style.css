@@ -212,6 +212,10 @@ a:active {
   background-color: #232323 !important;
 }
 
+.btn-secondary:hover {
+  background-color: rgba(78, 78, 78, 0.2) !important;
+}
+
 .btn-tertiary {
   color: #a1a1a1 !important;
   background-color: #232323 !important;
@@ -280,6 +284,7 @@ a:active {
 .form-check-input[type=checkbox]{
   background-color: unset;
   border-color: #7e7e7e;
+  border-radius: 3px !important;
 }
 
 .form-check-input:checked {
