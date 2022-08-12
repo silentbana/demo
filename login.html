@@ -69,8 +69,8 @@
       <h1 class="text-center mb-5">訂單查詢</h1>
       <form id="login-form" action="javascript:submitForm()" novalidate>
         <div class="col-8">
-          <label for="email" class="form-label">手機號碼</label>
-          <input id="email" class="form-control" placeholder="請輸入手機號碼十碼" type="text" value="" onchange="phoneNumber(this.value)" required>
+          <label for="phone" class="form-label">手機號碼</label>
+          <input id="phone" class="form-control" placeholder="請輸入手機號碼十碼" type="tel" value="" required>
           <div class="invalid-feedback">*請輸入手機號碼</div>
         </div>
 
@@ -82,9 +82,7 @@
           </div>
           <div class="v-code-btn">
             <div class="form-label" style="height: 24px;"></div>
-            <button type="button" class="btn btn-outline-primary btn-sm" id="send" onclick="sendMessages()" disabled>發送驗證碼</button>
-            <button type="button" class="btn btn-outline-primary btn-sm" id="countdown" hidden disabled>02:30</button>
-            <button type="button" class="btn btn-outline-primary btn-sm" id="resend" onclick="resendMessages()" hidden>重新發送</button>
+            <button type="button" class="btn btn-outline-primary btn-sm" id="login-sms-btn" disabled>發送驗證碼</button>
           </div>
         </div>
         
@@ -110,45 +108,36 @@
 
 <script>
   $(document).ready(function () {
+    $('#phone').on('input', function () {
+      if (this.value.length == 10) {
+        $('#login-sms-btn').removeAttr('disabled')
+      }
+    })
+    smsInit();
   });
 
-  const number = ''
-  const countdown = document.getElementById('countdown')
-
-  const phoneNumber = (value) => {
-    this.number = value
-    if (value.length>0) $('#send').removeAttr('disabled')
+  const smsInit = () => {
+    $('#login-sms-btn').off('click').on('click', function () {
+      $('#login-sms-btn').attr('disabled', 'disabled');
+      smsCount = 150;
+      // 後端發簡訊驗證碼
+      startSmsCount();
+    })
   }
 
-  const sendMessages = () => {
-    $('#send').hide();
-    $('#countdown').removeAttr('hidden')
-    countdownFuncton(new Date().getTime() + 150100)   
-  }
-
-  const resendMessages = () => {
-    $('#resend').hide();
-    $('#countdown').show();
-    countdownFuncton(new Date().getTime() + 150100)   
-  }
-
-  const countdownFuncton = (time) => {
-    fun = setInterval(function () {
-      console.log(new Date().getTime());
-      const current_time = new Date().getTime();
-      const seconds_left = (time - current_time) / 1000;
-      
-      if (seconds_left > 1) {
-        minutes = parseInt(seconds_left / 60);
-        seconds = parseInt(seconds_left % 60);
-        const timestr = minutes.toString().padStart(2, '0') + ':' + seconds.toString().padStart(2, '0');
-        this.countdown.innerHTML = timestr
+  const startSmsCount = () => {
+    let timer = setInterval(function () {
+      if (smsCount < 0) {
+        clearInterval(timer);
+        $('#login-sms-btn').text('重新發送')
+        $('#login-sms-btn').attr('disabled', false);
+        smsInit();
       } else {
-        $('#resend').removeAttr('hidden');
-        $('#resend').show();
-        this.countdown.innerHTML = '02:30'
-        $('#countdown').hide();
-        clearInterval(fun);
+        const minutes = parseInt(smsCount / 60);
+        const seconds = parseInt(smsCount % 60);
+        $('#login-sms-btn').text(minutes.toString().padStart(2, '0') + ':' + seconds.toString().padStart(2, '0'))
+        $('#login-sms-btn').attr('disabled', 'disabled');
+        smsCount--;
       }
     }, 1000);
   }
