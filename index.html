@@ -205,6 +205,7 @@
         </h2>
       </div>
     </div>
+    <img src="../assets/image/section_5_light.svg" alt="light">
   </section>
 
   <div class="horizontal-line horizontal-line-order"></div>
@@ -233,7 +234,7 @@
               </div>
               <div class="col-5 p-0">
                 <div class="form-label" style="height: 24px;"></div>
-                <button class="w-100 btn btn-secondary btn-sm" type="button">發送驗證碼</button>
+                <button class="w-100 btn btn-outline-primary btn-sm" type="button">發送驗證碼</button>
               </div>
             </div>
             <div class="col-3">
@@ -392,7 +393,7 @@
     })
 
     $('.form-select').change(function (e) {
-      $(`#${e.target.id}`).attr('style', 'color: #232323 !important');
+      $(`#${e.target.id}`).attr('style', 'color: #a1a1a1 !important');
     });
   });
 
@@ -561,6 +562,13 @@
     background-image: url('../assets/image/section_5_mountain.svg');
     background-repeat: no-repeat;
     background-position: bottom 258px right;
+    position: relative;
+  }
+
+  .section-5>img {
+    position: absolute;
+    top: -210px;
+    left: 0;
   }
 
   .section-5-1 {
