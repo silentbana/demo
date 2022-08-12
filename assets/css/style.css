@@ -111,7 +111,7 @@ a:active {
 
 /* custom component css */
 .progress-active {
-  background-image: linear-gradient(to bottom, #55ffe0 -38%, #caff86 135%);
+  background-color: #caff86;
 }
 
 .progress-active::after {
@@ -124,13 +124,13 @@ a:active {
 }
 
 .progress-inactive {
-  background-color: #f2f2f2;
+  background-color: #4e4e4e;
 }
 
 .progress-inactive::after {
   content: '';
   height: 16px;
-  border-left: 1px solid #232323;
+  border-left: 1px solid #a1a1a1;
   position: absolute;
   right: 0;
   top: -4px;
