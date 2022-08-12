@@ -75,7 +75,7 @@ a:active {
   background-color: #232323;
 }
 
-.bg-0a0a0a{
+.bg-0a0a0a {
   background-color: #0a0a0a;
 }
 
@@ -149,6 +149,18 @@ a:active {
   padding: 16px 32px !important;
 }
 
+.btn-collapse {
+  width: 40px;
+  height: 40px;
+  background-image: url(/assets/image/icons_arrow_up_lg.svg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.btn-collapse.collapsed {
+  background-image: url(/assets/image/icons_arrow_down_lg.svg);
+}
+
 /* custom bootstrap css */
 .modal {
   backdrop-filter: blur(4px);
@@ -213,7 +225,6 @@ a:active {
   font-weight: bold !important;
   border-radius: 4px !important;
 }
-
 
 .btn:hover {
   border: 1px solid #000 !important;
