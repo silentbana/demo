@@ -12,56 +12,56 @@
   <title>訂單查詢</title>
 </head>
 
-<body>
+<body style="overflow: hidden;">
   <nav class="navbar fixed-top">
     <div class=" container-fluid">
-    <button class="d-block d-lg-none navbar-toggler" type="button" data-bs-toggle="offcanvas"
-      data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+      <button class="d-block d-lg-none navbar-toggler" type="button" data-bs-toggle="offcanvas"
+        data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-    <div class="d-flex align-items-center text-white">
-      <a href="https://www.luxgen-motor.com.tw/" target="_blank">
-        <img class="logo" src="../assets/image/logo@3x.png" alt="logo">
-      </a>
+      <div class="d-flex align-items-center text-white">
+        <a href="https://www.luxgen-motor.com.tw/" target="_blank">
+          <img class="logo" src="../assets/image/logo@3x.png" alt="logo">
+        </a>
 
-      <ul class="d-none d-lg-flex nav">
-        <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="/">入主純電未來</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/activity">活動專區</a>
-        </li>
-      </ul>
-    </div>
-
-    <div class="login-area d-flex align-items-center">
-      <img class="login-icon" src="../assets/image/icon_order_white.svg" alt="訂單查詢">
-      <a href="/order">
-        <div class="text-white" role="button">訂單查詢</div>
-      </a>
-    </div>
-
-    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-      <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-      </div>
-      <div class="offcanvas-body">
-        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+        <ul class="d-none d-lg-flex nav">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
+            <a class="nav-link" aria-current="page" href="/">入主純電未來</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
+            <a class="nav-link" href="/activity">活動專區</a>
           </li>
         </ul>
-        <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn-lg btn btn-outline-success" type="submit">Search</button>
-        </form>
       </div>
-    </div>
+
+      <div class="login-area d-flex align-items-center">
+        <img class="login-icon" src="../assets/image/icon_order_white.svg" alt="訂單查詢">
+        <a href="/order">
+          <div class="text-white" role="button">訂單查詢</div>
+        </a>
+      </div>
+
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn-lg btn btn-outline-success" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
     </div>
   </nav>
   <main class="order text-white">
@@ -71,126 +71,129 @@
         <div class="count font-18 align-self-end">總計：共2筆</div>
       </div>
 
-      <div class="item d-flex flex-row">
-        <img src="/assets/image/order_car.png" alt="">
-        <div class="des flex-grow-1">
+      <div style="height: calc(100vh - 257px); overflow: scroll;">
+        <div class="item d-flex flex-row">
+          <img src="/assets/image/order_car.png" alt="">
+          <div class="des flex-grow-1">
 
-          <div class="title d-flex flex-row justify-content-between">
-            <div class="name font-30 fw-bold">LUXGEN THE NEXT純電休旅-綠能代言人專案</div>
-            <div class="cancel d-flex flex-row">
-              <div class="align-self-center">X1</div>
-              <button type="button" class="align-self-center" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                <img src="/assets/image/icon_delete.svg" alt="">
-              </button>
-            </div>
-          </div>
-
-          <div class="details font-18 d-flex flex-row justify-content-between">
-            <div class="detail">
-              <div class="numero">訂單編號：ECW20220707000002</div>
-              <div class="date">訂購日期：2022/09/14</div>
-              <div class="state">付款狀態：<span class="text-ff9900">待付款</span></div>
-              <div class="bonus mt-2 d-flex flex-row fw-semibold">
-                專案禮遇項目
-                <div class="btn-collapse ms-1" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="true"></div>
+            <div class="title d-flex flex-row justify-content-between">
+              <div class="name font-30 fw-bold">LUXGEN THE NEXT純電休旅-綠能代言人專案</div>
+              <div class="cancel d-flex flex-row">
+                <div class="align-self-center">X1</div>
+                <button type="button" class="align-self-center" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                  <img src="/assets/image/icon_delete.svg" alt="">
+                </button>
               </div>
-              <!-- collapse -->
-              <ul id="collapse1" class="text-a1a1a1 font-18 collapse show">
-                <li>享第一手開發日誌和最新通知消息</li>
-                <li>支付之1,000元可折抵後續購買新世代純電休旅車車價</li>
-                <li>訂購車款時有限量版車款選擇權</li>
-                <li>優先交車權</li>
-                <li>首批訂購權</li>
-                <li>優先安排試駕體驗</li>
-                <li>抽家用充電樁，共10名</li>
-                <li>抽獨家商品，共10名</li>
+            </div>
+
+            <div class="details font-18 d-flex flex-row justify-content-between">
+              <div class="detail">
+                <div class="numero">訂單編號：ECW20220707000002</div>
+                <div class="date">訂購日期：2022/09/14</div>
+                <div class="state">付款狀態：<span class="text-ff9900">待付款</span></div>
+                <div class="bonus mt-2 d-flex flex-row fw-semibold">
+                  專案禮遇項目
+                  <div class="btn-collapse ms-1" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1"
+                    aria-expanded="true"></div>
+                </div>
+                <!-- collapse -->
+                <ul id="collapse1" class="text-a1a1a1 font-18 collapse show">
+                  <li>享第一手開發日誌和最新通知消息</li>
+                  <li>支付之1,000元可折抵後續購買新世代純電休旅車車價</li>
+                  <li>訂購車款時有限量版車款選擇權</li>
+                  <li>優先交車權</li>
+                  <li>首批訂購權</li>
+                  <li>優先安排試駕體驗</li>
+                  <li>抽家用充電樁，共10名</li>
+                  <li>抽獨家商品，共10名</li>
+                </ul>
+              </div>
+              <div class="price mt-2">
+                <h3>$935,000</h3>
+              </div>
+            </div>
+
+            <div class="pro">
+              <ul class="d-flex m-0 p-0">
+                <li>
+                  <div class="square progress-active"></div> 完成預訂
+                </li>
+                <li>
+                  <div class="square progress-active"></div> 探索體驗
+                </li>
+                <li>
+                  <div class="square progress-inactive"></div> 選擇車規
+                </li>
+                <li>
+                  <div class="square progress-inactive"></div> 交車
+                </li>
               </ul>
             </div>
-            <div class="price mt-2">
-              <h3>$935,000</h3>
-            </div>
-          </div>
 
-          <div class="pro">
-            <ul class="d-flex m-0 p-0">
-              <li>
-                <div class="square progress-active"></div> 完成預訂
-              </li>
-              <li>
-                <div class="square progress-active"></div> 探索體驗
-              </li>
-              <li>
-                <div class="square progress-inactive"></div> 選擇車規
-              </li>
-              <li>
-                <div class="square progress-inactive"></div> 交車
-              </li>
-            </ul>
           </div>
-
         </div>
-      </div>
 
-      <div class="item d-flex flex-row">
-        <img src="/assets/image/order_car.png" alt="">
-        <div class="des flex-grow-1">
+        <div class="item d-flex flex-row">
+          <img src="/assets/image/order_car.png" alt="">
+          <div class="des flex-grow-1">
 
-          <div class="title d-flex flex-row justify-content-between">
-            <div class="name font-30 fw-bold">LUXGEN THE NEXT純電休旅-綠能代言人專案</div>
-            <div class="cancel d-flex flex-row">
-              <div class="align-self-center">X1</div>
-              <button type="button" class="align-self-center" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                <img src="/assets/image/icon_delete.svg" alt="">
-              </button>
-            </div>
-          </div>
-
-          <div class="details font-18 d-flex flex-row justify-content-between">
-            <div class="detail">
-              <div class="numero">訂單編號：ECW20220707000002</div>
-              <div class="date">訂購日期：2022/09/14</div>
-              <div class="state">付款狀態：<span class="text-ff9900">待付款</span></div>
-              <div class="bonus mt-2 d-flex flex-row fw-semibold">
-                專案禮遇項目
-                <div class="btn-collapse ms-1" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="true"></div>
+            <div class="title d-flex flex-row justify-content-between">
+              <div class="name font-30 fw-bold">LUXGEN THE NEXT純電休旅-綠能代言人專案</div>
+              <div class="cancel d-flex flex-row">
+                <div class="align-self-center">X1</div>
+                <button type="button" class="align-self-center" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                  <img src="/assets/image/icon_delete.svg" alt="">
+                </button>
               </div>
-              <!-- collapse -->
-              <ul id="collapse2" class="text-a1a1a1 font-18 collapse show">
-                <li>享第一手開發日誌和最新通知消息</li>
-                <li>支付之1,000元可折抵後續購買新世代純電休旅車車價</li>
-                <li>訂購車款時有限量版車款選擇權</li>
-                <li>優先交車權</li>
-                <li>首批訂購權</li>
-                <li>優先安排試駕體驗</li>
-                <li>抽家用充電樁，共10名</li>
-                <li>抽獨家商品，共10名</li>
+            </div>
+
+            <div class="details font-18 d-flex flex-row justify-content-between">
+              <div class="detail">
+                <div class="numero">訂單編號：ECW20220707000002</div>
+                <div class="date">訂購日期：2022/09/14</div>
+                <div class="state">付款狀態：<span class="text-ff9900">待付款</span></div>
+                <div class="bonus mt-2 d-flex flex-row fw-semibold">
+                  專案禮遇項目
+                  <div class="btn-collapse ms-1" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2"
+                    aria-expanded="true"></div>
+                </div>
+                <!-- collapse -->
+                <ul id="collapse2" class="text-a1a1a1 font-18 collapse show">
+                  <li>享第一手開發日誌和最新通知消息</li>
+                  <li>支付之1,000元可折抵後續購買新世代純電休旅車車價</li>
+                  <li>訂購車款時有限量版車款選擇權</li>
+                  <li>優先交車權</li>
+                  <li>首批訂購權</li>
+                  <li>優先安排試駕體驗</li>
+                  <li>抽家用充電樁，共10名</li>
+                  <li>抽獨家商品，共10名</li>
+                </ul>
+              </div>
+              <div class="price mt-2">
+                <h3>$935,000</h3>
+              </div>
+            </div>
+
+            <div class="pro">
+              <ul class="d-flex m-0 p-0">
+                <li>
+                  <div class="square progress-active"></div> 完成預訂
+                </li>
+                <li>
+                  <div class="square progress-active"></div> 探索體驗
+                </li>
+                <li>
+                  <div class="square progress-inactive"></div> 選擇車規
+                </li>
+                <li>
+                  <div class="square progress-inactive"></div> 交車
+                </li>
               </ul>
             </div>
-            <div class="price mt-2">
-              <h3>$935,000</h3>
-            </div>
-          </div>
 
-          <div class="pro">
-            <ul class="d-flex m-0 p-0">
-              <li>
-                <div class="square progress-active"></div> 完成預訂
-              </li>
-              <li>
-                <div class="square progress-active"></div> 探索體驗
-              </li>
-              <li>
-                <div class="square progress-inactive"></div> 選擇車規
-              </li>
-              <li>
-                <div class="square progress-inactive"></div> 交車
-              </li>
-            </ul>
           </div>
-
         </div>
       </div>
-
     </div>
     <!-- calc -->
     <div class="calc d-flex flex-row justify-content-between">
@@ -291,7 +294,7 @@
     background-color: rgba(35, 35, 35, 0.7);
     backdrop-filter: blur(5px);
     border-left: #caff86 solid 10px;
-    margin-top: 20px;
+    margin-bottom: 20px;
     box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.1);
   }
 
