@@ -67,16 +67,16 @@
   </nav>
   <main class="login text-white">
     <div class="login-input">
-      <h1 class="text-center mb-5">訂單查詢</h1>
+      <div class="text-center mb-5">訂單查詢</div>
       <form id="login-form" action="javascript:submitForm()" novalidate>
-        <div class="col-8">
+        <div class="form-input">
           <label for="phone" class="form-label">手機號碼</label>
           <input id="phone" class="form-control" placeholder="請輸入十碼手機號碼" type="tel" value="" required>
           <div class="invalid-feedback">*請輸入手機號碼</div>
         </div>
 
-        <div class="input-group justify-content-center col-8">
-          <div class="v-code-input">
+        <div class="input-group justify-content-center form-input flex-nowrap">
+          <div class="v-code-input flex-grow-1">
             <label for="v-code" class="form-label">簡訊驗證碼</label>
             <input id="v-code" class="form-control" placeholder="請輸入六碼驗證碼" type="text" required>
             <div class="invalid-feedback">*請輸入簡訊驗證碼</div>
@@ -87,7 +87,7 @@
           </div>
         </div>
         
-        <button type="submit" class="btn btn-lg bg-caff86 col-4 d-block">確認</button>
+        <button type="submit" class="btn btn-lg bg-caff86 d-block">確認</button>
       </form>
     </div>
   </main>
@@ -222,24 +222,40 @@
   }
 
   .login-input {
-    margin: 80px 170px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    width: 75%;
+    height: 50%;
+    min-height: 316px;
     border-radius: 10px;
     backdrop-filter: blur(5px);
     border: solid 1px #4e4e4e;
     background-color: rgba(35, 35, 35, 0.7);
     padding: 40px 0 72px;
   }
-
+  
+  .login-input>div {
+    font-size: 40px;
+  }
+  
   form>div {
     margin: 40px auto 0px;
   }
 
+  .form-input {
+    width: 75%;
+  }
+
   form>button {
+    width: 330px;
     margin: 72px auto 0px;
   }
 
   .v-code-input {
-    width: calc(66.6% - 133px);
     margin-right: 10px;
   }
   
@@ -280,6 +296,28 @@
 
     .login-area {
       padding-right: 36px;
+    }
+  }
+  @media (max-width: 766px) {
+    .login-input {
+      width: 90%;
+      height: 75%;
+    }
+
+    .login-input>div {
+      font-size: 24px;
+    }
+
+    .form-input {
+      width: 90%;
+    }
+
+    form>button {
+      width: 150px;
+    }
+
+    .v-code-input {
+      margin-right: 8px;
     }
   }
 </style>
