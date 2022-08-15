@@ -18,10 +18,10 @@
       <img src="/assets/image/logo@3x.png" alt="logo">
     </div>
     <div class="content">
-      <div class="title">COMING SOON</div>
-      <div class="subtitle">距離網頁發佈時間</div>
+      <div class="title fw-bold text-center">COMING SOON</div>
+      <div class="subtitle text-center">距離網頁發佈時間</div>
 
-      <div class="clock">
+      <div class="clock d-flex">
         <div>
           <ul>
             <li>0</li>
@@ -105,15 +105,64 @@
     list-style: none;
   }
 
-  @media (min-width: 1200px) {
-    .logo {
-      padding: 20px 36px;
-    }
+  .logo {
+    padding: 20px 36px;
+  }
 
+  .title {
+    font-size: 80px;
+    font-family: Roboto;
+    letter-spacing: 26.4px;
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .subtitle {
+    margin: 46px auto 33px auto;
+    font-size: 18px;
+    font-family: NotoSans;
+    line-height: 1.78;
+    letter-spacing: 14.76px;
+    text-shadow: 0 3px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .clock {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  ul {
+    display: flex;
+    font-family: Roboto;
+    font-size: 66px;
+    padding: 0;
+  }
+  
+  li {
+    height: 122px;
+    width: 96px;
+    line-height: 122px;
+    text-align: center;
+    border-bottom: 7px solid #caff86;
+    border-radius: 6px;
+    background-color: rgba(35, 35, 35, 0.6);
+  }
+
+  li:nth-child(1) {
+    margin-right: 16px;
+  }
+
+  
+  .unit {
+    text-align: center;
+    font-size: 20px;
+  }
+  
+  @media (min-width: 1200px) {
     .logo>img {
       height: 24px;
     }
-
+    
     .content {
       position: absolute;
       bottom: 30vh;
@@ -121,67 +170,105 @@
       right: 0;
       margin: auto;
     }
+    
+    .clock>div:not(:last-child) {
+      margin-right: 40px;
+    }
+  
+  }
+  @media (min-width: 768px) and (max-width: 1199px) {
+    .logo>img {
+      width: 152px;
+    }
+
+    .content {
+      position: absolute;
+      bottom: 45vh;
+      left: 0;
+      right: 0;
+    }
 
     .title {
-      text-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
-      font-family: Roboto;
-      font-size: 80px;
-      font-weight: bold;
-      letter-spacing: 26.4px;
-      text-align: center;
+      font-size: 56px;
+      letter-spacing: 16.4px;
     }
 
     .subtitle {
-      margin: 46px auto 33px auto;
-      text-shadow: 0 3px 4px rgba(0, 0, 0, 0.1);
-      font-family: NotoSans;
-      font-size: 18px;
-      line-height: 1.78;
-      letter-spacing: 14.76px;
-      text-align: center;
-    }
-
-    .clock {
-      display: flex;
-      width: 100%;
-      justify-content: center;
-      align-items: center;
-    }
-
-    ul {
-      display: flex;
-      font-family: Roboto;
-      font-size: 66px;
-      padding: 0;
+      margin: 27px auto 20px;
     }
 
     li {
-      height: 122px;
-      width: 96px;
-      line-height: 122px;
-      text-align: center;
-      border-bottom: 7px solid #caff86;
-      border-radius: 6px;
-      background-color: rgba(35, 35, 35, 0.6);
+      height: 100px;
+      width: 78px;
+      line-height: 100px;
     }
 
     li:nth-child(1) {
-      margin-right: 16px;
+      margin-right: 12px;
     }
 
     .clock>div:not(:last-child) {
-      margin-right: 40px;
+      margin-right: 20px;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .countdown {
+      background: url(/assets/image/countdown_background_sm.png) no-repeat center bottom;
+    }
+
+    .logo {
+      padding-top: 8vh;
+    }
+
+    .logo>img {
+      max-width: 148px;
+      margin: 0 auto 7vh auto;
+      display: block;
+    }
+
+    .title {
+      font-size: 32px;
+      letter-spacing: 6.4px;
+    }
+
+    .subtitle {
+      margin: 8px auto 7vh auto;
+      font-size: 16px;
+      font-family: NotoSans;
+      line-height: 2;
+      letter-spacing: 13.12px;
+    }
+
+    .clock {
+      margin: 0 auto 0;
+      width: 280px;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    ul {
+      font-size: 44px;
+    }
+
+    li {
+      height: 77px;
+      width: 60px;
+      line-height: 77px;
+      text-align: center;
+      border-bottom: 7px solid #caff86;
+      border-radius: 6px;
+      background-color: rgba(35, 35, 35, 0.8);
+    }
+    
+    li:nth-child(1) {
+      margin-right: 10px;
     }
 
     .unit {
       text-align: center;
-      font-size: 20px;
-    }
-  }
-
-  @media (min-width: 768px) and (max-width: 1199px) {
-    .logo {
-      padding: 0 36px;
+      font-size: 14px;
+      padding-bottom: 5vh;
     }
   }
 </style>
