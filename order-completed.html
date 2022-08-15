@@ -13,89 +13,25 @@
 </head>
 
 <body class="bg-0a0a0a">
-  <nav class="navbar fixed-top">
-    <div class="container-fluid">
-      <button class="d-block d-lg-none navbar-toggler" type="button" data-bs-toggle="offcanvas"
-        data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="d-flex align-items-center text-white">
-        <a href="https://www.luxgen-motor.com.tw/" target="_blank">
-          <img class="logo" src="../assets/image/logo@3x.png" alt="logo">
-        </a>
-
-        <ul class="d-none d-lg-flex nav">
-          <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="/">入主純電未來</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" data-bs-toggle="modal" data-bs-target="#activityModal">活動專區</a>
-            <!-- <a class="nav-link" href="/activity">活動專區</a> -->
-          </li>
-        </ul>
-      </div>
-
-      <div class="login-area d-flex align-items-center">
-        <img class="login-icon" src="../assets/image/icon_order_white.svg" alt="訂單查詢">
-        <a href="/order">
-          <div class="text-white" role="button">訂單查詢</div>
-        </a>
-      </div>
-
-      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-        <div class="offcanvas-header">
-          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        </div>
-        <div class="offcanvas-body">
-          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
-            </li>
-          </ul>
-          <form class="d-flex" role="search">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn-lg btn btn-outline-success" type="button">Search</button>
-          </form>
-        </div>
-      </div>
-    </div>
-  </nav>
-
   <main class="order">
     <div class="content">
       <img src="/assets/image/done.png" class="m-auto d-block" alt="done">
-      <h1 class="order-title text-white text-center mt-4">恭喜你完成<br>《 LUXGEN THE NEXT 》專案訂購</h1>
-      <div class="subtitle font-18 text-a1a1a1 text-center mt-4">感謝您成為LUXGEN VIP會員，將會發送簡訊提供您的 VIP會員預設密碼，記得至 會員專區登入完成密碼修改，未來若忘記密碼，則使用忘記密碼進行手機驗證，調整密碼即可登入，後續可至訂購查詢區登入LUXGEN VIP會員，確認您的訂購資訊，並未來將開啟最新資訊區， 已會員的身份可以查看更多第一手資訊!</div>
-      <div class="line text-white d-flex flex-row justify-content-between">
-        <div class="des align-self-center font-18">
+      <div class="order-title text-white text-center mt-2 mt-md-4 pb-1 pb-md-0">恭喜你完成<br>《 LUXGEN THE NEXT 》專案訂購</div>
+      <div class="subtitle text-a1a1a1 text-center mt-2 mt-md-4">感謝您成為LUXGEN VIP會員，將會發送簡訊提供您的 VIP會員預設密碼，記得至 會員專區登入完成密碼修改，未來若忘記密碼，則使用忘記密碼進行手機驗證，調整密碼即可登入，後續可至訂購查詢區登入LUXGEN VIP會員，確認您的訂購資訊，並未來將開啟最新資訊區， 已會員的身份可以查看更多第一手資訊!</div>
+      <div class="line text-white d-md-flex flex-row justify-content-between">
+        <div class="des align-self-center">
           歡迎加入LINE官方帳號，關注LUXGEN相關動態<br>
           <a href="https://r.botbonnie.com/6ojE3">https://r.botbonnie.com/6ojE3</a>
         </div>
         <img src="http://via.placeholder.com//150" alt="">
       </div>
-      <button type="button" class="btn bg-caff86 d-block" data-bs-toggle="modal" data-bs-target="#shareModal">我要分享</button>
-    </div>
-  </main>
-
-  <!-- activity dialog -->
-  <div class="modal" id="activityModal" tabindex="-1" aria-labelledby="activityModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered custom-dialog">
-      <div class="modal-content p-4">
-        <h5 class="custom-modal-title">COMING SOON</h5>
-        <div class="custom-modal-body text-white">
-          10/20 之後，活動消息將陸續釋出，敬請期待！
-        </div>
-        <div class="custom-modal-footer d-flex justify-content-center">
-          <button type="button" class="btn btn-primary" data-bs-dismiss="modal">我瞭解了</button>
-        </div>
+      <div class="buttons d-flex flex-row justify-content-center">
+        <button type="button" class="btn btn-tertiary">返回主頁</button>
+        <div style="width: 20px;"></div>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#shareModal">我要分享</button>
       </div>
     </div>
-  </div>
+  </main>
 
   <!-- share dialog -->
   <div class="modal" id="shareModal" tabindex="-1" aria-labelledby="shareModalLabel" aria-hidden="true">
@@ -103,12 +39,12 @@
       <div class="modal-content p-3">
         <div class="close-dialog-btn" data-bs-dismiss="modal" aria-label="Close"><img src="/assets/image/icon_close.svg" alt=""></div>
         <h5 class="custom-modal-title text-white p-2">分享至以下社群</h5>
-        <div class="custom-modal-body mt-4 mb-2">
+        <div class="custom-modal-body mt-3 mt-md-4 mb-2">
           <img src="/assets/image/facebook.webp" alt="facebook">
           <img src="/assets/image/instagram.webp" alt="instagram">
           <img src="/assets/image/line.webp" alt="line">
         </div>
-        <div class="custom-modal-footer p-3">
+        <div class="custom-modal-footer p-1 py-3 p-md-3">
           <div class="share-url d-flex flex-row justify-content-between">
             <div class="text-a1a1a1" id="url">https://www.luxgen-motor.com.tw/Hom</div>
             <button type="button" id="copy-btn"><img src="/assets/image/icon_copy.svg" alt=""></button>
@@ -121,19 +57,6 @@
       </div>
     </div>
   </div>
-
-  <footer class="footer bg-232323 text-center text-lg-start text-white">
-    <div class="container footer-container">
-      <div class="d-block d-md-flex align-items-center justify-content-between">
-        <div class="font-14">
-          <a class="d-inline-block pe-2 pe-md-5" href="https://www.luxgen-motor.com.tw/Home/Copyrights">版權說明</a>
-          <a class="d-inline-block pe-2 pe-md-5" href="https://www.luxgen-motor.com.tw/Home/Privacy">服務條款與隱私說明</a>
-          <a class="d-inline-block pe-2 pe-md-5" href="https://www.luxgen-motor.com.tw/Home/EPA">環保署政策宣導</a>
-        </div>
-        <div class="text-center">LUXGEN@2022</div>
-      </div>
-    </div>
-  </footer>
 </body>
 
 </html>
@@ -151,39 +74,6 @@
 </script>
 
 <style>
-  /* nav-abr */
-  .navbar {
-    backdrop-filter: blur(5px);
-  }
-
-  .nav-item .nav-link {
-    color: #fff;
-    font-weight: 400;
-    padding: 4px 4px;
-    margin: 8px 16px;
-    cursor: pointer;
-  }
-
-  .nav-item .active {
-    font-weight: 600;
-    border-bottom: 2px solid #caff86;
-  }
-
-  .logo {
-    height: 24px;
-    padding: 0 10px;
-  }
-
-  .login-area {
-    padding-right: 10px;
-  }
-
-  .login-icon {
-    width: 18px;
-    height: 18px;
-    margin-right: 10px;
-  }
-
   /* oder-completed */
   .order {
     padding-top: 60px;
@@ -200,6 +90,14 @@
     padding-bottom: 96px;
   }
 
+  .order-title {
+    font-size: 40px;
+  }
+
+  .subtitle {
+    font-size: 18px;
+  }
+
   .content>button {
     font-size: 20px;
     margin: 32px auto 0;
@@ -214,9 +112,22 @@
     background-color: rgba(35, 35, 35, 0.5);
   }
 
+  .des {
+    font-size: 18px;
+  }
+
   .des>a {
     color: #caff86;
     text-decoration: underline;
+  }
+  
+  .buttons {
+    margin-top: 32px;
+  }
+
+  .buttons>button{
+    width: 20%;
+    padding: 14px 24px;
   }
 
   /* share-dialog */
@@ -230,11 +141,19 @@
     background-color: #000;
     border-radius: 4px;
     padding: 9.5px 10px 8.5px 12px;
+    white-space: nowrap;
+  }
+
+  .share-url>div {
+    width: calc(100% - 30px);
+    overflow: hidden;
   }
 
   .share-url>button {
     background-color: transparent;
     border: none;
+    width: 20px;
+    height: 20px;
   }
 
   .custom-modal-body>img:not(:first-child) {
@@ -245,33 +164,59 @@
     margin: 12px auto 2px;
   }
 
-  .footer-container {
-    padding: 24px;
-    margin-top: -72px;
-  }
-
-  .footer a {
-    color: #fff !important;
-    text-decoration: none !important;
-  }
-
   @media (min-width: 1200px) {
-    .logo {
-      padding: 0 36px;
-    }
 
-    .login-area {
-      padding-right: 36px;
-    }
   }
 
   @media (min-width: 768px) and (max-width: 1199px) {
-    .logo {
-      padding: 0 36px;
+
+  }
+
+  @media (max-width: 767px) {
+    .order {
+      background-position: 24px 70px, right bottom;
+      background-size: 30%, 30%;
+    }
+    .content {
+      margin: 5% 5% auto;
     }
 
-    .login-area {
-      padding-right: 36px;
+    .content>img {
+      height: 120px;
+      width: 120px;
+    }
+  
+    .order-title {
+      font-size: 20px;
+    }
+
+    .subtitle {
+      font-size: 14px;
+    }
+
+    .line {
+      margin-top: 20px;
+      padding: 20px 12px;
+    }
+
+    .des {
+      font-size: 14px;
+      text-align: center;
+    }
+
+    .line>img {
+      margin: 18px auto 0;
+      display: block;
+    }
+
+    .buttons {
+      margin-top: 20px;
+    }
+
+    .buttons>button {
+      width: 40%;
+      padding: 8px 24px;
     }
   }
+
 </style>
