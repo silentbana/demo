@@ -66,20 +66,20 @@
     </div>
   </nav>
   <main class="order text-white">
-    <div class="font-30 fw-bold order-title">我的訂單</div>
+    <div class="fw-bold order-title">我的訂單</div>
     <div class="no-order position-absolute top-50 start-50 translate-middle">
       <img src="/assets//image/no_order.png" class="m-auto d-block" alt="no-order">
-      <div class="title font-30 fw-bold">您目前還沒有訂單喔</div>
-      <div class="subtitle font-18 text-a1a1a1">快去活動網頁看看，並進行下訂吧！</div>
+      <div class="title fw-bold text-center">您目前還沒有訂單喔</div>
+      <div class="subtitle text-a1a1a1 text-center">快去活動網頁看看，並進行下訂吧！</div>
     </div>
     <!-- calc -->
-    <div class="calc d-flex flex-row justify-content-between">
-      <div class="statement font-18 d-flex flex-row align-self-center fw-semibold">
+    <div class="calc d-md-flex flex-row justify-content-between">
+      <div class="statement d-flex flex-row align-self-center fw-semibold justify-content-center">
         <div class="subtotal">小計：0</div>
         <div class="shipping-fee">運費：0</div>
         <div class="point">L Point折抵：0</div>
       </div>
-      <div class="total font-30 fw-bold align-self-center">
+      <div class="total fw-bold align-self-center">
         總金額：<span class="text-caff86">0</span>
       </div>
     </div>
@@ -108,10 +108,6 @@
   $(document).ready(function () {
 
   });
-
-  const returnedPurchase = () => {
-    console.log('我要退訂');
-  }
 </script>
 
 <style>
@@ -163,6 +159,19 @@
     position: absolute;
     top: 100px;
     left: 170px;
+    font-size: 30px;
+  }
+
+  .no-order {
+    width: 300px;
+  }
+
+  .no-order>.title {
+    font-size: 30px;
+  }
+
+  .no-order>.subtitle {
+    font-size: 18px;
   }
 
   .calc {
@@ -175,9 +184,17 @@
     font-family: NotoSans;
   }
 
+  .statement {
+    font-size: 18px;
+  }
+
   .subtotal,
   .shipping-fee {
     margin-right: 32px;
+  }
+
+  .total {
+    font-size: 30px;
   }
 
   .total>span {
@@ -201,6 +218,53 @@
 
     .login-area {
       padding-right: 36px;
+    }
+
+    .calc {
+      padding: 20px 100px;
+    }
+    
+  }
+  @media (max-width: 767px) { 
+    .order {
+      background-size: 30%, 30%;
+    }
+    .order-title {
+      top: 88px;
+      left: 20px;
+      font-size: 20px;
+    }
+    .no-order>img {
+      width: 140px;
+      height: 140px;
+    }
+
+    .no-order>.title {
+      font-size: 20px;
+    }
+
+    .no-order>.subtitle {
+      font-size: 16px;
+    }
+
+    .calc {
+      padding: 0;
+    }
+
+    .statement {
+      font-size: 14px;
+      margin: 8px auto;
+    }
+      
+    .subtotal,
+    .shipping-fee {
+      margin-right: 20px;
+    }
+
+    .total {
+      font-size: 20px;
+      text-align: center;
+      margin: 16px;
     }
   }
 </style>
