@@ -26,7 +26,7 @@
 
         <div class="des text-center d-lg-none">歡迎從下方連結加入LINE官方帳號，並請輸入「the green」，未來有最新產品訊息更新時，將主動發送通知提醒您回到網站查看</div>
         
-        <button class="btn btn-secondary d-block d-lg-none">加入官方Line</button>
+        <button class="btn btn-secondary d-block d-lg-none" >加入官方Line</button>
         
         <img src="http://via.placeholder.com//150" alt="qrcode" class="d-none d-lg-block">
       </div>
@@ -42,11 +42,10 @@
   <div class="modal" id="shareModal" tabindex="-1" aria-labelledby="shareModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered custom-dialog">
       <div class="modal-content p-3">
-        <div class="close-dialog-btn" data-bs-dismiss="modal" aria-label="Close"><img src="/assets/image/icon_close.svg" alt=""></div>
+        <div class="btn-close" data-bs-dismiss="modal" aria-label="Close"><img src="/assets/image/icon_close.svg" alt=""></div>
         <h5 class="custom-modal-title text-white p-2">分享至以下社群</h5>
         <div class="custom-modal-body mt-3 mt-md-4 mb-2">
           <img src="/assets/image/facebook.webp" alt="facebook">
-          <img src="/assets/image/instagram.webp" alt="instagram">
           <img src="/assets/image/line.webp" alt="line">
         </div>
         <div class="custom-modal-footer p-1 py-3 p-md-3">
@@ -138,12 +137,6 @@
   }
 
   /* share-dialog */
-  .close-dialog-btn {
-    position: absolute;
-    background-color: transparent;
-    border: none;
-  }
-
   .share-url {
     background-color: #000;
     border-radius: 4px;
@@ -178,6 +171,14 @@
   @media (min-width: 768px) and (max-width: 1199px) {
     .content {
       width: 75%;
+    }
+
+    .order-title {
+      font-size: 30px;
+    }
+
+    .subtitle {
+      font-size: 16px;
     }
 
     .des {
@@ -236,6 +237,7 @@
     .line>button {
       margin-top: 18px;
       width: 100%;
+      font-size: 18px;
     }
 
     .buttons {
@@ -245,6 +247,7 @@
     .buttons>button {
       width: 40%;
       padding: 8px 24px;
+      font-size: 18px;
     }
   }
 

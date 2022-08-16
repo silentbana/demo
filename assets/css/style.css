@@ -163,6 +163,7 @@ a:active {
 
 /* custom bootstrap css */
 .modal {
+  padding: 0 24px;
   backdrop-filter: blur(4px);
   background-color: rgba(35, 35, 35, 0.2);
 }
@@ -190,6 +191,34 @@ a:active {
   padding: 10px;
   font-size: 20px;
   font-weight: bold;
+}
+
+.offcanvas {
+  background-color: #0a0a0a !important;
+  background-image: url(/assets/image/order_background1.png), url(/assets/image/order_background2.png);
+  background-position: 0 70px, right bottom 30px;
+  background-size: 18%, 18%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-height: 100vh;
+  color: #fff !important;
+}
+
+.custom-offcanvas-header {
+  text-align: center;
+  margin-top: 20px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #4e4e4e;
+}
+
+.custom-offcanvas-header>button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.custom-offcanvas-body>ul {
+  padding: 0 !important;
 }
 
 .btn-primary {
@@ -246,6 +275,12 @@ a:active {
 .btn {
   font-weight: bold !important;
   border-radius: 4px !important;
+}
+
+.btn-close {
+  position: absolute;
+  background-color: transparent;
+  border: none;
 }
 
 .form-label,
