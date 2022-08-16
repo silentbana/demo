@@ -17,13 +17,18 @@
     <div class="content position-absolute top-50 start-50 translate-middle">
       <img src="/assets/image/done.png" class="m-auto d-block" alt="done">
       <div class="order-title text-white text-center mt-2 mt-md-4 pb-1 pb-md-0">恭喜你完成<br>《 LUXGEN THE NEXT 》專案訂購</div>
-      <div class="subtitle text-a1a1a1 text-center mt-2 mt-md-4">感謝您成為LUXGEN VIP會員，將會發送簡訊提供您的 VIP會員預設密碼，記得至 會員專區登入完成密碼修改，未來若忘記密碼，則使用忘記密碼進行手機驗證，調整密碼即可登入，後續可至訂購查詢區登入LUXGEN VIP會員，確認您的訂購資訊，並未來將開啟最新資訊區， 已會員的身份可以查看更多第一手資訊!</div>
-      <div class="line text-white d-md-flex flex-row justify-content-between">
-        <div class="des align-self-center">
+      <div class="subtitle text-a1a1a1 text-center mt-2 mt-md-4">感謝您成為LUXGEN VIP會員，將會發送簡訊提供您的VIP會員預設密碼，記得至會員專區登入完成密碼修改，未來若忘記密碼，則使用忘記密碼進行手機驗證，調整密碼即可登入，後續可至訂購查詢區登入LUXGEN VIP會員，確認您的訂購資訊，並未來將開啟最新資訊區， 已會員的身份可以查看更多第一手資訊!</div>
+      <div class="line text-white d-lg-flex flex-row justify-content-between">
+        <div class="des align-self-center d-none d-lg-block">
           歡迎加入LINE官方帳號，關注LUXGEN相關動態<br>
           <a href="https://r.botbonnie.com/6ojE3">https://r.botbonnie.com/6ojE3</a>
         </div>
-        <img src="http://via.placeholder.com//150" alt="qrcode">
+
+        <div class="des text-center d-lg-none">歡迎從下方連結加入LINE官方帳號，並請輸入「the green」，未來有最新產品訊息更新時，將主動發送通知提醒您回到網站查看</div>
+        
+        <button class="btn btn-secondary d-block d-lg-none">加入官方Line</button>
+        
+        <img src="http://via.placeholder.com//150" alt="qrcode" class="d-none d-lg-block">
       </div>
       <div class="buttons d-flex flex-row justify-content-center">
         <button type="button" class="btn btn-tertiary">返回主頁</button>
@@ -175,6 +180,16 @@
       width: 75%;
     }
 
+    .des {
+      font-size: 16px;
+      line-height: 2;
+    }
+
+    .line>button {
+      margin: 24px auto 0;
+      width: 80%;
+    }
+
     .buttons>button{
       width: 25%;
       padding: 14px 24px;
@@ -204,6 +219,7 @@
 
     .subtitle {
       font-size: 14px;
+      line-height: 1.93;
     }
 
     .line {
@@ -214,11 +230,12 @@
     .des {
       font-size: 14px;
       text-align: center;
+      line-height: 24px;
     }
 
-    .line>img {
-      margin: 18px auto 0;
-      display: block;
+    .line>button {
+      margin-top: 18px;
+      width: 100%;
     }
 
     .buttons {

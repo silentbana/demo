@@ -205,13 +205,13 @@ a:active {
 }
 
 .btn-secondary {
-  color: #a1a1a1 !important;
-  border: 1px solid #4e4e4e !important;
+  color: #caff86 !important;
+  border: 1px solid #caff86 !important;
   background-color: #232323 !important;
 }
 
 .btn-secondary:hover {
-  background-color: rgba(78, 78, 78, 0.2) !important;
+  background-color: rgba(105, 154, 42, 0.2) !important;
 }
 
 .btn-tertiary {
