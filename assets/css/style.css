@@ -152,13 +152,13 @@ a:active {
 .btn-collapse {
   width: 40px;
   height: 40px;
-  background-image: url(/assets/image/icons_arrow_up_lg.svg);
+  background-image: url(../image/icons_arrow_up_lg.svg);
   background-repeat: no-repeat;
   background-size: 100%;
 }
 
 .btn-collapse.collapsed {
-  background-image: url(/assets/image/icons_arrow_down_lg.svg);
+  background-image: url(../image/icons_arrow_down_lg.svg);
 }
 
 /* custom bootstrap css */
@@ -195,7 +195,7 @@ a:active {
 
 .offcanvas {
   background-color: #0a0a0a !important;
-  background-image: url(/assets/image/order_background1.png), url(/assets/image/order_background2.png);
+  background-image: url(../image/order_background_1.png), url(../image/order_background_2.png);
   background-position: 0 70px, right bottom 30px;
   background-size: 18%, 18%;
   background-repeat: no-repeat;
@@ -302,7 +302,7 @@ a:active {
 
 .form-select {
   color: #a1a1a1 !important;
-  background-image: url('/assets/image/icon_select_line.svg'), url('/assets/image/icon_arrow_down.svg') !important;
+  background-image: url('../image/icon_select_line.svg'), url('../image/icon_arrow_down.svg') !important;
   background-size: 28px 28px, 30px 30px !important;
   background-position: right 20px top 5px, right top 8px !important;
   cursor: pointer;
