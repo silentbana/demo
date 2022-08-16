@@ -89,7 +89,7 @@
                 <div class="bonus mt-2 d-flex flex-row fw-semibold">
                   訂購人基本資料
                   <div class="btn-collapse collapsed ms-1" type="button" data-bs-toggle="collapse" data-bs-target="#basic-info-collapse1"
-                    aria-expanded="true"></div>
+                    aria-expanded="false"></div>
                 </div>
                 <!-- basic-info collapse -->
                 <ul id="basic-info-collapse1" class="text-a1a1a1 collapse">
@@ -386,7 +386,7 @@
     margin: 20px 0 24px;
   }
 
-  .collapse {
+  .detail>ul {
     list-style-type: decimal !important;
     padding-left: 20px !important;
     margin-bottom: 0;
@@ -403,7 +403,7 @@
     padding: 32px 16px 20px;
   }
 
-  ul {
+  .pro>ul {
     list-style-type: none;
   }
 
@@ -452,9 +452,12 @@
     margin-right: 32px;
   }
 
+  .total {
+    font-size: 30px;
+  }
+
   .total>span {
     padding-left: 4px;
-    font-size: 30px;
   }
 
   @media (min-width: 1200px) {
@@ -474,6 +477,27 @@
 
     .login-area {
       padding-right: 36px;
+    }
+
+    .item {
+      padding: 20px;
+    }
+    
+    .item>img {
+      margin: 40px 3% auto 0;
+      width: 231px;
+    }
+
+    .calc {
+      padding: 24px 5%;
+    }
+
+    .statement {
+      font-size: 16px;
+    }
+
+    .total {
+      font-size: 24px;
     }
   }
 

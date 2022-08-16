@@ -17,7 +17,7 @@
     <div class="logo">
       <img src="/assets/image/logo@3x.png" alt="logo">
     </div>
-    <div class="content">
+    <div class="content position-absolute top-50 start-50 translate-middle">
       <div class="title fw-bold text-center">COMING SOON</div>
       <div class="subtitle text-center">距離網頁發佈時間</div>
 
@@ -95,6 +95,7 @@
   .countdown {
     color: #fff;
     height: 100vh;
+    min-height: 380px;
     background-size: 100% 100% !important;
     background: url(/assets/image/countdown_background.png) no-repeat center bottom;
   }
@@ -163,14 +164,6 @@
       height: 24px;
     }
     
-    .content {
-      position: absolute;
-      bottom: 30vh;
-      left: 0;
-      right: 0;
-      margin: auto;
-    }
-    
     .clock>div:not(:last-child) {
       margin-right: 40px;
     }
@@ -179,13 +172,6 @@
   @media (min-width: 768px) and (max-width: 1199px) {
     .logo>img {
       width: 152px;
-    }
-
-    .content {
-      position: absolute;
-      bottom: 45vh;
-      left: 0;
-      right: 0;
     }
 
     .title {
@@ -214,6 +200,7 @@
 
   @media (max-width: 767px) {
     .countdown {
+      min-height: 480px;
       background: url(/assets/image/countdown_background_sm.png) no-repeat center bottom;
     }
 

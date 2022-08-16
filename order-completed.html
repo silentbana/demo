@@ -14,7 +14,7 @@
 
 <body class="bg-0a0a0a">
   <main class="order">
-    <div class="content">
+    <div class="content position-absolute top-50 start-50 translate-middle">
       <img src="/assets/image/done.png" class="m-auto d-block" alt="done">
       <div class="order-title text-white text-center mt-2 mt-md-4 pb-1 pb-md-0">恭喜你完成<br>《 LUXGEN THE NEXT 》專案訂購</div>
       <div class="subtitle text-a1a1a1 text-center mt-2 mt-md-4">感謝您成為LUXGEN VIP會員，將會發送簡訊提供您的 VIP會員預設密碼，記得至 會員專區登入完成密碼修改，未來若忘記密碼，則使用忘記密碼進行手機驗證，調整密碼即可登入，後續可至訂購查詢區登入LUXGEN VIP會員，確認您的訂購資訊，並未來將開啟最新資訊區， 已會員的身份可以查看更多第一手資訊!</div>
@@ -23,7 +23,7 @@
           歡迎加入LINE官方帳號，關注LUXGEN相關動態<br>
           <a href="https://r.botbonnie.com/6ojE3">https://r.botbonnie.com/6ojE3</a>
         </div>
-        <img src="http://via.placeholder.com//150" alt="">
+        <img src="http://via.placeholder.com//150" alt="qrcode">
       </div>
       <div class="buttons d-flex flex-row justify-content-center">
         <button type="button" class="btn btn-tertiary">返回主頁</button>
@@ -76,24 +76,17 @@
 <style>
   /* oder-completed */
   .order {
-    padding-top: 60px;
     background-image: url('/assets/image/order_background3.png'), url('/assets/image/order_background4.png');
     background-position: 210px 175px, right 16px bottom 130px;
     background-size: 18%, 18%;
     background-repeat: no-repeat;
     background-attachment: fixed;
     min-height: 100vh;
-    padding: 10% 15%;
   }
-/* 
+
   .content {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    margin: auto;
-  } */
+    width: 60%;
+  }
 
   .order-title {
     font-size: 40px;
@@ -119,6 +112,10 @@
 
   .des {
     font-size: 18px;
+  }
+
+  .line>img {
+    margin-left: 10px;
   }
 
   .des>a {
@@ -174,7 +171,14 @@
   }
 
   @media (min-width: 768px) and (max-width: 1199px) {
+    .content {
+      width: 75%;
+    }
 
+    .buttons>button{
+      width: 25%;
+      padding: 14px 24px;
+    }
   }
 
   @media (max-width: 767px) {
@@ -182,6 +186,11 @@
       background-position: 24px 70px, right bottom;
       background-size: 30%, 30%;
       padding: 10% 5%;
+      min-height: 700px;
+    }
+
+    .content {
+      width: 90%;
     }
 
     .content>img {
