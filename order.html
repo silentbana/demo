@@ -87,12 +87,26 @@
                 <div class="date">訂購日期：2022/09/14</div>
                 <div class="state">付款狀態：<span class="text-ff9900">待付款</span></div>
                 <div class="bonus mt-2 d-flex flex-row fw-semibold">
-                  專案禮遇項目
-                  <div class="btn-collapse ms-1" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2"
+                  訂購人基本資料
+                  <div class="btn-collapse collapsed ms-1" type="button" data-bs-toggle="collapse" data-bs-target="#basic-info-collapse1"
                     aria-expanded="true"></div>
                 </div>
-                <!-- collapse -->
-                <ul id="collapse2" class="text-a1a1a1 collapse show">
+                <!-- basic-info collapse -->
+                <ul id="basic-info-collapse1" class="text-a1a1a1 collapse">
+                  <li>訂購人：王傳一</li>
+                  <li>性別：男</li> 
+                  <li>手機號碼：0928471544</li>
+                  <li>Email：S1928374@gmail.com</li>
+                  <li>公司名稱：ABC有限公司</li>
+                  <li>統一編號：00093816</li>
+                </ul>
+                <div class="bonus mt-2 d-flex flex-row fw-semibold">
+                  專案禮遇項目
+                  <div class="btn-collapse collapsed ms-1" type="button" data-bs-toggle="collapse" data-bs-target="#bonus-collapse1"
+                    aria-expanded="true"></div>
+                </div>
+                <!-- bonus collapse -->
+                <ul id="bonus-collapse1" class="text-a1a1a1 collapse">
                   <li>享第一手開發日誌和最新通知消息</li>
                   <li>支付之1,000元可折抵後續購買新世代純電休旅車車價</li>
                   <li>訂購車款時有限量版車款選擇權</li>
@@ -132,7 +146,7 @@
 
             <div class="title order-1 d-md-flex flex-row justify-content-between">
               <div class="name fw-bold">LUXGEN THE NEXT純電休旅-綠能代言人專案</div>
-              <button type="button" class="align-self-center" data-bs-toggle="modal" data-bs-target="#returnModal">
+              <button type="button" class="align-self-center" data-bs-toggle="modal" data-bs-target="#expiredModal">
                 <img src="/assets/image/icon_delete.svg" alt="">
               </button>
             </div>
@@ -143,12 +157,26 @@
                 <div class="date">訂購日期：2022/09/14</div>
                 <div class="state">付款狀態：<span class="text-ff9900">待付款</span></div>
                 <div class="bonus mt-2 d-flex flex-row fw-semibold">
-                  專案禮遇項目
-                  <div class="btn-collapse ms-1" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1"
+                  訂購人基本資料
+                  <div class="btn-collapse collapsed ms-1" type="button" data-bs-toggle="collapse" data-bs-target="#basic-info-collapse2"
                     aria-expanded="true"></div>
                 </div>
-                <!-- collapse -->
-                <ul id="collapse1" class="text-a1a1a1 collapse show">
+                <!-- basic-info collapse -->
+                <ul id="basic-info-collapse2" class="text-a1a1a1 collapse">
+                  <li>訂購人：王傳一</li>
+                  <li>性別：男</li> 
+                  <li>手機號碼：0928471544</li>
+                  <li>Email：S1928374@gmail.com</li>
+                  <li>公司名稱：ABC有限公司</li>
+                  <li>統一編號：00093816</li>
+                </ul>
+                <div class="bonus mt-2 d-flex flex-row fw-semibold">
+                  專案禮遇項目
+                  <div class="btn-collapse collapsed ms-1" type="button" data-bs-toggle="collapse" data-bs-target="#bonus-collapse2"
+                    aria-expanded="true"></div>
+                </div>
+                <!-- bonus collapse -->
+                <ul id="bonus-collapse2" class="text-a1a1a1 collapse">
                   <li>享第一手開發日誌和最新通知消息</li>
                   <li>支付之1,000元可折抵後續購買新世代純電休旅車車價</li>
                   <li>訂購車款時有限量版車款選擇權</li>
@@ -217,6 +245,22 @@
       <div class="modal-dialog modal-dialog-centered custom-dialog">
         <div class="modal-content p-4">
           <h5 class="custom-modal-title">請問是否要進行退訂？</h5>
+          <div class="custom-modal-body">
+            提醒您，您所要退訂的訂單編號為「ECW20220707000002」，車款為「全新上市 Luxgen Model C」。請確認您是否要退訂？
+          </div>
+          <div class="custom-modal-footer justify-content-between d-flex flex-row">
+            <button type="button" class="btn btn-secondary" onclick="returnedPurchase()">我要退訂</button>
+            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">取消</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- expired dialog -->
+    <div class="modal" id="expiredModal" tabindex="-1" aria-labelledby="expiredModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered custom-dialog">
+        <div class="modal-content p-4">
+          <h5 class="custom-modal-title">請問是否要進行退訂？jjjj</h5>
           <div class="custom-modal-body">
             提醒您，您所要退訂的訂單編號為「ECW20220707000002」，車款為「全新上市 Luxgen Model C」。請確認您是否要退訂？
           </div>
