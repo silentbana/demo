@@ -325,6 +325,30 @@ a:active {
   border-color: #699a2a !important;
 }
 
+.invalid-feedback{
+  color: #ff7e7e !important;
+}
+
+.was-validated .form-control:invalid, .form-control.is-invalid{
+  background-image: unset !important;
+}
+
+.was-validated .form-check-input:valid, .form-check-input.is-valid{
+  border-color: #7e7e7e !important;
+}
+
+.was-validated .form-check-input:invalid, .form-check-input.is-invalid{
+  border-color: #ff7e7e !important;
+}
+
+.was-validated .form-check-input:valid ~ .form-check-label, .form-check-input.is-valid ~ .form-check-label{
+  color: #fff !important;
+}
+
+.was-validated .form-check-input:invalid ~ .form-check-label, .form-check-input.is-invalid ~ .form-check-label{
+  color: #fff !important;
+}
+
 .h6,
 .h6,
 h5,
