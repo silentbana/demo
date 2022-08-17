@@ -390,4 +390,26 @@ h1,
   .custom-offcanvas-body>ul>.nav-item {
     margin: 64px 0 0 ;
   }
+
+  .btn-collapse {
+    height: 28px;
+    width: 28px;
+  }
+
+  .font-18 {
+    font-size: 16px !important;
+  }
+
+  .font-30 {
+    font-size: 20px !important;
+  }
+
+  .font-50 {
+    font-size: 32px !important;
+  }
+
+  .font-56 {
+    font-size: 32px !important;
+    text-align: center;
+  }
 }
