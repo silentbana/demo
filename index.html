@@ -194,7 +194,7 @@
   <section class="section-6">
     <div class="section-6-bg">
       <div class="container">
-        <div style="height: 88px;"></div>
+        <div></div>
         <div>
           <div class="order-area position-relative">
             <form id="order-form" action="javascript:submitForm()" novalidate>
@@ -203,7 +203,7 @@
                 <h2 class="text-white font-30">訂購資訊</h2>
               </div>
 
-              <div class="row mb-4">
+              <div class="row mb-md-4">
                 <div class="col-md-6">
                   <div class="form-label">手機號碼</div>
                   <input id="phone" class="form-control" placeholder="請輸入十碼手機號碼" type="tel" required>
@@ -223,12 +223,12 @@
               </div>
 
               <div class="row mb-4">
-                <div class="col-md-3">
+                <div class="col-md-3 pt-3 pr-md-0 mt-1 mt-md-0">
                   <div class="form-label">姓名</div>
                   <input id="name" class="form-control" placeholder="請輸入您的真實姓名" type="text" required>
                   <div class="invalid-feedback">*請輸入姓名</div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-3 pt-3 pr-md-0 mt-1 mt-md-0">
                   <div class="form-label">性別</div>
                   <select id="gender" class="form-select form-control" required>
                     <option value="" selected disabled>請選擇</option>
@@ -237,29 +237,29 @@
                   </select>
                   <div class="invalid-feedback">*請選擇性別</div>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-6 pt-3 pr-md-0 mt-1 mt-md-0">
                   <div class="form-label">Email</div>
                   <input id="email" class="form-control" placeholder="請輸入Email" type="email" required>
                   <div class="invalid-feedback">*請輸入Email</div>
                 </div>
               </div>
 
-              <div class="horizontal-line"></div>
-
-              <div class="pt-4 pb-3">
+              <div class="pt-md-4 pb-3">
                 <div class="form-check juridical">
                   <input class="form-check-input" type="checkbox" value="" id="juridical-checkbox">
                   <label class="form-check-label" for="juridical-checkbox">法人(公司行號/機關)</label>
                 </div>
               </div>
 
+              <div class="horizontal-line"></div>
+
               <div class="row mb-4 juridical-area">
-                <div class="col-6">
+                <div class="col-md-6 mt-1 mt-md-0 pt-2 pt-md-0">
                   <div class="form-label">公司名稱</div>
                   <input id="company" class="form-control" placeholder="請輸入公司名稱" type="text" required disabled>
                   <div class="invalid-feedback">*請輸入公司名稱</div>
                 </div>
-                <div class="col-6">
+                <div class="col-md-6 mt-1 mt-md-0 pt-2 pt-md-0">
                   <div class="form-label">統一編號</div>
                   <input id="tax-ID" class="form-control" placeholder="請輸入統一編號" type="tel" required disabled>
                   <div class="invalid-feedback">*請輸入統一編號</div>
@@ -280,7 +280,7 @@
             </div>
           </div> -->
 
-              <div class="pt-3 pb-3">
+              <div class="pt-3">
                 <div class="form-check privacy">
                   <input class="form-check-input" type="checkbox" value="" id="privacy-checkbox" required>
                   <label class="form-check-label" for="privacy-checkbox">我已閱讀並同意
@@ -299,9 +299,8 @@
                 </div>
               </div>
 
-              <div class="row pt-3">
-                <button type="submit" class="btn btn-lg btn-primary m-auto" style="width: fit-content;">入主THE
-                  NEXT百萬內純電休旅</button>
+              <div class="row pt-1 pt-md-3 px-2 px-md-0">
+                <button type="submit" class="btn btn-primary m-auto" style="width: fit-content;">送出THE NEXT訂購資訊 入主純電未來</button>
               </div>
             </form>
           </div>
@@ -737,6 +736,10 @@
     background-size: 100%;
   }
 
+  .section-6-bg>.container>div:first-child {
+    height: 88px;
+  }
+
   .tips {
     padding: 40px 0;
   }
@@ -746,6 +749,11 @@
     border-radius: 8px;
     backdrop-filter: blur(58px);
     background-color: rgba(35, 35, 35, 0.9);
+  }
+
+  form>div:last-child>button {
+    font-size: 16px;
+    padding: 8px 16px;
   }
 
   .sms-area {
@@ -812,6 +820,10 @@
     }
   }
   @media (max-width: 767px) {
+    div {
+      font-size: 14px;
+    }
+
     .navigation-left {
       display: none;
     }
@@ -832,23 +844,35 @@
       padding: 65px 0;
     }
 
-    .col-md-5,.text-white>div {
-      font-size: 14px;
+    .section-5-1 {
+      padding: 78px 0 27px;
     }
 
-    .vertical-line {
-      padding-right: 12px;
+    .section-5-2 {
+      padding: 34px 0 32px;
     }
 
     .section-5-2-1>article,
     .section-5-2-2>article {
       margin: 12px 8px;
+    }
+    
+    .section-5-2-1>article>div,
+    .section-5-2-2>article>div {
       font-size: 20px;
     }
 
     .section-5-3 {
       padding-bottom: 24px;
       font-size: 24px;
+    }
+
+    .section-6-bg>.container>div:first-child {
+      height: 44px;
+    }
+
+    .vertical-line {
+      padding-right: 12px;
     }
     
     .order-area {
