@@ -195,13 +195,14 @@ a:active {
 
 .offcanvas {
   background-color: #0a0a0a !important;
-  background-image: url(../image/order_background_1.png), url(../image/order_background_2.png);
-  background-position: 0 70px, right bottom 30px;
-  background-size: 18%, 18%;
+  background-image: url(../image/order_background_1.png), url(../image/order_background_2.png), url(../image/logo@3x.png);
+  background-position: 0 70px, right bottom 30px, right 50% bottom 10%;
+  background-size: 18%, 18%, 148px;
   background-repeat: no-repeat;
   background-attachment: fixed;
   min-height: 100vh;
   color: #fff !important;
+  width: 100% !important;
 }
 
 .custom-offcanvas-header {
@@ -376,5 +377,17 @@ h1,
   .container-sm,
   .container {
     max-width: 1220px !important;
+  }
+}
+@media (max-width: 991px) {
+  .container-fluid>div {
+    position: absolute !important;
+    top: 12px !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+  }
+
+  .custom-offcanvas-body>.nav-item {
+    margin: 64px 0 0 ;
   }
 }
