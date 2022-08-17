@@ -73,13 +73,13 @@
                 <div class="state">付款狀態：<span class="text-ff9900">待付款</span></div>
                 <div class="bonus mt-2 d-flex flex-row fw-semibold">
                   訂購人基本資料
-                  <div class="btn-collapse collapsed ms-1" type="button" data-bs-toggle="collapse" data-bs-target="#basic-info-collapse1"
-                    aria-expanded="false"></div>
+                  <div class="btn-collapse collapsed ms-1" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#basic-info-collapse1" aria-expanded="false"></div>
                 </div>
                 <!-- basic-info collapse -->
                 <ul id="basic-info-collapse1" class="text-a1a1a1 collapse">
                   <li>訂購人：王傳一</li>
-                  <li>性別：男</li> 
+                  <li>性別：男</li>
                   <li>手機號碼：0928471544</li>
                   <li>Email：S1928374@gmail.com</li>
                   <li>公司名稱：ABC有限公司</li>
@@ -87,8 +87,8 @@
                 </ul>
                 <div class="bonus mt-2 d-flex flex-row fw-semibold">
                   專案禮遇項目
-                  <div class="btn-collapse collapsed ms-1" type="button" data-bs-toggle="collapse" data-bs-target="#bonus-collapse1"
-                    aria-expanded="true"></div>
+                  <div class="btn-collapse collapsed ms-1" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#bonus-collapse1" aria-expanded="true"></div>
                 </div>
                 <!-- bonus collapse -->
                 <ul id="bonus-collapse1" class="text-a1a1a1 collapse">
@@ -102,10 +102,26 @@
                   <li>抽獨家商品，共10名</li>
                 </ul>
               </div>
+              <div class="pro order-2 d-block d-md-none" style="margin: 16px 0 20px 0;">
+                <ul class="d-flex m-0 p-0">
+                  <li>
+                    <div class="square progress-active"></div> 完成預訂
+                  </li>
+                  <li>
+                    <div class="square progress-active"></div> 探索體驗
+                  </li>
+                  <li>
+                    <div class="square progress-inactive"></div> 選擇車規
+                  </li>
+                  <li>
+                    <div class="square progress-inactive"></div> 交車
+                  </li>
+                </ul>
+              </div>
               <div class="price">$935,000</div>
             </div>
 
-            <div class="pro order-2">
+            <div class="pro order-2 d-none d-md-block">
               <ul class="d-flex m-0 p-0">
                 <li>
                   <div class="square progress-active"></div> 完成預訂
@@ -148,13 +164,13 @@
                 <div class="state">付款狀態：<span class="text-ff9900">待付款</span></div>
                 <div class="bonus mt-2 d-flex flex-row fw-semibold">
                   訂購人基本資料
-                  <div class="btn-collapse collapsed ms-1" type="button" data-bs-toggle="collapse" data-bs-target="#basic-info-collapse2"
-                    aria-expanded="true"></div>
+                  <div class="btn-collapse collapsed ms-1" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#basic-info-collapse2" aria-expanded="true"></div>
                 </div>
                 <!-- basic-info collapse -->
                 <ul id="basic-info-collapse2" class="text-a1a1a1 collapse">
                   <li>訂購人：王傳一</li>
-                  <li>性別：男</li> 
+                  <li>性別：男</li>
                   <li>手機號碼：0928471544</li>
                   <li>Email：S1928374@gmail.com</li>
                   <li>公司名稱：ABC有限公司</li>
@@ -162,8 +178,8 @@
                 </ul>
                 <div class="bonus mt-2 d-flex flex-row fw-semibold">
                   專案禮遇項目
-                  <div class="btn-collapse collapsed ms-1" type="button" data-bs-toggle="collapse" data-bs-target="#bonus-collapse2"
-                    aria-expanded="true"></div>
+                  <div class="btn-collapse collapsed ms-1" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#bonus-collapse2" aria-expanded="true"></div>
                 </div>
                 <!-- bonus collapse -->
                 <ul id="bonus-collapse2" class="text-a1a1a1 collapse">
@@ -177,10 +193,26 @@
                   <li>抽獨家商品，共10名</li>
                 </ul>
               </div>
+              <div class="pro order-2 d-block d-md-none" style="margin: 16px 0 20px 0;">
+                <ul class="d-flex m-0 p-0">
+                  <li>
+                    <div class="square progress-active"></div> 完成預訂
+                  </li>
+                  <li>
+                    <div class="square progress-active"></div> 探索體驗
+                  </li>
+                  <li>
+                    <div class="square progress-inactive"></div> 選擇車規
+                  </li>
+                  <li>
+                    <div class="square progress-inactive"></div> 交車
+                  </li>
+                </ul>
+              </div>
               <div class="price">$935,000</div>
             </div>
 
-            <div class="pro order-2">
+            <div class="pro order-2 d-none d-md-block">
               <ul class="d-flex m-0 p-0">
                 <li>
                   <div class="square progress-active"></div> 完成預訂
@@ -218,14 +250,14 @@
     <div class="custom-offcanvas-body">
       <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 text-center">
         <li class="nav-item">
-          <a class="nav-link active d-inline-block" aria-current="page" href="#">入主純電未來</a>
+          <a class="nav-link" aria-current="page" href="/">入主純電未來</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" data-bs-toggle="modal" data-bs-target="#activityModal">活動專區</a>
           <!-- <a class="nav-link" href="#">活動專區</a> -->
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">訂單查詢</a>
+          <a class="nav-link active d-inline-block" href="/order">訂單查詢</a>
         </li>
       </ul>
     </div>
@@ -250,7 +282,7 @@
   <div class="modal" id="shareModal" tabindex="-1" aria-labelledby="shareModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered custom-dialog">
       <div class="modal-content p-3">
-        <div class="btn-close" data-bs-dismiss="modal" aria-label="Close"><img src="./assets/image/icon_close.svg" alt=""></div>
+        <div class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></div>
         <h5 class="custom-modal-title text-white p-2">分享至以下社群</h5>
         <div class="custom-modal-body mt-3 mt-md-4 mb-2">
           <img src="./assets/image/facebook.webp" alt="facebook">
@@ -273,7 +305,7 @@
   <!-- returned purchase dialog -->
   <div class="modal" id="returnModal" tabindex="-1" aria-labelledby="returnModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered custom-dialog">
-      <div class="modal-content p-3 text-white">
+      <div class="modal-content p-4 text-white">
         <h5 class="custom-modal-title">請問是否要進行退訂？</h5>
         <div class="custom-modal-body">
           提醒您，您所要退訂的訂單編號為「ECW20220707000002」，車款為「全新上市 Luxgen Model C」。請確認您是否要退訂？
@@ -289,7 +321,7 @@
   <!-- expired dialog -->
   <div class="modal" id="expiredModal" tabindex="-1" aria-labelledby="expiredModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered custom-dialog">
-      <div class="modal-content p-3 text-white">
+      <div class="modal-content p-4 text-white">
         <h5 class="custom-modal-title">已超過退訂期限</h5>
         <div class="custom-modal-body">
           下訂日期：2022/09/14<br>
@@ -363,7 +395,7 @@
   }
 
   .order-items {
-    height: calc(100vh - 257px);
+    height: calc(100vh - 247px);
     overflow: scroll;
   }
 
@@ -381,7 +413,7 @@
   }
 
   .item {
-    padding: 20px 36px 24px 44px;
+    padding: 20px 36px 32px 44px;
     border-radius: 8px;
     background-color: rgba(35, 35, 35, 0.7);
     backdrop-filter: blur(5px);
@@ -396,7 +428,7 @@
   }
 
   .des>.title {
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid #4e4e4e;
     padding-bottom: 12px;
   }
 
@@ -415,6 +447,10 @@
     margin: 20px 0 24px;
   }
 
+  .detail {
+    line-height: 32px;
+  }
+
   .detail>ul {
     list-style-type: decimal !important;
     padding-left: 20px !important;
@@ -427,7 +463,7 @@
   }
 
   .pro {
-    border: 1px solid #ddd;
+    border: 1px solid #4e4e4e;
     border-radius: 6px;
     padding: 32px 16px 20px;
   }
@@ -459,7 +495,8 @@
   }
 
   .price {
-    font-size: 28px;
+    font-size: 40px;
+    font-weight: 600;
   }
 
   .calc {
@@ -471,14 +508,15 @@
     box-shadow: 0 -2px 11px 0 rgba(0, 0, 0, 0.1);
     font-family: NotoSans;
     font-size: 30px;
+    border-top: 1px solid #4e4e4e;
   }
 
   .calc>span {
     padding-left: 4px;
   }
 
-    /* share-dialog */
-    .share-url {
+  /* share-dialog */
+  .share-url {
     background-color: #000;
     border-radius: 4px;
     padding: 9.5px 10px 8.5px 12px;
@@ -527,7 +565,7 @@
     .item {
       padding: 20px;
     }
-    
+
     .item>img {
       margin: 40px 3% auto 0;
       width: 231px;
@@ -541,7 +579,11 @@
 
   @media (max-width: 767px) {
     .items {
-      margin: 64px 16px;
+      margin: 24px 16px;
+    }
+
+    .order-items {
+      height: calc(100vh - 192px);
     }
 
     .page-title {
@@ -556,10 +598,6 @@
     .item>img {
       margin: 44px auto;
       width: 201px;
-    }
-
-    .des>.title {
-      border: none;
     }
 
     .title>.name {
@@ -594,6 +632,10 @@
     .calc {
       padding: 16px;
       font-size: 20px;
+    }
+
+    .order {
+      background-size: 30%, 30%;
     }
   }
 </style>

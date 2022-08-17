@@ -42,12 +42,12 @@
           <div class="text-white" role="button">訂單查詢</div>
         </a>
       </div>
-
     </div>
   </nav>
-  <main class="login text-white">
-    <div class="login-input position-absolute top-50 start-50 translate-middle">
-      <div class="text-center mb-4 mb-md-5">訂單查詢</div>
+
+  <main class="login text-white d-flex">
+    <div class="login-input">
+      <div class="text-center mb-3 mb-md-4">訂單查詢</div>
       <form id="login-form" action="javascript:submitForm()" novalidate>
         <div class="form-input">
           <label for="phone" class="form-label">手機號碼</label>
@@ -63,7 +63,8 @@
           </div>
           <div class="v-code-btn">
             <div class="form-label" style="height: 24px;"></div>
-            <a href="https://www.luxgen-motor.com.tw/Account/Forget" target="_blank" type="button" class="btn btn-outline-primary btn-sm" id="login-sms-btn">忘記密碼</a>
+            <a href="https://www.luxgen-motor.com.tw/Account/Forget" target="_blank" type="button"
+              class="btn btn-outline-primary btn-sm" id="login-sms-btn">忘記密碼</a>
 
             <!-- <button type="button" class="btn btn-outline-primary btn-sm" id="login-sms-btn">忘記密碼</button> -->
           </div>
@@ -78,15 +79,15 @@
           <div class="v-code-btn">
             <div class="form-label" style="height: 24px;"></div>
             <div class="ver d-flex">
-              <img src="http://via.placeholder.com/122x40" alt="">
-              <button type="button" class="refresh" onclick="refresh()">
+              <img class="pic-code" src="./assets/image/pic_code.png" alt="">
+              <div type="button" class="refresh" onclick="refresh()">
                 <img src="./assets/image/icons_refresh.svg" alt="">
-              </button>
+              </div>
             </div>
           </div>
         </div>
-        
-        <button type="submit" class="btn btn-primary d-block">確認</button>
+
+        <button type="submit" class="login-btn btn btn-primary d-block">登入</button>
       </form>
     </div>
   </main>
@@ -100,14 +101,14 @@
     <div class="custom-offcanvas-body">
       <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 text-center">
         <li class="nav-item">
-          <a class="nav-link active d-inline-block" aria-current="page" href="#">入主純電未來</a>
+          <a class="nav-link d-inline-block" aria-current="page" href="/">入主純電未來</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" data-bs-toggle="modal" data-bs-target="#activityModal">活動專區</a>
           <!-- <a class="nav-link" href="#">活動專區</a> -->
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">訂單查詢</a>
+          <a class="nav-link" href="/order">訂單查詢</a>
         </li>
       </ul>
     </div>
@@ -126,20 +127,7 @@
         </div>
       </div>
     </div>
-  </div>  
-<!-- 
-  <footer class="footer bg-232323 text-center text-lg-start text-white">
-    <div class="container-md footer-container">
-      <div class="d-block d-md-flex align-items-center justify-content-between">
-        <div class="font-14">
-          <a class="d-inline-block pe-2 pe-md-5" href="https://www.luxgen-motor.com.tw/Home/Copyrights">版權說明</a>
-          <a class="d-inline-block pe-2 pe-md-5" href="https://www.luxgen-motor.com.tw/Home/Privacy">服務條款與隱私說明</a>
-          <a class="d-inline-block pe-2 pe-md-5" href="https://www.luxgen-motor.com.tw/Home/EPA">環保署政策宣導</a>
-        </div>
-        <div class="text-center">LUXGEN@2022</div>
-      </div>
-    </div>
-  </footer> -->
+  </div>
 </body>
 
 </html>
@@ -148,7 +136,7 @@
   $(document).ready(function () {
   });
 
-  const refresh = ()=> {
+  const refresh = () => {
     console.log('refresh');
   }
 
@@ -197,19 +185,20 @@
   .login-area {
     padding-right: 10px;
   }
-  
+
   /* login */
   .login {
     height: 100vh;
     padding-top: 64px;
     background-color: #0a0a0a;
-    background-image: url(./assets/image/login_background.png);
-    background-size: 20%;
-    background-position: left bottom;
+    background-image: url(./assets/image/login_background.png), url(./assets/image/login_background_light.png);
+    background-size: 20%, 50%;
+    background-position: left bottom, right top;
     background-repeat: no-repeat;
   }
 
   .login-input {
+    margin: auto;
     width: 75%;
     min-height: 316px;
     border-radius: 10px;
@@ -218,13 +207,13 @@
     background-color: rgba(35, 35, 35, 0.7);
     padding: 40px 0 72px;
   }
-  
+
   .login-input>div {
-    font-size: 40px;
+    font-size: 30px;
   }
-  
+
   form>div {
-    margin: 40px auto 0px;
+    margin: 28px auto 0px;
   }
 
   .form-input {
@@ -239,7 +228,7 @@
   .v-code-input {
     margin-right: 10px;
   }
-  
+
   .v-code-btn>a {
     width: 123px;
     line-height: 32px;
@@ -260,7 +249,11 @@
     color: #fff !important;
     text-decoration: none !important;
   }
-  
+
+  .pic-code {
+    height: 40px;
+  }
+
   @media (min-width: 1200px) {
     .logo {
       padding: 0 36px;
@@ -288,13 +281,14 @@
       font-size: 32px;
     }
   }
+
   @media (max-width: 767px) {
     .login {
       background-size: 50%;
     }
 
     .login-input {
-      width: 95%;
+      width: calc(100% - 32px);
       padding: 40px 0 60px;
     }
 
@@ -335,6 +329,22 @@
 
     .footer-container>div>div:last-child {
       padding-top: 16px;
+    }
+
+    .login {
+      height: 100vh;
+      padding-top: 64px;
+      background-color: #0a0a0a;
+      background-image: url(./assets/image/login_background_m.png), url(./assets/image/login_background_light_m.png);
+      background-size: 50%, 70%;
+      background-position: left bottom, right top;
+      background-repeat: no-repeat;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .login-btn {
+      height: 60px;
     }
   }
 </style>
