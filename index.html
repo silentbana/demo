@@ -285,9 +285,8 @@
                   <input class="form-check-input" type="checkbox" value="" id="privacy-checkbox" required>
                   <label class="form-check-label" for="privacy-checkbox">我已閱讀並同意
                     <a href="https://www.luxgen-motor.com.tw/Home/Privacy" target="_blank"
-                      rel="noopener noreferrer">服務條款與隱私權聲明</a>與
-                    <a href="https://www.luxgen-motor.com.tw/Home/Privacy" target="_blank"
-                      rel="noopener noreferrer">保護文字</a>
+                      rel="noopener noreferrer">服務條款與隱私權聲明</a> 與
+                    <a href="#" class="protect">保護文字</a>
                   </label>
                 </div>
               </div>
@@ -440,6 +439,12 @@
     $('.scroll-to-order').click(() => {
       $('html, body').animate({
         scrollTop: $('.horizontal-line-order').offset().top
+      }, 1);
+    });
+    
+    $('.protect').click(() => {
+      $('html, body').animate({
+        scrollTop: $('.tips').offset().top
       }, 1);
     });
 
