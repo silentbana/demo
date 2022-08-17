@@ -56,9 +56,14 @@
 
             <div class="title order-1 d-md-flex flex-row justify-content-between">
               <div class="name fw-bold">LUXGEN THE NEXT純電休旅-綠能代言人專案</div>
-              <button type="button" class="align-self-center" data-bs-toggle="modal" data-bs-target="#returnModal">
-                <img src="./assets/image/icon_delete.svg" alt="">
-              </button>
+              <div class="buttons align-self-center">
+                <button type="button" class="align-self-center" data-bs-toggle="modal" data-bs-target="#shareModal">
+                  <img src="./assets/image/icons_share.svg" alt="">
+                </button>
+                <button type="button" class="align-self-center" data-bs-toggle="modal" data-bs-target="#returnModal">
+                  <img src="./assets/image/icon_delete.svg" alt="">
+                </button>
+              </div>
             </div>
 
             <div class="details order-3 d-md-flex flex-row justify-content-between">
@@ -126,9 +131,14 @@
 
             <div class="title order-1 d-md-flex flex-row justify-content-between">
               <div class="name fw-bold">LUXGEN THE NEXT純電休旅-綠能代言人專案</div>
-              <button type="button" class="align-self-center" data-bs-toggle="modal" data-bs-target="#expiredModal">
-                <img src="./assets/image/icon_delete.svg" alt="">
-              </button>
+              <div class="buttons align-self-center">
+                <button type="button" class="align-self-center" data-bs-toggle="modal" data-bs-target="#shareModal">
+                  <img src="./assets/image/icons_share.svg" alt="">
+                </button>
+                <button type="button" class="align-self-center" data-bs-toggle="modal" data-bs-target="#expiredModal">
+                  <img src="./assets/image/icon_delete.svg" alt="">
+                </button>
+              </div>
             </div>
 
             <div class="details order-3 d-md-flex flex-row justify-content-between">
@@ -236,7 +246,31 @@
     </div>
   </div>
 
-  <!-- dialog -->
+  <!-- share dialog -->
+  <div class="modal" id="shareModal" tabindex="-1" aria-labelledby="shareModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered custom-dialog">
+      <div class="modal-content p-3">
+        <div class="btn-close" data-bs-dismiss="modal" aria-label="Close"><img src="./assets/image/icon_close.svg" alt=""></div>
+        <h5 class="custom-modal-title text-white p-2">分享至以下社群</h5>
+        <div class="custom-modal-body mt-3 mt-md-4 mb-2">
+          <img src="./assets/image/facebook.webp" alt="facebook">
+          <img src="./assets/image/line.webp" alt="line">
+        </div>
+        <div class="custom-modal-footer p-1 py-3 p-md-3">
+          <div class="share-url d-flex flex-row justify-content-between">
+            <div class="text-a1a1a1" id="url">https://www.luxgen-motor.com.tw</div>
+            <button type="button" id="copy-btn"><img src="./assets/image/icon_copy.svg" alt=""></button>
+          </div>
+          <div class="remind text-caff86 text-center" hidden>
+            <img src="./assets/image/icon_check.svg" alt="">
+            已複製網址
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- returned purchase dialog -->
   <div class="modal" id="returnModal" tabindex="-1" aria-labelledby="returnModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered custom-dialog">
       <div class="modal-content p-3 text-white">
@@ -262,8 +296,8 @@
           退訂期限：2022/12/14<br>
           已超過退訂期限，很抱歉無法進行退訂，感謝您對綠能未來的支持
         </div>
-        <div class="custom-modal-footer text-center">
-          <button type="button" class="btn btn-primary" data-bs-dismiss="modal">我瞭解了</button>
+        <div class="custom-modal-footer">
+          <button type="button" class="btn btn-primary w-100" data-bs-dismiss="modal">我瞭解了</button>
         </div>
       </div>
     </div>
@@ -274,6 +308,12 @@
 
 <script>
   $(document).ready(function () {
+    $('#copy-btn').on('click', function () {
+      urlStr = document.getElementById('url');
+      window.getSelection().selectAllChildren(urlStr);
+      document.execCommand("Copy");
+      $('.remind').removeAttr('hidden');
+    })
 
   });
 
@@ -370,7 +410,7 @@
     font-size: 30px;
   }
 
-  .title>button {
+  .buttons>button {
     background-color: transparent;
     padding-left: 16px;
     border: none;
@@ -443,6 +483,34 @@
     padding-left: 4px;
   }
 
+    /* share-dialog */
+    .share-url {
+    background-color: #000;
+    border-radius: 4px;
+    padding: 9.5px 10px 8.5px 12px;
+    white-space: nowrap;
+  }
+
+  .share-url>div {
+    width: calc(100% - 30px);
+    overflow: hidden;
+  }
+
+  .share-url>button {
+    background-color: transparent;
+    border: none;
+    width: 20px;
+    height: 20px;
+  }
+
+  .custom-modal-body>img:not(:first-child) {
+    margin-left: 20px !important;
+  }
+
+  .remind {
+    margin: 12px auto 2px;
+  }
+
   @media (min-width: 1200px) {
     .logo {
       padding: 0 36px;
@@ -492,7 +560,7 @@
     }
 
     .item>img {
-      margin: 10px auto;
+      margin: 44px auto;
       width: 201px;
     }
 
@@ -505,7 +573,7 @@
       text-align: center;
     }
 
-    .title>button {
+    .buttons {
       position: absolute;
       right: 12px;
       top: 12px;
