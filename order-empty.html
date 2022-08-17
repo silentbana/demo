@@ -14,55 +14,35 @@
 
 <body>
   <nav class="navbar fixed-top">
-    <div class=" container-fluid">
-    <button class="d-block d-lg-none navbar-toggler" type="button" data-bs-toggle="offcanvas"
-      data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+    <div class="container-fluid">
+      <button class="d-block d-lg-none navbar-toggler" type="button" data-bs-toggle="offcanvas"
+        data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+        <img src="./assets/image/icons_menu.svg" alt="">
+      </button>
 
-    <div class="d-flex align-items-center text-white">
-      <a href="https://www.luxgen-motor.com.tw/" target="_blank">
-        <img class="logo" src="./assets/image/logo@3x.png" alt="logo">
-      </a>
+      <div class="d-md-flex align-items-center text-white">
+        <a href="https://www.luxgen-motor.com.tw/" target="_blank">
+          <img class="logo" src="./assets/image/logo@3x.png" alt="logo">
+        </a>
 
-      <ul class="d-none d-lg-flex nav">
-        <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="/">入主純電未來</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" data-bs-toggle="modal" data-bs-target="#activityModal">活動專區</a>
-          <!-- <a class="nav-link" href="/activity">活動專區</a> -->
-        </li>
-      </ul>
-    </div>
-
-    <div class="login-area d-flex align-items-center">
-      <img class="login-icon" src="./assets/image/icon_order_white.svg" alt="訂單查詢">
-      <a href="/order">
-        <div class="text-white" role="button">訂單查詢</div>
-      </a>
-    </div>
-
-    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-      <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-      </div>
-      <div class="offcanvas-body">
-        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+        <ul class="d-none d-lg-flex nav">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
+            <a class="nav-link" aria-current="page" href="/">入主純電未來</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
+            <a class="nav-link" data-bs-toggle="modal" data-bs-target="#activityModal">活動專區</a>
+            <!-- <a class="nav-link" href="/activity">活動專區</a> -->
           </li>
         </ul>
-        <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn-lg btn btn-outline-success" type="submit">Search</button>
-        </form>
       </div>
-    </div>
+
+      <div class="login-area d-none d-lg-flex align-items-center">
+        <img class="login-icon" src="./assets/image/icon_order_white.svg" alt="訂單查詢">
+        <a href="/order">
+          <div class="text-white" role="button">訂單查詢</div>
+        </a>
+      </div>
+
     </div>
   </nav>
   <main class="order text-white">
@@ -77,6 +57,28 @@
       總金額：<span class="text-caff86">0</span>
     </div>
   </main>
+
+  <!-- menu offcanvas -->
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+    <div class="custom-offcanvas-header">
+      <h5 class="offcanvas-title text-center" id="offcanvasNavbarLabel">主選單</h5>
+      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="custom-offcanvas-body">
+      <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 text-center">
+        <li class="nav-item">
+          <a class="nav-link active d-inline-block" aria-current="page" href="#">入主純電未來</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-bs-toggle="modal" data-bs-target="#activityModal">活動專區</a>
+          <!-- <a class="nav-link" href="#">活動專區</a> -->
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">訂單查詢</a>
+        </li>
+      </ul>
+    </div>
+  </div>
 
   <!-- activity dialog -->
   <div class="modal" id="activityModal" tabindex="-1" aria-labelledby="activityModalLabel" aria-hidden="true">
