@@ -46,8 +46,8 @@
     </div>
   </nav>
   <main class="login text-white">
-    <div class="login-input">
-      <div class="text-center mb-5">訂單查詢</div>
+    <div class="login-input position-absolute top-50 start-50 translate-middle">
+      <div class="text-center mb-4 mb-md-5">訂單查詢</div>
       <form id="login-form" action="javascript:submitForm()" novalidate>
         <div class="form-input">
           <label for="phone" class="form-label">手機號碼</label>
@@ -57,13 +57,32 @@
 
         <div class="input-group justify-content-center form-input flex-nowrap">
           <div class="v-code-input flex-grow-1">
-            <label for="v-code" class="form-label">簡訊驗證碼</label>
-            <input id="v-code" class="form-control" placeholder="請輸入六碼驗證碼" type="text" required>
-            <div class="invalid-feedback">*請輸入簡訊驗證碼</div>
+            <label for="v-code" class="form-label">密碼</label>
+            <input id="v-code" class="form-control" placeholder="請輸入8-32位英數字" type="text" required>
+            <div class="invalid-feedback">*請輸入密碼</div>
           </div>
           <div class="v-code-btn">
             <div class="form-label" style="height: 24px;"></div>
-            <button type="button" class="btn btn-outline-primary btn-sm" id="login-sms-btn" disabled>發送驗證碼</button>
+            <a href="https://www.luxgen-motor.com.tw/Account/Forget" target="_blank" type="button" class="btn btn-outline-primary btn-sm" id="login-sms-btn">忘記密碼</a>
+
+            <!-- <button type="button" class="btn btn-outline-primary btn-sm" id="login-sms-btn">忘記密碼</button> -->
+          </div>
+        </div>
+
+        <div class="input-group justify-content-center form-input flex-nowrap">
+          <div class="v-code-input flex-grow-1">
+            <label for="v-code" class="form-label">圖形驗證</label>
+            <input id="v-code" class="form-control" placeholder="請輸入圖片文字" type="text" required>
+            <div class="invalid-feedback">*請輸入圖片文字</div>
+          </div>
+          <div class="v-code-btn">
+            <div class="form-label" style="height: 24px;"></div>
+            <div class="ver d-flex">
+              <img src="http://via.placeholder.com/122x40" alt="">
+              <button type="button" class="refresh" onclick="refresh()">
+                <img src="./assets/image/icons_refresh.svg" alt="">
+              </button>
+            </div>
           </div>
         </div>
         
@@ -84,7 +103,8 @@
           <a class="nav-link active d-inline-block" aria-current="page" href="#">入主純電未來</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">活動專區</a>
+          <a class="nav-link" data-bs-toggle="modal" data-bs-target="#activityModal">活動專區</a>
+          <!-- <a class="nav-link" href="#">活動專區</a> -->
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">訂單查詢</a>
@@ -107,7 +127,7 @@
       </div>
     </div>
   </div>  
-
+<!-- 
   <footer class="footer bg-232323 text-center text-lg-start text-white">
     <div class="container-md footer-container">
       <div class="d-block d-md-flex align-items-center justify-content-between">
@@ -119,45 +139,17 @@
         <div class="text-center">LUXGEN@2022</div>
       </div>
     </div>
-  </footer>
+  </footer> -->
 </body>
 
 </html>
 
 <script>
   $(document).ready(function () {
-    $('#phone').on('input', function () {
-      if (this.value.length == 10) {
-        $('#login-sms-btn').removeAttr('disabled')
-      }
-    })
-    smsInit();
   });
 
-  const smsInit = () => {
-    $('#login-sms-btn').off('click').on('click', function () {
-      $('#login-sms-btn').attr('disabled', 'disabled');
-      smsCount = 150;
-      // 後端發簡訊驗證碼
-      startSmsCount();
-    })
-  }
-
-  const startSmsCount = () => {
-    let timer = setInterval(function () {
-      if (smsCount < 0) {
-        clearInterval(timer);
-        $('#login-sms-btn').text('重新發送')
-        $('#login-sms-btn').attr('disabled', false);
-        smsInit();
-      } else {
-        const minutes = parseInt(smsCount / 60);
-        const seconds = parseInt(smsCount % 60);
-        $('#login-sms-btn').text(minutes.toString().padStart(2, '0') + ':' + seconds.toString().padStart(2, '0'))
-        $('#login-sms-btn').attr('disabled', 'disabled');
-        smsCount--;
-      }
-    }, 1000);
+  const refresh = ()=> {
+    console.log('refresh');
   }
 
   [...document.querySelectorAll('#login-form')]
@@ -215,7 +207,7 @@
   /* login */
   .login {
     height: 100vh;
-    padding-top: 60px;
+    padding-top: 64px;
     background-color: #0a0a0a;
     background-image: url(./assets/image/login_background.png);
     background-size: 20%;
@@ -224,14 +216,7 @@
   }
 
   .login-input {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    margin: auto;
     width: 75%;
-    height: 50%;
     min-height: 316px;
     border-radius: 10px;
     backdrop-filter: blur(5px);
@@ -261,8 +246,9 @@
     margin-right: 10px;
   }
   
-  .v-code-btn>button {
+  .v-code-btn>a {
     width: 123px;
+    line-height: 32px;
   }
 
   label>button {
@@ -302,7 +288,6 @@
 
     .login-input {
       width: 85%;
-      height: 70%;
     }
 
     .login-input>div {
@@ -315,8 +300,8 @@
     }
 
     .login-input {
-      width: 90%;
-      height: 75%;
+      width: 95%;
+      padding: 40px 0 60px;
     }
 
     .login-input>div {
@@ -325,6 +310,15 @@
 
     .form-input {
       width: 90%;
+    }
+
+    form>div {
+      margin: 28px 20px 0;
+    }
+
+    .refresh {
+      background: transparent;
+      border: none;
     }
 
     form>button {
