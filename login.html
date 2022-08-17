@@ -109,7 +109,7 @@
   </div>  
 
   <footer class="footer bg-232323 text-center text-lg-start text-white">
-    <div class="container footer-container">
+    <div class="container-md footer-container">
       <div class="d-block d-md-flex align-items-center justify-content-between">
         <div class="font-14">
           <a class="d-inline-block pe-2 pe-md-5" href="https://www.luxgen-motor.com.tw/Home/Copyrights">版權說明</a>
@@ -336,8 +336,17 @@
       margin-right: 8px;
     }
 
-    .nav-item {
-      margin: 40px 0 0 ;
+    .footer-container {
+      padding: 16px;
+    }
+
+    .footer-container>div>div:first-child {
+      border-bottom: #4e4e4e 1px solid;
+      padding-bottom: 16px;
+    }
+
+    .footer-container>div>div:last-child {
+      padding-top: 16px;
     }
   }
 </style>

@@ -163,7 +163,7 @@ a:active {
 
 /* custom bootstrap css */
 .modal {
-  padding: 0 24px;
+  padding: 0 20px;
   backdrop-filter: blur(4px);
   background-color: rgba(35, 35, 35, 0.2);
 }
@@ -197,7 +197,7 @@ a:active {
   background-color: #0a0a0a !important;
   background-image: url(../image/order_background_1.png), url(../image/order_background_2.png), url(../image/logo@3x.png);
   background-position: 0 70px, right bottom 30px, right 50% bottom 10%;
-  background-size: 18%, 18%, 148px;
+  background-size: 20%, 20%, 148px;
   background-repeat: no-repeat;
   background-attachment: fixed;
   min-height: 100vh;
@@ -387,7 +387,7 @@ h1,
     transform: translateX(-50%) !important;
   }
 
-  .custom-offcanvas-body>.nav-item {
+  .custom-offcanvas-body>ul>.nav-item {
     margin: 64px 0 0 ;
   }
 }
