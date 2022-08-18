@@ -367,7 +367,7 @@ footer a:hover {
 
 .form-select {
   color: #a1a1a1 !important;
-  background-image: url('../image/icon_select_line.svg'), url('../image/icon_arrow_down.svg') !important;
+  background-image: url('../image/icon_select_line.svg'), url('../image/icon_arrow_down.png') !important;
   background-size: 28px 28px, 30px 30px !important;
   background-position: right 20px top 5px, right top 8px !important;
   cursor: pointer;
