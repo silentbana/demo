@@ -172,6 +172,7 @@ a:active {
   background-image: url(../image/icons_arrow_up_lg.svg);
   background-repeat: no-repeat;
   background-size: 100%;
+  cursor: pointer;
 }
 
 .btn-collapse.collapsed {
