@@ -59,7 +59,7 @@
           <div class="v-code-input flex-grow-1 position-relative">
             <label for="password" class="form-label">密碼</label>
             <input id="password" class="form-control" placeholder="請輸入8-32位英數字" type="password" required>
-            <button class="btn position-absolute end-0" type="button" onclick="togglePassword()"><img src="/assets/image/icon_close_eye.svg" alt="" id="toggle-img"></button>
+            <button class="btn position-absolute end-0" type="button" onclick="togglePassword()"><img src="./assets/image/icon_close_eye.svg" alt="" id="toggle-img"></button>
             <div class="invalid-feedback">*請輸入密碼</div>
           </div>
           <div class="v-code-btn">
@@ -143,7 +143,7 @@
 
   const togglePassword = () => {
     const type = $('#password').attr('type') == 'password' ? 'text' :'password'
-    const src = $('#password').attr('type') == 'password' ? '/assets/image/icon_view.svg' : '/assets/image/icon_close_eye.svg'
+    const src = $('#password').attr('type') == 'password' ? './assets/image/icon_view.svg' : './assets/image/icon_close_eye.svg'
     $('#password').attr('type', type)
     $('#toggle-img').attr('src', src)
   }
