@@ -56,9 +56,10 @@
         </div>
 
         <div class="input-group justify-content-center form-input flex-nowrap">
-          <div class="v-code-input flex-grow-1">
-            <label for="v-code" class="form-label">密碼</label>
-            <input id="v-code" class="form-control" placeholder="請輸入8-32位英數字" type="text" required>
+          <div class="v-code-input flex-grow-1 position-relative">
+            <label for="password" class="form-label">密碼</label>
+            <input id="password" class="form-control" placeholder="請輸入8-32位英數字" type="password" required>
+            <button class="btn position-absolute end-0" type="button" onclick="togglePassword()"><img src="/assets/image/icon_close_eye.svg" alt="" id="toggle-img"></button>
             <div class="invalid-feedback">*請輸入密碼</div>
           </div>
           <div class="v-code-btn">
@@ -138,6 +139,13 @@
 
   const refresh = () => {
     console.log('refresh');
+  }
+
+  const togglePassword = () => {
+    const type = $('#password').attr('type') == 'password' ? 'text' :'password'
+    const src = $('#password').attr('type') == 'password' ? '/assets/image/icon_view.svg' : '/assets/image/icon_close_eye.svg'
+    $('#password').attr('type', type)
+    $('#toggle-img').attr('src', src)
   }
 
   [...document.querySelectorAll('#login-form')]
@@ -227,6 +235,10 @@
 
   .v-code-input {
     margin-right: 10px;
+  }
+
+  .v-code-input>button {
+    top: 30px;
   }
 
   .v-code-btn>a {
