@@ -46,11 +46,10 @@
   </nav>
 
   <section class="section-1">
-    <img class="w-100 h-100 d-none d-md-block" src="./assets/image/section_1_bg.png" alt="bg">
-    <img class="w-100 h-100 d-block d-md-none" src="./assets/image/section_1_bg_m.png" alt="bg">
-    <!-- <div class="section-1-btn">
-      <button type="button" class="scroll-to-order btn btn-lg btn-primary">入主純電未來</button>
-    </div> -->
+    <video class="section-1-video" playsinline webkit-playsinline preload="auto" autoplay muted>
+      <source src="./assets/video/section_1.mp4" type="video/mp4" />
+    </video>
+    <img class="section-1-video-m" src="./assets/image/section_1_bg_m.jpg" alt="bg">
   </section>
 
   <section class="section-2">
@@ -314,7 +313,8 @@
 
               <div class="pt-3">
                 <div class="form-check privacy">
-                  <input class="form-check-input" type="checkbox" value="" checked="checked" id="privacy-checkbox" required>
+                  <input class="form-check-input" type="checkbox" value="" checked="checked" id="privacy-checkbox"
+                    required>
                   <label class="form-check-label" for="privacy-checkbox">我已閱讀並同意
                     <a href="https://www.luxgen-motor.com.tw/Home/Privacy" target="_blank" rel="noopener noreferrer"
                       class="fw-bold">服務條款與隱私權聲明</a> 與
@@ -325,7 +325,8 @@
 
               <div class="pt-3 pb-3">
                 <div class="form-check privacy">
-                  <input class="form-check-input" type="checkbox" value="" checked="checked" id="become-member-checkbox" required>
+                  <input class="form-check-input" type="checkbox" value="" checked="checked" id="become-member-checkbox"
+                    required>
                   <label class="form-check-label" for="become-member-checkbox">送出訂購資訊，同時成為LUXGEN VIP會員</label>
                 </div>
               </div>
@@ -418,7 +419,8 @@
           您已是LUXGEN VIP會員，請輸入會員登入密碼，完成訂購。
           <div class="password position-relative">
             <input class="mt-3 mb-2" placeholder="8-32位元，包含英文大小寫及數字" type="password" id="password">
-            <button class="btn position-absolute top-0 end-0" onclick="togglePassword()"><img src="./assets/image/icon_close_eye.svg" alt="" id="toggle-img"></button>
+            <button class="btn position-absolute top-0 end-0" onclick="togglePassword()"><img
+                src="./assets/image/icon_close_eye.svg" alt="" id="toggle-img"></button>
           </div>
           <a href="https://www.luxgen-motor.com.tw/Account/Forget" target="_blank" type="button"
             class="mt-1 pt-2">忘記密碼</a>
@@ -454,7 +456,7 @@
   </div>
 
   <div class="horizontal-line"></div>
-  
+
   <footer class="footer bg-0a0a0a text-center text-lg-start text-white">
     <div class="container-md footer-container">
       <div class="d-block d-md-flex align-items-center justify-content-between">
@@ -487,7 +489,7 @@
 
     $('.protect').click(() => {
       $('html, body').animate({
-        scrollTop: $('.tips').offset().top-50
+        scrollTop: $('.tips').offset().top - 50
       }, 1);
     });
 
@@ -593,7 +595,7 @@
   }
 
   const togglePassword = () => {
-    const type = $('#password').attr('type') == 'password' ? 'text' :'password'
+    const type = $('#password').attr('type') == 'password' ? 'text' : 'password'
     const src = $('#password').attr('type') == 'password' ? './assets/image/icon_view.svg' : './assets/image/icon_close_eye.svg'
     $('#password').attr('type', type)
     $('#toggle-img').attr('src', src)
@@ -728,6 +730,7 @@
 
   .section-1 {
     width: 100%;
+    height: 100vh;
     position: relative;
   }
 
@@ -740,6 +743,22 @@
 
   .section-1-btn button {
     width: fit-content;
+  }
+
+  .section-1-video {
+    display: block;
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .section-1-video-m{
+    display: none;
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;
   }
 
   .section-2 {
@@ -958,6 +977,14 @@
 
     .navigation-right {
       display: none !important;
+    }
+
+    .section-1-video {
+      display: none;
+    }
+
+    .section-1-video-m {
+      display: block;
     }
 
     .section-3 {
