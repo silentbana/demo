@@ -55,8 +55,6 @@
   </section>
 
   <section class="section-2 d-flex">
-    <img class="d-none d-md-block m-auto" src="./assets/image/section_2_bg.png" alt="bg">
-    <img class="d-block d-md-none m-auto" src="./assets/image/section_2_bg_m.png" alt="bg">
     <div class="section-2-content">
       <div class="m-auto">
         <div class="font-56">LILIUM</div>
@@ -766,11 +764,10 @@
   .section-2 {
     position: relative;
     height: 100vh;
-  }
-
-  .section-2 img {
-    height: 100%;
-    width: 100%;
+    background-image: url('./assets/image/section_2_bg.png');
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
   }
 
   .section-2-content {
@@ -1025,9 +1022,8 @@
       display: block;
     }
 
-    .section-2 img {
-      max-height: 100%;
-      width: auto;
+    .section-2 {
+      background-image: url('./assets/image/section_2_bg_m.png');
     }
 
     .section-3 {
