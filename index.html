@@ -247,7 +247,7 @@
                     <div class="invalid-feedback">*請輸入簡訊驗證碼</div>
                   </div>
                   <div class="col-5 p-0">
-                    <div class="form-label" style="height: 24px;"></div>
+                    <div class="form-label"></div>
                     <button id="sms-btn" class="w-100 btn btn-outline-primary btn-sm" type="button">發送驗證碼</button>
                   </div>
                 </div>
@@ -940,6 +940,14 @@
     display: none;
   }
 
+  .sms-area .col-5 .form-label {
+    height: 24px;
+  }
+
+  #sms-btn {
+    font-size: 16px !important;
+  }
+
   .juridical-area {
     display: none;
   }
@@ -1184,6 +1192,18 @@
     .font-18 {
       font-size: 16px !important;
       line-height: 28px !important;
+    }
+
+    .sms-area {
+      padding-top: 16px;
+    }
+
+    .sms-area .col-5 .form-label {
+      height: 21px;
+    }
+
+    #sms-btn {
+      font-size: 14px !important;
     }
   }
 </style>
