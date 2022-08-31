@@ -1,3 +1,11 @@
+@font-face {
+  font-family: 'CorporateGothicNbpRegular';
+  font-weight: normal;
+  font-style: normal;
+  src: url('../font/CorporateGothicNbpRegular-YJJ2.ttf') format('ttf');
+  font-display: auto;
+}
+
 * {
   box-sizing: border-box;
 }
