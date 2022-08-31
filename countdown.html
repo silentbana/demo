@@ -14,10 +14,13 @@
 
 <body>
   <main class="countdown">
-    <div class="logo">
+    <div class="logo d-none d-md-block">
       <img src="./assets/image/logo@3x.png" alt="logo">
     </div>
     <div class="content position-absolute top-50 start-50" style="transform: translate(-50%, -60%)">
+      <div class="logo d-block d-md-none">
+        <img src="./assets/image/logo@3x.png" alt="logo">
+      </div>
       <div class="title fw-bold text-center">COMING SOON</div>
       <div class="subtitle text-center">距離網頁發佈時間</div>
 
@@ -207,13 +210,9 @@
       background: url(./assets/image/countdown_background_sm.png) no-repeat center bottom;
     }
 
-    .logo {
-      padding-top: 8vh;
-    }
-
     .logo>img {
       max-width: 148px;
-      margin: 0 auto 7vh auto;
+      margin: 0 auto;
       display: block;
     }
 
