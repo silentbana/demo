@@ -12,7 +12,7 @@
   <title>訂單查詢</title>
 </head>
 
-<body style="overflow: hidden; touch-action: none; -ms-touch-action: none; position: fixed; width: 100vw;">
+<body class="order-body">
   <nav class="navbar fixed-top">
     <div class="container-fluid">
       <button class="d-block d-lg-none navbar-toggler" type="button" data-bs-toggle="offcanvas"
@@ -355,7 +355,14 @@
 </script>
 
 <style>
-  /* navbar */
+  .order-body {
+    overflow: hidden;
+    touch-action: none;
+    -ms-touch-action: none;
+    position: fixed;
+    width: 100vw;
+  }
+
   .navbar {
     backdrop-filter: blur(5px);
   }
