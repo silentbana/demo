@@ -403,6 +403,14 @@
       <img src="./assets/image/icon_scroll_top_white.svg" alt="回到頂端">
     </div>
   </div>
+  <div class="navigation-right-m">
+    <div class="shopping-m position-relative" role="button">
+      <img src="./assets/image/icon_shopping.svg" alt="訂購">
+    </div>
+    <div class="scroll-top position-relative" role="button">
+      <img src="./assets/image/icon_scroll_top_white.svg" alt="回到頂端">
+    </div>
+  </div>
 
   <!-- activity dialog -->
   <div class="modal" id="activityModal" tabindex="-1" aria-labelledby="activityModalLabel" aria-hidden="true">
@@ -490,7 +498,7 @@
       $(window).scrollTop(0);
     });
 
-    $('.scroll-to-order, .shopping').click(() => {
+    $('.scroll-to-order, .shopping, .shopping-m').click(() => {
       $('html, body').animate({
         scrollTop: $('.horizontal-line-order').offset().top
       }, 1);
@@ -695,6 +703,13 @@
     border-left: 0.5px solid #fff;
   }
 
+  .navigation-right-m {
+    display: none;
+    position: fixed;
+    bottom: 50px;
+    right: 40px;
+  }
+
   .dot-area {
     margin: 12px 0;
   }
@@ -721,12 +736,14 @@
   }
 
   .shopping,
+  .shopping-m,
   .scroll-top {
     height: 60px;
     transition: all 0.2s;
   }
 
   .shopping>img,
+  .shopping-m>img,
   .scroll-top>img {
     width: 40px;
     height: 40px;
@@ -736,6 +753,7 @@
   }
 
   .shopping>img:hover,
+  .shopping-m>img:hover,
   .scroll-top>img:hover {
     transform: scale(1.1);
   }
@@ -1228,6 +1246,10 @@
 
     #sms-btn {
       font-size: 14px !important;
+    }
+
+    .navigation-right-m {
+      display: block;
     }
   }
 </style>
