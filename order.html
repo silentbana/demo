@@ -12,7 +12,7 @@
   <title>訂單查詢</title>
 </head>
 
-<body style="overflow: hidden;">
+<body style="overflow: hidden; touch-action: none; -ms-touch-action: none; position: fixed; width: 100vw;">
   <nav class="navbar fixed-top">
     <div class="container-fluid">
       <button class="d-block d-lg-none navbar-toggler" type="button" data-bs-toggle="offcanvas"
@@ -87,8 +87,8 @@
                 </ul>
                 <div class="bonus mt-2 d-flex flex-row fw-semibold">
                   專案禮遇項目
-                  <div class="btn-collapse collapsed ms-1" data-bs-toggle="collapse"
-                    data-bs-target="#bonus-collapse1" aria-expanded="true"></div>
+                  <div class="btn-collapse collapsed ms-1" data-bs-toggle="collapse" data-bs-target="#bonus-collapse1"
+                    aria-expanded="true"></div>
                 </div>
                 <!-- bonus collapse -->
                 <ul id="bonus-collapse1" class="text-a1a1a1 collapse">
@@ -178,8 +178,8 @@
                 </ul>
                 <div class="bonus mt-2 d-flex flex-row fw-semibold">
                   專案禮遇項目
-                  <div class="btn-collapse collapsed ms-1" data-bs-toggle="collapse"
-                    data-bs-target="#bonus-collapse2" aria-expanded="true"></div>
+                  <div class="btn-collapse collapsed ms-1" data-bs-toggle="collapse" data-bs-target="#bonus-collapse2"
+                    aria-expanded="true"></div>
                 </div>
                 <!-- bonus collapse -->
                 <ul id="bonus-collapse2" class="text-a1a1a1 collapse">
@@ -232,7 +232,7 @@
           </div>
         </div>
 
-        <div style="height: 28px;"></div>
+        <div style="height: 120px;"></div>
       </div>
     </div>
     <!-- calc -->
@@ -434,6 +434,7 @@
 
   .title>.name {
     font-size: 30px;
+    flex: 1;
   }
 
   .buttons>button {
@@ -575,6 +576,10 @@
       padding: 20px 5%;
       font-size: 24px;
     }
+
+    .price {
+      font-size: 32px;
+    }
   }
 
   @media (max-width: 767px) {
@@ -593,6 +598,7 @@
     .item {
       padding: 0 12px;
       border-left: #caff86 solid 6px;
+      position: relative;
     }
 
     .item>img {
