@@ -47,7 +47,33 @@
   </nav>
   <main class="order text-white">
     <div class="items">
-      <div class="page-title mb-3 fw-bold">我的訂單</div>
+      <div class="page-title mb-3 fw-bold d-flex align-items-center">
+        <div>
+          我的訂單
+        </div>
+        <div class="chips">
+          <div>
+            <div class="chip">
+              <input id="chip1" type="radio" name="chip" value="0" checked>
+              <label class="form-check-label" for="chip1">
+                全部專案
+              </label>
+            </div>
+            <div class="chip">
+              <input id="chip2" type="radio" name="chip" value="1">
+              <label class="form-check-label" for="chip2">
+                專案成立
+              </label>
+            </div>
+            <div class="chip">
+              <input id="chip3" type="radio" name="chip" value="2">
+              <label class="form-check-label" for="chip3">
+                其他
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
 
       <div class="order-items">
         <div class="item d-flex flex-column flex-md-row">
@@ -70,7 +96,7 @@
               <div class="detail">
                 <div class="numero">訂單編號：ECW20220707000002</div>
                 <div class="date">訂購日期：2022/09/14</div>
-                <div class="state">付款狀態：<span class="text-ff9900">待付款</span></div>
+                <div class="state">專案狀態：<span class="text-ff9900">專案成立</span></div>
                 <div class="bonus mt-2 d-flex flex-row fw-semibold">
                   訂購人基本資料
                   <div class="btn-collapse collapsed ms-1" data-bs-toggle="collapse"
@@ -161,7 +187,7 @@
               <div class="detail">
                 <div class="numero">訂單編號：ECW20220707000002</div>
                 <div class="date">訂購日期：2022/09/14</div>
-                <div class="state">付款狀態：<span class="text-ff9900">待付款</span></div>
+                <div class="state">專案狀態：<span class="text-ff9900">專案成立</span></div>
                 <div class="bonus mt-2 d-flex flex-row fw-semibold">
                   訂購人基本資料
                   <div class="btn-collapse collapsed ms-1" data-bs-toggle="collapse"
@@ -549,6 +575,40 @@
 
   .remind {
     margin: 12px auto 2px;
+  }
+
+  .chips {
+    display: flex;
+    padding-left: 10px;
+    flex: 1;
+  }
+
+  .chips>div {
+    display: -webkit-box;
+    overflow: scroll;
+  }
+
+  .chip {
+    display: flex;
+    align-items: center;
+  }
+
+  .chip>input {
+    opacity: 0;
+  }
+
+  .chip>input+label {
+    color: #e1e1e1;
+    background-color: #545454;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 7px 12px;
+    border-radius: 30px;
+  }
+
+  .chip>input:checked+label {
+    color: #232323;
+    background-color: #caff86;
   }
 
   @media (min-width: 1200px) {
