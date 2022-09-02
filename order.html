@@ -219,7 +219,7 @@
                   <li>抽獨家商品，共10名</li>
                 </ul>
               </div>
-              <div class="pro order-2 d-block d-md-none" style="margin: 16px 0 20px 0;">
+              <!-- <div class="pro order-2 d-block d-md-none" style="margin: 16px 0 20px 0;">
                 <ul class="d-flex m-0 p-0">
                   <li>
                     <div class="square progress-active"></div> 完成預訂
@@ -234,7 +234,7 @@
                     <div class="square progress-inactive"></div> 交車
                   </li>
                 </ul>
-              </div>
+              </div> -->
               <div class="price">$935,000</div>
             </div>
 
@@ -457,6 +457,10 @@
 
   .item.error{
     border-left: #ff7e7e solid 10px;
+  }
+
+  .item.error .details{
+    margin: 20px 0 0 0;
   }
 
   .item>img {
@@ -714,5 +718,9 @@
     .order {
       background-size: 30%, 30%;
     }
+
+    .item.error .price{
+      margin-bottom: 12px;
+  }
   }
 </style>
