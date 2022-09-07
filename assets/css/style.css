@@ -84,11 +84,11 @@ button:disabled {
   color: #169a82;
 }
 
-.text-caff86{
+.text-caff86 {
   color: #caff86;
 }
 
-.text-ff7e7e{
+.text-ff7e7e {
   color: #ff7e7e;
 }
 
@@ -178,15 +178,19 @@ button:disabled {
   top: -4px;
 }
 
-.btn-sm {
+.btn.btn-sm {
   height: 40px;
 }
 
-.btn-md {
+.btn.btn-default {
+  height: 48px;
+}
+
+.btn.btn-md {
   height: 52px;
 }
 
-.btn-lg {
+.btn.btn-lg {
   height: 60px;
   padding: 16px 32px !important;
 }
@@ -359,10 +363,30 @@ footer a:hover {
   background-color: #5e5e5e !important;
 }
 
+.btn-outline-warning {
+  color: #ff7e7e !important;
+  backdrop-filter: blur(5px);
+  border: solid 1px #ff7e7e !important;
+  background-color: #232323 !important;
+}
+
+.btn-outline-warning:hover {
+  background-color: rgba(255, 126, 126, 0.2) !important;
+}
+
+.btn-outline-warning:disabled {
+  color: #a1a1a1 !important;
+  font-weight: 600;
+  border: none !important;
+  backdrop-filter: blur(5px) !important;
+  background-color: #5e5e5e !important;
+}
+
 .btn {
   font-weight: bold !important;
   border-radius: 4px !important;
-  font-size: 20px !important;
+  font-size: 18px !important;
+  padding: 4px 16px !important;
 }
 
 .form-label,
@@ -504,6 +528,20 @@ h1,
 
 @media (max-width: 767px) {
   .btn {
-    font-size: 18px !important;
+    font-size: 16px !important;
+    padding: 2px 16px;
+  }
+
+  .btn.btn-default {
+    height: 44px;
+  }
+
+  .btn.btn-md {
+    height: 44px;
+  }
+
+  .btn.btn-lg {
+    height: 44px;
+    padding: 4px 24px !important;
   }
 }
