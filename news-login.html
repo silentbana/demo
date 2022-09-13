@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="./assets/css/bootstrap.css" />
   <script src="./assets/js/jquery-3.6.0.min.js"></script>
   <script src="./assets/js/bootstrap.js"></script>
-  <title>專案查詢</title>
+  <title>最新消息</title>
 </head>
 
 <body>
@@ -33,7 +33,7 @@
             <a class="nav-link" href="/activity">活動專區</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/news">最新消息</a>
+            <a class="nav-link active" href="/news">最新消息</a>
           </li>
         </ul>
       </div>
@@ -44,22 +44,8 @@
           <div class="text-white" role="button">專案查詢</div>
         </a>
       </div>
-
     </div>
   </nav>
-  
-  <main class="order text-white">
-    <div class="fw-bold order-title">我的訂單</div>
-    <div class="no-order position-absolute top-50 start-50 translate-middle">
-      <img src="./assets/image/no_order.png" width="226" class="m-auto d-block" alt="no-order">
-      <div class="title fw-bold text-center mb-2">您目前還沒有訂單喔</div>
-      <div class="subtitle text-a1a1a1 text-center">快去活動網頁看看，並進行下訂吧！</div>
-    </div>
-    <!-- calc -->
-    <div class="calc fw-bold text-center">
-      總金額：<span class="text-caff86">0</span>
-    </div>
-  </main>
 
   <!-- menu offcanvas -->
   <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
@@ -70,13 +56,13 @@
     <div class="custom-offcanvas-body">
       <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 text-center">
         <li class="nav-item">
-          <a class="nav-link active d-inline-block" aria-current="page" href="#">入主純電未來</a>
+          <a class="nav-link" aria-current="page" href="/">入主純電未來</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="/activity">活動專區</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/news">最新消息</a>
+          <a class="nav-link active d-inline-block" href="/activity">最新消息</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="/order">專案查詢</a>
@@ -85,36 +71,52 @@
     </div>
   </div>
 
-  <!-- activity dialog -->
-  <div class="modal" id="activityModal" tabindex="-1" aria-labelledby="activityModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered custom-dialog">
-      <div class="modal-content p-4">
-        <h5 class="custom-modal-title">COMING SOON</h5>
-        <div class="custom-modal-body text-white">
-          10/20 之後，活動消息將陸續釋出，敬請期待！
-        </div>
-        <div class="custom-modal-footer d-flex justify-content-center">
-          <button type="button" class="btn btn-primary" data-bs-dismiss="modal">我瞭解了</button>
-        </div>
+  <main class="news-login text-white">
+    <div class="banner">
+      <div class="text-center w-100">
+        <img src="./assets/image/news_title.svg" alt="news">
+        <div class="font-20 fw-light text-caff86 pt-3 letter-spacing-13">最新消息</div>
       </div>
     </div>
-  </div>
-  
+    <div class="content">
+      <div class="info container">
+        <h1 class="font-40 fw-bold">n7的第一手訊息搶先看！</h1>
+        <h2 class="font-18 fw-light py-5">快點登入看有甚麼最新訊息吧！不定時還會推出新活動等你來參與！
+          <br />身為純電代言人的你，還有機會參與n7的仕樣配置票選，一起打造屬於我們的純電未來吧！
+        </h2>
+        <a href="/login">
+          <button type="button" class="btn btn-lg btn-primary d-inline">會員登入</button>
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <div class="horizontal-line"></div>
+
+  <footer class="footer bg-0a0a0a text-center text-lg-start text-white">
+    <div class="container-md footer-container">
+      <div class="d-block d-md-flex align-items-center justify-content-between">
+        <div class="font-14">
+          <a class="d-inline-block pe-2 pe-md-5" href="https://www.luxgen-motor.com.tw/Home/Copyrights">版權說明</a>
+          <a class="d-inline-block pe-2 pe-md-5" href="https://www.luxgen-motor.com.tw/Home/Privacy">服務條款與隱私說明</a>
+          <a class="d-inline-block pe-2 pe-md-5" href="https://www.luxgen-motor.com.tw/Home/EPA">環保署政策宣導</a>
+        </div>
+        <div class="text-center">LUXGEN@2022</div>
+      </div>
+    </div>
+  </footer>
 </body>
 
 </html>
 
 <script>
   $(document).ready(function () {
-
   });
 </script>
 
 <style>
-  /* navbar */
   .navbar {
-    backdrop-filter: blur(5px);
-    border-bottom: 1px solid #4e4e4e;
+    backdrop-filter: blur(0px);
   }
 
   .nav-item .nav-link {
@@ -139,51 +141,40 @@
     padding-right: 10px;
   }
 
-  /* order */
-  .order {
-    padding-top: 60px;
+  .news-login {
     background-color: #0a0a0a;
-    background-image: url(./assets/image/order_background_1.png), url(./assets/image/order_background_2.png);
-    background-position: 0 70px, right bottom 30px;
-    background-size: 18%, 18%;
-    background-repeat: no-repeat;
-    height: 100vh;
   }
 
-  .order-title {
-    position: absolute;
-    top: 100px;
-    left: 170px;
-    font-size: 30px;
-  }
-
-  .no-order {
-    width: 300px;
-  }
-
-  .no-order>.title {
-    font-size: 30px;
-    margin-top: 32px;
-  }
-
-  .no-order>.subtitle {
-    font-size: 18px;
-  }
-
-  .calc {
+  .banner {
+    min-height: 394px;
     width: 100%;
-    position: fixed;
-    bottom: 0;
-    padding: 31px 170px;
-    background: #232223;
-    box-shadow: 0 -2px 11px 0 rgba(0, 0, 0, 0.1);
-    font-family: NotoSans;
-    font-size: 30px;
-    border-top: 1px solid #4e4e4e;
+    background-image: url('./assets/image/news_banner.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    display: flex;
+    align-items: center;
+    vertical-align: middle;
   }
 
-  .calc>span {
-    padding-left: 4px;
+  .content {
+    min-height: 533px;
+    width: 100%;
+    background-image: url(./assets/image/news_bg_light.svg), url(./assets/image/news_bg_title.svg);
+    background-position: left 0 top -400px, left 10px bottom 40px;
+    background-repeat: no-repeat;
+  }
+
+  .info {
+    position: relative;
+    top: -60px;
+    padding: 88px 20px;
+    border-radius: 4px;
+    -webkit-backdrop-filter: blur(88px);
+    backdrop-filter: blur(88px);
+    border: solid 1px #4e4e4e;
+    background-color: #232323;
+    text-align: center;
   }
 
   @media (min-width: 1200px) {
@@ -205,41 +196,27 @@
       padding-right: 36px;
     }
 
-    .calc {
-      padding: 20px 100px;
+    .login-input {
+      width: 85%;
     }
-    
-    .calc {
-      padding: 20px 5%;
-      font-size: 24px;
+
+    .login-input>div {
+      font-size: 32px;
     }
   }
-  @media (max-width: 767px) { 
-    .order {
-      background-size: 30%, 30%;
+
+  @media (max-width: 767px) {
+    .login {
+      background-size: 50%;
     }
 
-    .order-title {
-      top: 88px;
-      left: 20px;
-      font-size: 20px;
-    }
-    .no-order>img {
-      width: 140px;
-      height: 140px;
+    .login-input {
+      width: calc(100% - 32px);
+      padding: 40px 0 60px;
     }
 
-    .no-order>.title {
-      font-size: 20px;
-    }
-
-    .no-order>.subtitle {
-      font-size: 16px;
-    }
-
-    .calc {
-      padding: 16px;
-      font-size: 20px;
+    .login-input>div {
+      font-size: 24px;
     }
   }
 </style>

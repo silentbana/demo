@@ -84,10 +84,6 @@ button:disabled {
   color: #169a82;
 }
 
-.text-caff86 {
-  color: #caff86;
-}
-
 .text-ff7e7e {
   color: #ff7e7e;
 }
@@ -149,6 +145,10 @@ button:disabled {
 
 .font-56 {
   font-size: 56px !important;
+}
+
+.letter-spacing-13 {
+  letter-spacing: 13px;
 }
 
 /* custom component css */
@@ -227,13 +227,22 @@ button:disabled {
   margin-right: 10px;
 }
 
-footer a:hover {
+.footer-container {
+  padding: 36px;
+}
+
+.footer a {
+  color: #fff !important;
+  text-decoration: none !important;
+}
+
+.footer a:hover {
   color: #7e7e7e !important;
 }
 
 .horizontal-line {
   width: 100%;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid #4e4e4e;
 }
 
 /* custom bootstrap css */
@@ -407,11 +416,12 @@ footer a:hover {
   color: #a1a1a1 !important;
 }
 
-.form-select {
-  color: #a1a1a1 !important;
+.form-select{
+  color: #ffffff !important;
   background-image: url('../image/icon_select_line.svg'), url('../image/icon_arrow_down.png') !important;
   background-size: 28px 28px, 30px 30px !important;
   background-position: right 20px top 5px, right top 8px !important;
+  background-repeat: no-repeat;
   cursor: pointer;
 }
 
@@ -543,5 +553,18 @@ h1,
   .btn.btn-lg {
     height: 44px;
     padding: 4px 24px !important;
+  }
+
+  .footer-container {
+    padding: 16px;
+  }
+
+  .footer-container > div > div:first-child {
+    border-bottom: #4e4e4e 1px solid;
+    padding-bottom: 16px;
+  }
+
+  .footer-container > div > div:last-child {
+    padding-top: 16px;
   }
 }

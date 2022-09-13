@@ -27,11 +27,13 @@
 
         <ul class="d-none d-lg-flex nav">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="/">入主純電未來</a>
+            <a class="nav-link active" href="/">入主純電未來</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" data-bs-toggle="modal" data-bs-target="#activityModal">活動專區</a>
-            <!-- <a class="nav-link" href="/activity">活動專區</a> -->
+            <a class="nav-link" href="/activity">活動專區</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/news">最新消息</a>
           </li>
         </ul>
       </div>
@@ -39,7 +41,7 @@
       <div class="login-area d-none d-lg-flex align-items-center">
         <div class="login-icon"></div>
         <a href="/order">
-          <div class="text-white" role="button">訂單查詢</div>
+          <div class="text-white" role="button">專案查詢</div>
         </a>
       </div>
     </div>
@@ -159,7 +161,7 @@
             </li>
           </ul>
           <li>參與辦法:於LUXGEN官方網站《 LUXGEN the NEXT
-            》專頁註冊會員或登入會員後完成資料填寫，並線上預繳1,000元，即可成為純電代言人，後續請前往訂單查詢頁確認您的訂單資料，並以登入狀態可於活動專區搶先看第一手開發日誌與最新通知消息</li>
+            》專頁註冊會員或登入會員後完成資料填寫，並線上預繳1,000元，即可成為純電代言人，後續請前往專案查詢頁確認您的訂單資料，並以登入狀態可於活動專區搶先看第一手開發日誌與最新通知消息</li>
         </ul>
 
         <div class="d-flex pb-0 pb-md-4 mt-5">
@@ -353,7 +355,7 @@
 
     <div class="tips text-a1a1a1 font-14 container">
       <div>
-        <註一>線上支付1,000元參予LUXGEN THE NEXT-綠能代言人專案者，此1,000元未來可以折抵 訂金或車價，並也可登入會員於訂單查詢頁完成退訂
+        <註一>線上支付1,000元參予LUXGEN THE NEXT-綠能代言人專案者，此1,000元未來可以折抵 訂金或車價，並也可登入會員於專案查詢頁完成退訂
       </div>
       <div>
         <註二>線上支付1,000元參予LUXGEN THE NEXT-綠能代言人專案者，順序不代表交車順序， 將視後續實際完成規格選擇與費用繳交完成後為主
@@ -413,21 +415,6 @@
     </div>
   </div>
 
-  <!-- activity dialog -->
-  <div class="modal" id="activityModal" tabindex="-1" aria-labelledby="activityModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered custom-dialog">
-      <div class="modal-content p-4">
-        <h5 class="custom-modal-title">COMING SOON</h5>
-        <div class="custom-modal-body text-white">
-          10/20 之後，活動消息將陸續釋出，敬請期待！
-        </div>
-        <div class="custom-modal-footer d-flex justify-content-center">
-          <button type="button" class="btn btn-primary" data-bs-dismiss="modal">我瞭解了</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
   <!-- 會員登入 dialog -->
   <div class="modal" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered custom-dialog">
@@ -463,11 +450,13 @@
           <a class="nav-link active d-inline-block" aria-current="page" href="/">入主純電未來</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" data-bs-toggle="modal" data-bs-target="#activityModal">活動專區</a>
-          <!-- <a class="nav-link" href="#">活動專區</a> -->
+          <a class="nav-link" href="/activity">活動專區</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/order">訂單查詢</a>
+          <a class="nav-link" href="/news">最新消息</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/order">專案查詢</a>
         </li>
       </ul>
     </div>
@@ -613,14 +602,14 @@
   }
 
   const togglePassword = () => {
-    const type = $('#password').attr('type') == 'password' ? 'text' : 'password'
-    const src = $('#password').attr('type') == 'password' ? './assets/image/icon_view.svg' : './assets/image/icon_close_eye.svg'
-    $('#password').attr('type', type)
-    $('#toggle-img').attr('src', src)
+    const type = $('#password').attr('type') == 'password' ? 'text' : 'password';
+    const src = $('#password').attr('type') == 'password' ? './assets/image/icon_view.svg' : './assets/image/icon_close_eye.svg';
+    $('#password').attr('type', type);
+    $('#toggle-img').attr('src', src);
   }
 
   const login = () => {
-    console.log('login')
+    console.log('login');
   }
 
   const handleScroll = () => {

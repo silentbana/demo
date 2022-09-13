@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="./assets/css/bootstrap.css" />
   <script src="./assets/js/jquery-3.6.0.min.js"></script>
   <script src="./assets/js/bootstrap.js"></script>
-  <title>活動專區</title>
+  <title>最新消息</title>
 </head>
 
 <body>
@@ -27,13 +27,13 @@
 
         <ul class="d-none d-lg-flex nav">
           <li class="nav-item">
-            <a class="nav-link" href="/">入主純電未來</a>
+            <a class="nav-link" aria-current="page" href="/">入主純電未來</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" href="/activity">活動專區</a>
+            <a class="nav-link" href="/activity">活動專區</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/news">最新消息</a>
+            <a class="nav-link active" href="/news">最新消息</a>
           </li>
         </ul>
       </div>
@@ -56,13 +56,13 @@
     <div class="custom-offcanvas-body">
       <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 text-center">
         <li class="nav-item">
-          <a class="nav-link" href="/">入主純電未來</a>
+          <a class="nav-link" aria-current="page" href="/">入主純電未來</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active d-inline-block" href="/activity">活動專區</a>
+          <a class="nav-link" href="/activity">活動專區</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/news">最新消息</a>
+          <a class="nav-link active d-inline-block" href="/activity">最新消息</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="/order">專案查詢</a>
@@ -71,8 +71,53 @@
     </div>
   </div>
 
-  <main class="activity text-white">
+  <main class="news text-white">
+    <div class="banner">
+      <div class="text-center w-100">
+        <img src="./assets/image/news_title.svg" alt="news">
+        <div class="font-20 fw-light text-caff86 pt-3 letter-spacing-13">最新消息</div>
+      </div>
+    </div>
+    <div class="content">
+      <div class="container">
+        <div class="filter row">
+          <div class="col-12 col-md-6">
+            <div class="label">類別</div>
+            <select id="news-type" class="form-select form-control">
+              <option value="1" selected>全部消息</option>
+              <option value="2">納智捷</option>
+              <option value="3">鴻海</option>
+              <option value="4">媒體報導</option>
+            </select>
+          </div>
+          <div class="col-12 col-md-6">
+            <div class="label">時間</div>
+            <select id="news-time" class="form-select form-control">
+              <option value="1" selected>全部</option>
+              <option value="2022">2022</option>
+              <option value="2023">2023</option>
+              <option value="2024">2024</option>
+              <option value="2025">2025</option>
+              <option value="2026">2026</option>
+              <option value="2027">2027</option>
+              <option value="2028">2028</option>
+              <option value="2029">2029</option>
+              <option value="2030">2030</option>
+            </select>
+          </div>
+        </div>
 
+        <div class="list">
+          <div>標題</div>
+          <div>標題</div>
+          <div>標題</div>
+          <div>標題</div>
+          <div>標題</div>
+          <div>標題</div>
+          <div>標題</div>
+        </div>
+      </div>
+    </div>
   </main>
 
   <div class="horizontal-line"></div>
@@ -125,8 +170,67 @@
     padding-right: 10px;
   }
 
-  .activity {
+  .news {
     background-color: #0a0a0a;
+  }
+
+  .banner {
+    min-height: 394px;
+    width: 100%;
+    background-image: url('./assets/image/news_banner.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    display: flex;
+    align-items: center;
+    vertical-align: middle;
+  }
+
+  .content {
+    min-height: 533px;
+    width: 100%;
+    background-image: url(./assets/image/news_bg_light.svg), url(./assets/image/news_bg_title.svg);
+    background-position: left 0 top -400px, left 10px bottom 40px;
+    background-repeat: no-repeat;
+  }
+
+  .filter {
+    position: relative;
+    top: -56px;
+    border-radius: 4px;
+    -webkit-backdrop-filter: blur(88px);
+    backdrop-filter: blur(88px);
+    border: solid 1px #4e4e4e;
+    background-color: #232323;
+    display: flex;
+    padding: 32px 40px;
+    grid-gap: 28px;
+  }
+
+  .filter>div {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    vertical-align: middle;
+  }
+
+  .filter .label {
+    margin-right: 12px;
+  }
+
+  .filter select,
+  .filter input {
+    flex: 1;
+  }
+
+  .list {
+    display: grid;
+    grid-gap:20px;
+    grid-template-columns: 50% 50%;
+  }
+
+  .list > div{
+    background: red;
   }
 
   @media (min-width: 1200px) {
@@ -169,6 +273,10 @@
 
     .login-input>div {
       font-size: 24px;
+    }
+
+    .filter>div {
+      flex: unset;
     }
   }
 </style>
