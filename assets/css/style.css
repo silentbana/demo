@@ -88,6 +88,10 @@ button:disabled {
   color: #ff7e7e;
 }
 
+.text-4e4e4e {
+  color: #4e4e4e;
+}
+
 .text-a1a1a1 {
   color: #a1a1a1;
 }
@@ -149,6 +153,22 @@ button:disabled {
 
 .letter-spacing-13 {
   letter-spacing: 13px;
+}
+
+.text-clamp-1 {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.text-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 /* custom component css */
@@ -416,7 +436,7 @@ button:disabled {
   color: #a1a1a1 !important;
 }
 
-.form-select{
+.form-select {
   color: #ffffff !important;
   background-image: url('../image/icon_select_line.svg'), url('../image/icon_arrow_down.png') !important;
   background-size: 28px 28px, 30px 30px !important;
