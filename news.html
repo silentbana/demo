@@ -259,11 +259,11 @@
       <div class="line-area container">
         <div>
           <div class="left">
-            <div class="mb-4">如有不清楚的地方歡迎加入Line詢問，並加入的你有最新消息將會發送訊息通知您回來登入查看！</div>
+            <div>如有不清楚的地方歡迎加入Line詢問，並加入的你有最新消息將會發送訊息通知您回來登入查看！</div>
             <a href="https://r.botbonnie.com/6ojE3" target="_blank" class="d-block d-lg-inline"><button
                 class="btn btn-lg btn-secondary">加入官方Line</button></a>
           </div>
-          <div>
+          <div class="right">
             <img src="./assets/image/qr_code.png" width="150" height="150" alt="qrcode">
           </div>
         </div>
@@ -503,6 +503,10 @@
     background-color: rgba(35, 35, 35);
   }
 
+  .line-area .left>div {
+      margin-bottom: 24px;
+    }
+
   .line-area .left {
     padding-right: 10%;
   }
@@ -604,6 +608,27 @@
     }
 
     .line-area {
+      padding: 0 0 32px 0;
+    }
+
+    .line-area>div {
+      width: calc(100% - 32px);
+      padding: 20px 12px;
+    }
+
+    .line-area .left {
+      padding-right: 0;
+    }
+
+    .line-area .left>div {
+      margin-bottom: 18px;
+    }
+
+    .line-area .left button {
+      width: 100%;
+    }
+
+    .line-area .right {
       display: none;
     }
 
