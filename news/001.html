@@ -99,6 +99,7 @@
                 <div class="text-clamp-2 text-a1a1a1">LUXGEN
                   LINK⁺智聯網系統，以AI聯網科技大幅革新人車關係，一切資訊，盡在你手！透過智慧型手機與車輛聯網技術的進化整合，毫秒之間，即可一鍵遠端掌握各種車輛狀態，並且享受原廠無微不至的貼心服務。以智慧，開展專屬於您的數位精采生活，盡享最高規格的用車安全與便利性。無論前往何處，皆能智行無疆！
                 </div>
+                <div class="line"></div>
                 <div class="text-4e4e4e">2022.09.01</div>
               </article>
             </a>
@@ -111,6 +112,7 @@
                 <div class="text-clamp-2 text-a1a1a1">LUXGEN
                   LINK⁺智聯網系統，以AI聯網科技大幅革新人車關係，一切資訊，盡在你手！透過智慧型手機與車輛聯網技術的進化整合，毫秒之間，即可一鍵遠端掌握各種車輛狀態，並且享受原廠無微不至的貼心服務。以智慧，開展專屬於您的數位精采生活，盡享最高規格的用車安全與便利性。無論前往何處，皆能智行無疆！
                 </div>
+                <div class="line"></div>
                 <div class="text-4e4e4e">2022.09.01</div>
               </article>
             </a>
@@ -123,6 +125,7 @@
                 <div class="text-clamp-2 text-a1a1a1">LUXGEN
                   LINK⁺智聯網系統，以AI聯網科技大幅革新人車關係，一切資訊，盡在你手！透過智慧型手機與車輛聯網技術的進化整合，毫秒之間，即可一鍵遠端掌握各種車輛狀態，並且享受原廠無微不至的貼心服務。以智慧，開展專屬於您的數位精采生活，盡享最高規格的用車安全與便利性。無論前往何處，皆能智行無疆！
                 </div>
+                <div class="line"></div>
                 <div class="text-4e4e4e">2022.09.01</div>
               </article>
             </a>
@@ -247,14 +250,28 @@
     cursor: pointer;
   }
 
+  .more-news>div{}
+
   .more-news>div:hover {
-    opacity: 0.8;
+    transition: all 0.3s ease-out;
+    transform: translate(-2px, -2px);
   }
 
   .more-news img {
     width: 100%;
     aspect-ratio: 16 / 9;
     border-radius: 4px 4px 0 0;
+  }
+
+  .more-news .line {
+    width: 5%;
+    border-bottom: 2px solid #caff86;
+    margin-bottom: 12px;
+    transition: all 0.3s ease-out;
+  }
+
+  .more-news>div:hover .line {
+    width: 100%;
   }
 
   .more-news article {
