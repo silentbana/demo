@@ -376,6 +376,7 @@ button:disabled {
 .btn-outline-primary {
   color: #caff86 !important;
   backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
   border: solid 1px #caff86 !important;
   background-color: #232323 !important;
 }
@@ -395,6 +396,7 @@ button:disabled {
 .btn-outline-warning {
   color: #ff7e7e !important;
   backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
   border: solid 1px #ff7e7e !important;
   background-color: #232323 !important;
 }
