@@ -250,10 +250,11 @@
     cursor: pointer;
   }
 
-  .more-news>div{}
+  .more-news>div {
+    transition: all 0.3s ease-out;
+  }
 
   .more-news>div:hover {
-    transition: all 0.3s ease-out;
     transform: translate(-2px, -2px);
   }
 
@@ -348,9 +349,13 @@
       flex-direction: column;
     }
 
-    .more>div:nth-child(1){
+    .more>div:nth-child(1) {
       font-size: 16px;
       padding-bottom: 12px;
+    }
+
+    .more-news .line {
+      display: none;
     }
 
     .news h1 {
