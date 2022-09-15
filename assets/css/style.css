@@ -232,6 +232,11 @@ button:disabled {
   color: #7e7e7e;
 }
 
+.nav-link,
+.login-icon{
+  transition: all 0.3s ease-out;
+}
+
 .login-area:hover div {
   color: #7e7e7e !important;
 }
