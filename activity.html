@@ -92,7 +92,7 @@
         <div class="line"></div>
         <div class="container">
           <div class="list">
-            <div class="item" onclick="location.href='/diary/001'">
+            <div class="item" onclick="location.href='/login'">
               <div>
                 <img src="./assets/image/diary_list_demo.png" alt="">
                 <div class="lock">
@@ -106,6 +106,7 @@
                   <button type="button" class="btn btn-lg btn-primary d-inline">會員登入</button>
                 </a>
               </article>
+              <div class="hover-line"></div>
             </div>
             <div class="item" onclick="location.href='/diary/001'">
               <div>
@@ -119,6 +120,7 @@
                 </div>
                 <div>2022.03.22</div>
               </article>
+              <div class="hover-line"></div>
             </div>
 
             <a href="/diary" class="find-more d-block d-lg-inline">
@@ -266,6 +268,7 @@
   }
 
   .diary .item {
+    position: relative;
     display: flex;
     align-items: center;
     vertical-align: middle;
@@ -273,8 +276,21 @@
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
   }
 
+  .diary .item .hover-line {
+    position: absolute;
+    left: calc(28% + 48px);
+    bottom: 0;
+    border-bottom: 2px solid #caff86;
+    width: 5%;
+    transition: all 0.3s ease-out;
+  }
+
   .diary .item:hover {
     cursor: pointer;
+  }
+
+  .diary .item:hover .hover-line {
+    width: calc(72% - 48px);
   }
 
   .diary .item>div:nth-child(1) {
