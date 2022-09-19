@@ -171,6 +171,14 @@ button:disabled {
   text-overflow: ellipsis;
 }
 
+.text-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 /* custom component css */
 .progress-active {
   background-color: #caff86;

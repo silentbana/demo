@@ -79,52 +79,16 @@
       </div>
     </div>
     <div class="content">
-      <div class="line">
-        <div class="container w-100 h-100"></div>
-      </div>
       <div class="diary">
-        <div class="container">
-          <div class="title">
-            <img src="./assets/image/icon_diary.svg" alt="">
-            <h2>n7開發日誌</h2>
-          </div>
+        <div class="title">
+          <img src="./assets/image/icon_diary.svg" alt="">
+          <h2>n7開發日誌</h2>
         </div>
-        <div class="line"></div>
-        <div class="container">
-          <div class="list">
-            <div class="item" onclick="location.href='/diary/001'">
-              <div>
-                <img src="./assets/image/diary_list_demo.png" alt="">
-                <div class="lock">
-                  <img src="./assets/image/icon_lock.svg" alt="">
-                </div>
-              </div>
-              <article>
-                <div class="text-clamp-1">登入搶先看</div>
-                <div class="text-clamp-3">登戶後的用戶可搶先觀看此篇開發日誌唷！快來登入吧！</div>
-                <a href="/login">
-                  <button type="button" class="btn btn-lg btn-primary d-inline">會員登入</button>
-                </a>
-              </article>
-            </div>
-            <div class="item" onclick="location.href='/diary/001'">
-              <div>
-                <img src="./assets/image/diary_list_demo.png" alt="">
-              </div>
-              <article>
-                <div class="text-clamp-1">〈車壇大小事〉LUXGEN招募n7純電休旅代言人</div>
-                <div class="text-clamp-3">
-                  LUXGEN正式於官網啟動《n7純電代言人》專案！LUXGEN新世代純電休旅n7，源自裕隆集團與鴻海集團合資的研發中心鴻華先進打造的原型概念車Model
-                  C發展而來，以「推動純電交通真正普及」為核心設計理念，端出不到百萬輕鬆入主的震撼價格，在10/15前只要在線上預繳千元，就能率先成為「n7純電代言人」，獨享優先交車等多項限定專屬禮遇。
-                </div>
-                <div>2022.03.22</div>
-              </article>
-            </div>
-
-            <a href="/diary" class="find-more d-block d-lg-inline">
-              <button class="btn btn-lg btn-tertiary">查看更多</button>
-            </a>
-          </div>
+        <div class="list">
+          <div class="item"></div>
+          <div class="item"></div>
+          <a href="/diary" class="d-block d-lg-inline"><button
+            class="btn btn-lg btn-secondary">查看更多</button></a>
         </div>
       </div>
     </div>
@@ -195,148 +159,6 @@
     display: flex;
     align-items: center;
     vertical-align: middle;
-  }
-
-  .content {
-    position: relative;
-    min-height: 533px;
-    width: 100%;
-    background-image: url(./assets/image/activity_bg_light.svg);
-    background-position: left 0 top -400px;
-    background-repeat: no-repeat;
-  }
-
-  .content>.line {
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 1;
-  }
-
-  .content>.line>.container {
-    border-left: 1px solid rgba(255, 255, 255, 0.05);
-    border-right: 1px solid rgba(255, 255, 255, 0.05);
-  }
-
-  .diary {
-    position: relative;
-    z-index: 2;
-    width: 100%;
-    background-image: url(./assets/image/activity_bg_development.svg);
-    background-position: right 28px top 90px;
-    background-repeat: no-repeat;
-    padding: 87px 0 56px 0;
-  }
-
-  .diary>.container {
-    padding: 0;
-  }
-
-  .diary .title {
-    display: flex;
-    align-items: center;
-    vertical-align: middle;
-    margin-bottom: 40px;
-  }
-
-  .diary .line {
-    width: 100%;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-  }
-
-  .diary .title img {
-    width: 56px;
-    height: 56px;
-    margin-right: 20px;
-  }
-
-  .diary .title h2 {
-    font-size: 56px;
-    font-weight: bold;
-  }
-
-  .diary .list {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .diary .item {
-    display: flex;
-    align-items: center;
-    vertical-align: middle;
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-  }
-
-  .diary .item:hover {
-    cursor: pointer;
-  }
-
-  .diary .item>div:nth-child(1) {
-    width: 28%;
-    position: relative;
-  }
-
-  .diary .item .lock {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    display: flex;
-    align-items: center;
-    left: 0;
-    top: 0;
-    -webkit-backdrop-filter: blur(15px);
-    backdrop-filter: blur(15px);
-    background-color: rgba(0, 0, 0, 0.5);
-
-  }
-
-  .diary .item .lock img {
-    width: 64px;
-    height: 64px;
-    margin: auto;
-  }
-
-  .diary .item img {
-    width: 100%;
-  }
-
-  .diary .item article {
-    width: 72%;
-    padding: 60px 48px;
-  }
-
-  .diary .item article>div:nth-child(1) {
-    font-size: 30px;
-    font-weight: bold;
-  }
-
-  .diary .item article>div:nth-child(2) {
-    color: #a1a1a1;
-    margin: 16px 0 32px 0;
-  }
-
-  .diary .item article>div:nth-child(3) {
-    color: #4e4e4e;
-  }
-
-  .find-more {
-    text-align: center;
-    padding: 56px 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-  }
-
-  .find-more .btn.btn-lg {
-    padding: 16px 100px !important;
-  }
-
-  .list a:hover {
-    color: unset;
   }
 
   @media (min-width: 1200px) {
