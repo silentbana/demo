@@ -72,12 +72,6 @@
   </div>
 
   <main class="activity text-white">
-    <div class="banner">
-      <div class="text-center w-100">
-        <img src="./assets/image/activity_title.svg" alt="activity">
-        <div class="font-20 fw-light text-caff86 pt-3 letter-spacing-13">活動專區</div>
-      </div>
-    </div>
     <div class="content">
       <div class="diary">
         <div class="title">
@@ -108,12 +102,29 @@
       </div>
     </div>
   </footer>
+
+  <div class="scroll-top" role="button">
+    <img src="./assets/image/icon_scroll_top_white.svg" alt="回到頂端">
+  </div>
 </body>
 
 </html>
 
 <script>
   $(document).ready(function () {
+    $('.scroll-top').click(() => {
+      $(window).scrollTop(0);
+    });
+
+    const handleScroll = () => {
+      if (window.pageYOffset > 0) {
+        $('.scroll-top').css({ 'opacity': '1', 'height': '40px', 'cursor': 'pointer' });
+      } else {
+        $('.scroll-top').css({ 'opacity': '0', 'height': '0px', 'cursor': 'default' });
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll, false);
   });
 </script>
 
@@ -149,16 +160,28 @@
     background-color: #0a0a0a;
   }
 
-  .banner {
-    min-height: 394px;
-    width: 100%;
-    background-image: url('./assets/image/activity_banner.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center bottom;
-    display: flex;
-    align-items: center;
-    vertical-align: middle;
+  .scroll-top {
+    position: fixed;
+    height: 0px;
+    opacity: 0;
+    right: 60px;
+    bottom: 15%;
+    z-index: 999;
+    cursor: default;
+    transition: all 0.3s ease-out;
+  }
+
+  .scroll-top>img {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    transition: all 0.3s ease-out;
+  }
+
+  .scroll-top>img:hover {
+    transform: scale(1.1);
   }
 
   @media (min-width: 1200px) {
@@ -201,14 +224,6 @@
 
     .login-input>div {
       font-size: 24px;
-    }
-
-    .banner {
-      background-image: url('./assets/image/news_banner_m.png');
-    }
-
-    .banner img {
-      width: 50%;
     }
   }
 </style>
