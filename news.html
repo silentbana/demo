@@ -301,9 +301,9 @@
 
     const handleScroll = () => {
       if (window.pageYOffset > 0) {
-        $('.scroll-top').css({ 'opacity': '1', 'height': '60px' });
+        $('.scroll-top').css({ 'opacity': '1', 'height': '40px', 'cursor': 'pointer' });
       } else {
-        $('.scroll-top').css({ 'opacity': '0', 'height': '0px' });
+        $('.scroll-top').css({ 'opacity': '0', 'height': '0px', 'cursor': 'default' });
       }
     };
 
@@ -534,8 +534,13 @@
 
   .scroll-top {
     position: fixed;
+    height: 0px;
+    opacity: 0;
     right: 60px;
-    bottom: 10%;
+    bottom: 15%;
+    z-index: 999;
+    cursor: default;
+    transition: all 0.3s ease-out;
   }
 
   .scroll-top>img {
@@ -544,6 +549,7 @@
     position: absolute;
     left: 0px;
     top: 0px;
+    transition: all 0.3s ease-out;
   }
 
   .scroll-top>img:hover {
