@@ -285,12 +285,29 @@
       </div>
     </div>
   </footer>
+
+  <div class="scroll-top" role="button">
+    <img src="./assets/image/icon_scroll_top_white.svg" alt="回到頂端">
+  </div>
 </body>
 
 </html>
 
 <script>
   $(document).ready(function () {
+    $('.scroll-top').click(() => {
+      $(window).scrollTop(0);
+    });
+
+    const handleScroll = () => {
+      if (window.pageYOffset > 0) {
+        $('.scroll-top').css({ 'opacity': '1', 'height': '60px' });
+      } else {
+        $('.scroll-top').css({ 'opacity': '0', 'height': '0px' });
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll, false);
   });
 </script>
 
@@ -422,6 +439,10 @@
     width: 100%;
   }
 
+  .list>div:hover img {
+    opacity: 0.7;
+  }
+
   .list a:hover {
     color: unset;
   }
@@ -504,11 +525,29 @@
   }
 
   .line-area .left>div {
-      margin-bottom: 24px;
-    }
+    margin-bottom: 24px;
+  }
 
   .line-area .left {
     padding-right: 10%;
+  }
+
+  .scroll-top {
+    position: fixed;
+    right: 60px;
+    bottom: 10%;
+  }
+
+  .scroll-top>img {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+  }
+
+  .scroll-top>img:hover {
+    transform: scale(1.1);
   }
 
   @media (min-width: 1200px) {
