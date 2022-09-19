@@ -220,8 +220,8 @@
   }
 
   .content>.line>.container {
-    border-left: 1px solid rgba(255, 255, 255, 0.05);
-    border-right: 1px solid rgba(255, 255, 255, 0.05);
+    border-left: 1px solid #3b3b3b;
+    border-right: 1px solid #3b3b3b;
   }
 
   .diary {
@@ -247,7 +247,7 @@
 
   .diary .line {
     width: 100%;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    border-bottom: 1px solid #3b3b3b;
   }
 
   .diary .title img {
@@ -272,8 +272,8 @@
     display: flex;
     align-items: center;
     vertical-align: middle;
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    border-top: 1px solid #3b3b3b;
+    border-bottom: 1px solid #3b3b3b;
   }
 
   .diary .item .hover-line {
@@ -287,10 +287,15 @@
 
   .diary .item:hover {
     cursor: pointer;
+    background-color: #232323;
   }
 
   .diary .item:hover .hover-line {
     width: calc(72% - 48px);
+  }
+
+  .diary .item:hover>div>img {
+    opacity: 0.7;
   }
 
   .diary .item>div:nth-child(1) {
@@ -318,8 +323,9 @@
     margin: auto;
   }
 
-  .diary .item img {
+  .diary .item>div>img {
     width: 100%;
+    border-left: 1px solid #3b3b3b;
   }
 
   .diary .item article {
@@ -344,7 +350,7 @@
   .find-more {
     text-align: center;
     padding: 56px 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    border-bottom: 1px solid #3b3b3b;
   }
 
   .find-more .btn.btn-lg {
