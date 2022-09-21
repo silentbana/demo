@@ -90,8 +90,8 @@
               <option value="4">媒體報導</option>
             </select>
           </div>
-          <div class="col-12 col-md-6">
-            <div class="label">時間</div>
+          <div class="col-12 col-md-3">
+            <div class="label">年份</div>
             <select id="news-time" class="form-select form-control">
               <option value="1" selected>全部</option>
               <option value="2022">2022</option>
@@ -103,6 +103,24 @@
               <option value="2028">2028</option>
               <option value="2029">2029</option>
               <option value="2030">2030</option>
+            </select>
+          </div>
+          <div class="col-12 col-md-3">
+            <div class="label">月份</div>
+            <select id="news-time" class="form-select form-control">
+              <option value="0" selected>全部</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+              <option value="12">12</option>
             </select>
           </div>
         </div>
@@ -373,12 +391,10 @@
     background-color: #232323;
     display: flex;
     padding: 32px 40px;
-    grid-gap: 28px;
     margin: auto;
   }
 
   .filter>div {
-    flex: 1;
     display: flex;
     align-items: center;
     vertical-align: middle;
@@ -611,6 +627,7 @@
       margin: auto;
       padding: 32px 20px;
       top: -86px;
+      grid-gap: 28px;
     }
 
     .filter>div {
