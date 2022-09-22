@@ -71,6 +71,31 @@
     </div>
   </div>
 
+  <!-- share dialog -->
+  <div class="modal" id="shareModal" tabindex="-1" aria-labelledby="shareModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered custom-dialog">
+      <div class="modal-content p-3">
+        <div class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close">
+        </div>
+        <h5 class="custom-modal-title text-white p-2">分享至以下社群</h5>
+        <div class="custom-modal-body mt-1 mt-md-4 mb-2">
+          <img src="../assets/image/facebook.webp" alt="facebook">
+          <img src="../assets/image/line.webp" alt="line">
+        </div>
+        <div class="custom-modal-footer p-1 py-3 p-md-3">
+          <div class="share-url d-flex flex-row justify-content-between">
+            <div class="text-a1a1a1" id="url">https://www.luxgen-motor.com.tw</div>
+            <button type="button" id="copy-btn"><img src="../assets/image/icon_copy.svg" alt=""></button>
+          </div>
+          <div class="remind text-caff86 text-center" hidden>
+            <img src="../assets/image/icon_check.svg" alt="">
+            &nbsp已複製網址
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <main class="activity text-white">
     <div class="container">
       <ul class="breadcrumb">
@@ -85,7 +110,7 @@
           <h2>車壇大小事：LUXGEN招募n7純電休旅代言人</h2>
           <div class="date">
             <div>2022.10.18</div>
-            <div>
+            <div data-bs-toggle="modal" data-bs-target="#shareModal">
               <div>我要分享</div>
               <img src="../assets/image/icon_share.svg" alt="">
             </div>
@@ -202,6 +227,13 @@
 
 <script>
   $(document).ready(function () {
+    $('#copy-btn').on('click', function () {
+      urlStr = document.getElementById('url');
+      window.getSelection().selectAllChildren(urlStr);
+      document.execCommand("Copy");
+      $('.remind').removeAttr('hidden');
+    })
+
   });
 </script>
 
@@ -480,6 +512,54 @@
     color: #4e4e4e;
   }
 
+  /* share-dialog */
+  .share-url {
+    background-color: #000;
+    border-radius: 4px;
+    padding: 9.5px 10px 8.5px 12px;
+    white-space: nowrap;
+    align-items: center;
+  }
+
+  .share-url>div {
+    width: calc(100% - 30px);
+    overflow: hidden;
+  }
+
+  .share-url>button {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    width: 20px;
+    height: 20px;
+  }
+
+  .custom-modal-body>img:not(:first-child) {
+    margin-left: 20px !important;
+  }
+
+  .remind {
+    margin: 12px auto 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .footer-container {
+    padding: 24px;
+  }
+
+  .footer a {
+    color: #fff !important;
+    text-decoration: none !important;
+  }
+
+  .btn-close {
+    cursor: pointer;
+  }
+
   @media (min-width: 1200px) {
     .logo {
       padding: 0 36px;
@@ -609,6 +689,7 @@
       padding: 16px;
       border-top: 1px solid #3b3b3b;
       border-bottom: 1px solid #3b3b3b;
+      text-align: center;
     }
 
     .diary .item .hover-line {

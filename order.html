@@ -289,7 +289,7 @@
           </div>
           <div class="remind text-caff86 text-center" hidden>
             <img src="./assets/image/icon_check.svg" alt="">
-            已複製網址
+            &nbsp已複製網址
           </div>
         </div>
       </div>
@@ -527,12 +527,13 @@
     padding-left: 4px;
   }
 
-  /* share-dialog */
-  .share-url {
+    /* share-dialog */
+    .share-url {
     background-color: #000;
     border-radius: 4px;
     padding: 9.5px 10px 8.5px 12px;
     white-space: nowrap;
+    align-items: center;
   }
 
   .share-url>div {
@@ -541,6 +542,9 @@
   }
 
   .share-url>button {
+    display: flex;
+    align-items: center;
+    padding: 0;
     background-color: transparent;
     border: none;
     width: 20px;
@@ -553,6 +557,22 @@
 
   .remind {
     margin: 12px auto 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .footer-container {
+    padding: 24px;
+  }
+
+  .footer a {
+    color: #fff !important;
+    text-decoration: none !important;
+  }
+
+  .btn-close {
+    cursor: pointer;
   }
 
   .chips {
