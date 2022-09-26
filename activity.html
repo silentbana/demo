@@ -97,8 +97,8 @@
                 </div>
               </div>
               <article>
-                <div class="text-clamp-1">登入搶先看</div>
-                <div class="text-clamp-3">登戶後的用戶可搶先觀看開發日誌唷！</div>
+                <div class="text-clamp-1">車壇大小事：LUXGEN招募n7純電休旅代言人</div>
+                <div class="text-clamp-3">登入搶先看第一手的開發日誌內容！</div>
                 <div>
                   <a href="/login">
                     <button type="button" class="btn btn-lg btn-primary d-inline">會員登入</button>
@@ -122,7 +122,7 @@
               <div class="hover-line"></div>
             </div>
 
-            <a href="/diary" class="find-more d-block d-lg-inline">
+            <a href="/diary" class="find-more d-block">
               <button class="btn btn-lg btn-tertiary">查看更多</button>
             </a>
           </div>
@@ -131,17 +131,56 @@
           <div class="container w-100 h-100"></div>
         </div>
       </div>
-    </div>
 
-    <div class="line-area container">
-      <div>
-        <div class="left">
-          <div>還沒加入LUXGEN官方Line OA嗎? 現在就從下方按鈕或者掃描畫面上QR Code加入， 有不清楚的地方歡迎加入後向小編詢問， 並有發佈最新訊息時將主動發送訊息提醒您回來登入查看!</div>
-          <a href="https://r.botbonnie.com/6ojE3" target="_blank" class="d-block d-lg-inline"><button
-              class="btn btn-lg btn-secondary">加入官方Line</button></a>
+      <div class="nft">
+        <div class="container">
+          <div class="title">
+            <img src="./assets/image/icon_nft.svg" alt="">
+            <h2>我的專屬NFT</h2>
+          </div>
+          <div class="sub-title">未來這張NFT將在領車後成為您專屬的私人車籍身份憑證， 從出廠開始，包含原廠檢修履歷、零配件更換選購紀錄與事故出險資訊通通透過去中心化的多方加密技術進行擔保，讓愛車更加保值!
+          </div>
+          <!-- 未登入 -->
+          <div class="list">
+            <div class="login">
+              <div class="login-title">登入查看我的專屬NFT</div>
+              <div>
+                <!-- 10/20改走登入流程，登入後回到此頁 -->
+                <!-- <a href="/login" class="d-block"> -->
+                <button class="btn btn-lg btn-tertiary" disabled>10/20開放登入</button>
+                <!-- </a> -->
+                <a href="/" class="d-block">
+                  <button class="btn btn-lg btn-tertiary">加入專案</button>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- 已登入，未加入專案 -->
+          <!-- <div class="list">
+
+          </div> -->
+          <!-- 已登入，已加入專案 -->
+          <!-- <div class="list">
+
+          </div> -->
+          <a href="/nft" class="find-more d-block">
+            <button class="btn btn-lg btn-tertiary">查看更多</button>
+          </a>
         </div>
-        <div class="right">
-          <img src="./assets/image/qr_code.png" width="150" height="150" alt="qrcode">
+
+        <div class="horizontal-line"></div>
+
+        <div class="line-area container">
+          <div>
+            <div class="left">
+              <div>還沒加入LUXGEN官方Line OA嗎? 現在就從下方按鈕或者掃描畫面上QR Code加入， 有不清楚的地方歡迎加入後向小編詢問， 並有發佈最新訊息時將主動發送訊息提醒您回來登入查看!</div>
+              <a href="https://r.botbonnie.com/6ojE3" target="_blank" class="d-block d-lg-inline"><button
+                  class="btn btn-lg btn-secondary">加入官方Line</button></a>
+            </div>
+            <div class="right">
+              <img src="./assets/image/qr_code.png" width="150" height="150" alt="qrcode">
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -247,7 +286,7 @@
     background-image: url(./assets/image/activity_bg_development.svg);
     background-position: right 28px top 96px;
     background-repeat: no-repeat;
-    padding: 87px 0 0 0;
+    padding: 88px 0 0 0;
   }
 
   .diary>.container {
@@ -378,6 +417,54 @@
 
   .list a:hover {
     color: unset;
+  }
+
+  .nft {
+    background-image: url(./assets/image/activity_bg_nft.svg), url(./assets/image/activity_bg_light_1.png), url(./assets/image/activity_bg_light_2.png), url(./assets/image/activity_bg_light_3.svg);
+    background-position: right 28px top 66px, left 0 top 158px, right 0 top 530px, right 0 top -200px;
+    background-repeat: no-repeat;
+    padding: 88px 0 0 0;
+  }
+
+
+  .nft .title {
+    display: flex;
+    align-items: center;
+    padding: 0 0 24px 0;
+  }
+
+  .nft .title img {
+    width: 56px;
+    height: 56px;
+    margin-right: 20px;
+  }
+
+  .nft .title h2 {
+    font-size: 56px;
+    font-weight: bold;
+  }
+
+  .nft .sub-title {
+    font-size: 20px;
+  }
+
+  .nft .list {
+    display: flex;
+    border-radius: 4px;
+    border-style: solid;
+    border-width: 1px;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(108deg, rgba(255, 255, 255, 0.49) 0%, rgba(255, 255, 255, 0.2) 54%, rgba(255, 255, 255, 0.85) 100%);
+  }
+
+  .nft .list .login {
+    margin: 110px auto;
+    text-align: center;
+  }
+
+  .nft .list .login-title {
+    font-size: 30px;
+    font-weight: bold;
   }
 
   .line-area {
