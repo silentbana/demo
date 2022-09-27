@@ -149,7 +149,7 @@
               <div class="button-area">
                 <button class="btn btn-lg btn-tertiary" disabled>10/20開放登入</button>
                 <a href="/" class="d-block">
-                  <button class="btn btn-lg btn-tertiary">加入n⁷專案<</button>
+                  <button class="btn btn-lg btn-tertiary">加入n⁷專案</button>
                 </a>
               </div>
             </div>
@@ -174,17 +174,17 @@
           <div class="list">
             <!-- 已開盲盒樣式 -->
             <div class="item translate">
+              <img src="./assets/image/nft_card_unopened.png" alt="nft">
+              <div class="hover-filter">
+              </div>
+            </div>
+            <!-- 未開盲盒樣式 -->
+            <div class="item translate">
               <img src="./assets/image/nft_card_opened.png" alt="nft">
               <div class="hover-filter">
                 <a href="/login">
                   <button class="btn btn-lg btn-primary">開啟盲盒</button>
                 </a>
-              </div>
-            </div>
-            <!-- 未開盲盒樣式 -->
-            <div class="item translate">
-              <img src="./assets/image/nft_card_unopened.png" alt="nft">
-              <div class="hover-filter">
               </div>
             </div>
             <!-- 尚未領取樣式 -->
@@ -198,9 +198,9 @@
               </div>
             </div>
             <!-- 已使用樣式 -->
-            <div class="item">
+            <div class="item used">
               <img src="./assets/image/nft_card_unopened.png" alt="nft">
-              <div class="used">
+              <div>
                 <img src="./assets/image/icon_nft_used.svg" alt="nft">
               </div>
             </div>
@@ -618,10 +618,10 @@
     flex-direction: column;
     justify-content: end;
     text-align: center;
-    width: calc(100% - 4px);
-    height: calc(100% - 4px);
-    left: 2px;
-    top: 2px;
+    width: calc(100% - 2px);
+    height: calc(100% - 2px);
+    left: 1px;
+    top: 1px;
     background-image: linear-gradient(to bottom, rgba(202, 255, 134, 0) 50%, rgba(202, 255, 134, 0.5) 100%);
     transition: all 0.3s ease-out;
   }
@@ -639,7 +639,7 @@
     transform: translate(0px, -36px);
   }
 
-  .nft .list .item .used {
+  .nft .list .used>div {
     position: absolute;
     inset: 0;
     border-radius: 4px;
@@ -652,15 +652,15 @@
     height: calc(100% - 2px);
     left: 1px;
     top: 1px;
+    background-color: rgba(255, 255, 255, 0.05);
   }
 
-  .nft .list .item .used {
-    background-color: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(1px);
-    -webkit-backdrop-filter: blur(1px);
+  .nft .list .used>img {
+    opacity: 0.6;
+    filter: grayscale(1);
   }
 
-  .nft .list .item .used img {
+  .nft .list .used>div img {
     width: 80%;
     margin: auto;
   }
