@@ -141,10 +141,10 @@
           <div class="sub-title">未來這張NFT將在領車後成為您專屬的私人車籍身份憑證， 從出廠開始，包含原廠檢修履歷、零配件更換選購紀錄與事故出險資訊通通透過去中心化的多方加密技術進行擔保，讓愛車更加保值!
           </div>
           <!-- 未登入 -->
-          <div class="list">
+          <div class="list glass">
             <div class="login">
               <div class="login-title">登入查看我的專屬NFT</div>
-              <div>
+              <div class="button-area">
                 <!-- 10/20改走登入流程，登入後回到此頁 -->
                 <!-- <a href="/login" class="d-block"> -->
                 <button class="btn btn-lg btn-tertiary" disabled>10/20開放登入</button>
@@ -421,7 +421,7 @@
 
   .nft {
     background-image: url(./assets/image/activity_bg_nft.svg), url(./assets/image/activity_bg_light_1.png), url(./assets/image/activity_bg_light_2.png), url(./assets/image/activity_bg_light_3.svg);
-    background-position: right 28px top 66px, left 0 top 158px, right 0 top 530px, right 0 top -200px;
+    background-position: right 28px top 66px, left 0 top 158px, right 0 top 550px, right 0 top -200px;
     background-repeat: no-repeat;
     padding: 88px 0 0 0;
   }
@@ -446,15 +446,36 @@
 
   .nft .sub-title {
     font-size: 20px;
+    padding: 0 0 56px 0;
   }
 
   .nft .list {
     display: flex;
+  }
+
+  .nft .glass {
+    position: relative;
     border-radius: 4px;
-    border-style: solid;
-    border-width: 1px;
-    border-image-slice: 1;
-    border-image-source: linear-gradient(108deg, rgba(255, 255, 255, 0.49) 0%, rgba(255, 255, 255, 0.2) 54%, rgba(255, 255, 255, 0.85) 100%);
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), linear-gradient(108deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 54%, rgba(255, 255, 255, 0.08) 100%);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    -webkit-backdrop-filter: blur(60px);
+    backdrop-filter: blur(60px);
+  }
+
+  .nft .glass::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 4px;
+    padding: 1px;
+    background: linear-gradient(108deg, rgba(255, 255, 255, 0.49) 0%, rgba(255, 255, 255, 0.2) 54%, rgba(255, 255, 255, 0.85) 100%);
+    -webkit-mask:
+      linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
   }
 
   .nft .list .login {
@@ -465,6 +486,13 @@
   .nft .list .login-title {
     font-size: 30px;
     font-weight: bold;
+    padding: 0 0 32px 0;
+  }
+
+  .nft .list .button-area {
+    display: flex;
+    align-items: center;
+    grid-gap: 10px;
   }
 
   .line-area {
