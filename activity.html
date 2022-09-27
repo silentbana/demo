@@ -181,7 +181,7 @@
             <!-- 未開盲盒樣式 -->
             <div class="item translate">
               <img src="./assets/image/nft_card_opened.png" alt="nft">
-              <div class="hover-filter">
+              <div class="hover-filter mobile-show">
                 <a href="/login">
                   <button class="btn btn-lg btn-primary">開啟盲盒</button>
                 </a>
@@ -467,7 +467,7 @@
 
   .nft {
     background-image: url(./assets/image/activity_bg_nft.svg), url(./assets/image/activity_bg_light_1.png), url(./assets/image/activity_bg_light_2.png), url(./assets/image/activity_bg_light_3.svg);
-    background-position: right 28px top 66px, left 0 top 158px, right 0 top 550px, right 0 top -200px;
+    background-position: right 28px top 66px, left -24px top 80px, right 0 top 550px, right 0 top -200px;
     background-repeat: no-repeat;
     padding: 88px 0 0 0;
   }
@@ -951,17 +951,23 @@
       padding: 24px 0;
     }
 
-    .nft .list{
+    .nft .list {
       grid-template-columns: repeat(1, 1fr);
     }
 
-    .nft .list .item{
+    .nft .list .item {
       pointer-events: none;
     }
 
     /* 小網只顯示第一筆 */
-    .nft .list .item:not(:nth-child(1)){
+    .nft .list .item:not(:nth-child(1)) {
       display: none;
     }
+
+    .nft .list .item .mobile-show {
+      display: flex;
+      background-image: none;
+    }
+
   }
 </style>
