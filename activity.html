@@ -198,12 +198,12 @@
               </div>
             </div>
             <!-- 已使用樣式 -->
-            <div class="item used">
+            <!-- <div class="item used">
               <img src="./assets/image/nft_card_unopened.png" alt="nft">
               <div>
                 <img src="./assets/image/icon_nft_used.svg" alt="nft">
               </div>
-            </div>
+            </div> -->
           </div>
           <a href="/nft" class="find-more d-block">
             <button class="btn btn-lg btn-tertiary">查看更多</button>
@@ -772,6 +772,10 @@
       padding: 8px 16px !important;
       height: 44px;
     }
+
+    .nft {
+      background-size: 50%, 175px, 291px, 100%;
+    }
   }
 
   @media (max-width: 767px) {
@@ -893,6 +897,66 @@
 
     .find-more .btn.btn-lg {
       padding: 4px 24px !important;
+    }
+
+    .nft {
+      padding: 28px 0 0 0;
+      background-image: url(./assets/image/activity_bg_light_1_m.png), url(./assets/image/activity_bg_light_2_m.png);
+      background-position: left 0 top 8px, right 0 bottom 260px;
+    }
+
+    .nft .title {
+      justify-content: center;
+      padding: 0 0 20px 0;
+    }
+
+    .nft .title img {
+      width: 28px;
+      height: 28px;
+      margin-right: 8px;
+    }
+
+    .nft .title h2 {
+      font-size: 30px;
+    }
+
+    .nft .sub-title {
+      font-size: 18px;
+      padding: 0 0 20px 0;
+    }
+
+    .nft .glass .login {
+      margin: 100px auto;
+    }
+
+    .nft .glass .login-title {
+      padding: 0 0 20px 0;
+    }
+
+    .nft .glass .login-title div:nth-child(1) {
+      font-size: 20px;
+    }
+
+    .nft .glass .button-area {
+      flex-direction: column;
+    }
+
+    .nft .glass .button-area button,
+    .nft .glass .button-area a {
+      width: 180px;
+    }
+
+    .nft .find-more {
+      padding: 24px 0;
+    }
+
+    .nft .list{
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    /* 小網只顯示第一筆 */
+    .nft .list .item:not(:nth-child(1)){
+      display: none;
     }
   }
 </style>
