@@ -319,9 +319,13 @@
 
     const handleScroll = () => {
       if (window.pageYOffset > 0) {
-        $('.scroll-top').css({ 'opacity': '1', 'height': '40px', 'cursor': 'pointer' });
+        if ($('.scroll-top').css('cursor') === 'default') {
+          $('.scroll-top').css({ 'opacity': '1', 'height': '40px', 'cursor': 'pointer' });
+        }
       } else {
-        $('.scroll-top').css({ 'opacity': '0', 'height': '0px', 'cursor': 'default' });
+        if ($('.scroll-top').css('cursor') === 'pointer') {
+          $('.scroll-top').css({ 'opacity': '0', 'height': '0px', 'cursor': 'default' });
+        }
       }
     };
 
