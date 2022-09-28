@@ -85,7 +85,7 @@
             <div class="title order-1 d-md-flex flex-row justify-content-between">
               <div class="name fw-bold">LUXGEN THE NEXT純電休旅-綠能代言人專案</div>
               <div class="buttons align-self-center">
-                <button type="button" class="align-self-center" data-bs-toggle="modal" data-bs-target="#shareModal">
+                <button type="button" class="align-self-center" data-bs-toggle="modal" data-bs-target="#share-modal">
                   <img src="./assets/image/icons_share.svg" alt="">
                 </button>
                 <button type="button" class="align-self-center" data-bs-toggle="modal" data-bs-target="#returnModal">
@@ -237,7 +237,7 @@
   <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
     <div class="custom-offcanvas-header">
       <h5 class="offcanvas-title text-center" id="offcanvasNavbarLabel">主選單</h5>
-      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      <button type="button" class="btn-close btn-close-white" role="button" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
     <div class="custom-offcanvas-body">
       <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 text-center">
@@ -273,7 +273,7 @@
   </div>
 
   <!-- share dialog -->
-  <div class="modal" id="shareModal" tabindex="-1" aria-labelledby="shareModalLabel" aria-hidden="true">
+  <div class="modal fade" id="share-modal" tabindex="-1" aria-labelledby="shareModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered custom-dialog">
       <div class="modal-content p-3">
         <div class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></div>
@@ -527,8 +527,15 @@
     padding-left: 4px;
   }
 
-    /* share-dialog */
-    .share-url {
+  /* share-dialog */
+  #share-modal .custom-modal-body {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .share-url {
     background-color: #000;
     border-radius: 4px;
     padding: 9.5px 10px 8.5px 12px;
@@ -551,10 +558,6 @@
     height: 20px;
   }
 
-  .custom-modal-body>img:not(:first-child) {
-    margin-left: 20px !important;
-  }
-
   .remind {
     margin: 12px auto 2px;
     display: flex;
@@ -569,10 +572,6 @@
   .footer a {
     color: #fff !important;
     text-decoration: none !important;
-  }
-
-  .btn-close {
-    cursor: pointer;
   }
 
   .chips {

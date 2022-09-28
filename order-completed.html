@@ -70,7 +70,8 @@
       <div class="buttons d-flex flex-row justify-content-center">
         <button type="button" class="btn btn-lg btn-tertiary">返回主頁</button>
         <div style="width: 20px;"></div>
-        <button type="button" class="btn btn-lg btn-primary" data-bs-toggle="modal" data-bs-target="#shareModal">我要分享</button>
+        <button type="button" class="btn btn-lg btn-primary" data-bs-toggle="modal"
+          data-bs-target="#share-modal">我要分享</button>
       </div>
     </div>
   </main>
@@ -80,7 +81,7 @@
   <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
     <div class="custom-offcanvas-header">
       <h5 class="offcanvas-title text-center" id="offcanvasNavbarLabel">主選單</h5>
-      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      <button type="button" class="btn-close btn-close-white" role="button" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
     <div class="custom-offcanvas-body">
       <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 text-center">
@@ -101,7 +102,7 @@
   </div>
 
   <!-- share dialog -->
-  <div class="modal" id="shareModal" tabindex="-1" aria-labelledby="shareModalLabel" aria-hidden="true">
+  <div class="modal fade" id="share-modal" tabindex="-1" aria-labelledby="shareModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered custom-dialog">
       <div class="modal-content p-3">
         <div class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close">
@@ -151,7 +152,6 @@
       document.execCommand("Copy");
       $('.remind').removeAttr('hidden');
     })
-
   });
 </script>
 
@@ -244,8 +244,15 @@
     padding: 14px 24px;
   }
 
-    /* share-dialog */
-    .share-url {
+  /* share-dialog */
+  #share-modal .custom-modal-body {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .share-url {
     background-color: #000;
     border-radius: 4px;
     padding: 9.5px 10px 8.5px 12px;
@@ -268,10 +275,6 @@
     height: 20px;
   }
 
-  .custom-modal-body>img:not(:first-child) {
-    margin-left: 20px !important;
-  }
-
   .remind {
     margin: 12px auto 2px;
     display: flex;
@@ -286,10 +289,6 @@
   .footer a {
     color: #fff !important;
     text-decoration: none !important;
-  }
-
-  .btn-close {
-    cursor: pointer;
   }
 
   @media (min-width: 1200px) {

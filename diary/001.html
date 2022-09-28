@@ -51,7 +51,7 @@
   <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
     <div class="custom-offcanvas-header">
       <h5 class="offcanvas-title text-center" id="offcanvasNavbarLabel">主選單</h5>
-      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      <button type="button" class="btn-close btn-close-white" role="button" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
     <div class="custom-offcanvas-body">
       <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 text-center">
@@ -72,7 +72,7 @@
   </div>
 
   <!-- share dialog -->
-  <div class="modal" id="shareModal" tabindex="-1" aria-labelledby="shareModalLabel" aria-hidden="true">
+  <div class="modal fade" id="share-modal" tabindex="-1" aria-labelledby="shareModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered custom-dialog">
       <div class="modal-content p-3">
         <div class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close">
@@ -110,7 +110,7 @@
           <h2>車壇大小事：LUXGEN招募n7純電休旅代言人</h2>
           <div class="date">
             <div>2022.10.18</div>
-            <div data-bs-toggle="modal" data-bs-target="#shareModal">
+            <div data-bs-toggle="modal" data-bs-target="#share-modal">
               <div>我要分享</div>
               <img src="../assets/image/icon_share.svg" alt="">
             </div>
@@ -237,7 +237,6 @@
       document.execCommand("Copy");
       $('.remind').removeAttr('hidden');
     })
-
   });
 </script>
 
@@ -517,6 +516,13 @@
   }
 
   /* share-dialog */
+  #share-modal .custom-modal-body {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+  }
+
   .share-url {
     background-color: #000;
     border-radius: 4px;
@@ -540,10 +546,6 @@
     height: 20px;
   }
 
-  .custom-modal-body>img:not(:first-child) {
-    margin-left: 20px !important;
-  }
-
   .remind {
     margin: 12px auto 2px;
     display: flex;
@@ -558,10 +560,6 @@
   .footer a {
     color: #fff !important;
     text-decoration: none !important;
-  }
-
-  .btn-close {
-    cursor: pointer;
   }
 
   @media (min-width: 1200px) {

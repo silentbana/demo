@@ -241,7 +241,7 @@ button:disabled {
 }
 
 .nav-link,
-.login-icon{
+.login-icon {
   transition: all 0.3s ease-out;
 }
 
@@ -282,6 +282,7 @@ button:disabled {
 .modal {
   padding: 0 20px;
   backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
   background-color: rgba(35, 35, 35, 0.2);
 }
 
