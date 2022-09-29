@@ -271,20 +271,7 @@
             <!-- 未開盲盒樣式 -->
             <div class="item translate" data-bs-toggle="modal" data-bs-target="#nft-modal">
               <img src="./assets/image/nft_card_opened.png" alt="nft">
-              <div class="hover-filter mobile-show">
-                <a href="/login">
-                  <button class="btn btn-lg btn-primary">開啟盲盒</button>
-                </a>
-              </div>
-            </div>
-            <!-- 尚未領取樣式 -->
-            <div class="item">
-              <img src="./assets/image/nft_card_unopened.png" alt="nft">
-              <div class="filter">
-                <div>您有盲盒未領取唷</div>
-                <a href="/login">
-                  <button class="btn btn-lg btn-primary">領取盲盒</button>
-                </a>
+              <div class="hover-filter">
               </div>
             </div>
             <!-- 已使用樣式 -->
@@ -688,32 +675,6 @@
 
   .nft .list .item:hover::before {
     background: linear-gradient(108deg, #caff86 0%, #caff86 54%, #caff86 100%);
-  }
-
-  .nft .list .item .filter {
-    position: absolute;
-    inset: 0;
-    border-radius: 4px;
-    padding: 1px;
-    -webkit-backdrop-filter: blur(20px);
-    backdrop-filter: blur(20px);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    width: calc(100% - 4px);
-    height: calc(100% - 4px);
-    left: 2px;
-    top: 2px;
-  }
-
-  .nft .list .item .filter div:nth-child(1) {
-    padding: 0 0 20px 0;
-    font-size: 20px;
-  }
-
-  .nft .list .item .filter a {
-    margin: 0 auto;
   }
 
   .nft .list .item .hover-filter {
@@ -1209,11 +1170,6 @@
       display: none;
     }
 
-    .nft .list .item .mobile-show {
-      display: flex;
-      background-image: none;
-    }
-
     /* nft-dialog */
     #nft-modal {
       height: 100vh;
@@ -1251,6 +1207,7 @@
     #nft-modal .content {
       height: auto;
       max-height: calc(100% - 140px);
+      margin: 16px 0 0 4px;
     }
 
     #nft-modal .title {
