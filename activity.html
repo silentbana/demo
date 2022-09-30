@@ -81,8 +81,6 @@
           <img src="./assets/image/nft_card_unopened.png" alt="nft">
           <!-- 未開盲盒樣式 -->
           <!-- <img src="./assets/image/nft_card_opened.png" alt="nft"> -->
-          <!-- 已使用樣式 -->
-          <!-- <img src="./assets/image/nft_card_unopened.png" alt="nft"> -->
         </div>
         <div class="nft-text">
           <div class="title">LUXGEN NFT</div>
@@ -96,38 +94,27 @@
               <span>NFT領取時間：</span>
               <span>2022/10/14</span>
             </div>
+            <!-- 未開盲盒MGM樣式 -->
+            <!-- <div class="d-flex align-items-center">
+              <span>MGM邀請碼：</span>
+              <span id="mgm-code">●●●●●●●●●●（開啟盲盒後獲得）</span>
+            </div> -->
+            <br>
+            <div>此LUXGEN NFT所享有的賦能：</div>
+            <!-- 已開盲盒MGM樣式 -->
             <div class="d-flex align-items-center">
               <span>MGM邀請碼：</span>
-              <!-- 已開盲盒樣式 -->
               <span id="mgm-code">MWg1928402</span>
               <button id="copy-mgm-code" type="button"><img src="./assets/image/icon_copy.svg" alt=""></button>
               <span id="copy-mgm-remind">已複製</span>
-              <!-- 未開盲盒樣式 -->
-              <!-- <span id="mgm-code">●●●●●●●●●●（開啟盲盒後獲得）</span> -->
             </div>
-            <br>
-            <div>此LUXGEN NFT所享有的賦能：</div>
-            <div>1. 線上預繳之1,000元可折抵後續購買n⁷之車價</div>
-            <div>2. 抽一年免費充電權，共10名</div>
-            <div>3. 抽獨家商品，共10名</div>
-            <div>4. 線上預繳之1,000元可折抵後續購買n⁷之車價</div>
-            <div>5. 抽一年免費充電權，共10名</div>
-            <div>6. 抽獨家商品，共10名</div>
-            <div>7. 抽獨家商品，共10名</div>
-            <div>8. 抽獨家商品，共10名</div>
-            <div>9. 抽獨家商品，共10名</div>
-            <div>10. 抽獨家商品，共10名</div>
-            <div>11. 抽獨家商品，共10名</div>
-            <div>12. 抽獨家商品，共10名</div>
+            <div>
+              *您可在入主純電未來下訂區使用此組邀請碼
+              <!-- 開啟盲盒後，即可得知這張NFT所享有的負能喔 -->
+            </div>
           </div>
           <div class="button">
-            <!-- 已開盲盒樣式 -->
-            <button type="button" class="btn btn-lg btn-primary d-inline">使用賦能</button>
-            <!-- 未開盲盒樣式 -->
-            <!-- <button class="btn btn-lg btn-tertiary" disabled>10/27開啟盲盒</button> -->
-            <!-- 已使用樣式 -->
-            <!-- <button class="btn btn-lg btn-tertiary" disabled>已使用</button> -->
-
+            <button class="btn btn-lg btn-tertiary" disabled>10/27開啟盲盒</button>
             <button id="show-share-btn" class="btn btn-lg btn-tertiary">我要分享</button>
           </div>
         </div>
@@ -274,12 +261,9 @@
               <div class="hover-filter">
               </div>
             </div>
-            <!-- 已使用樣式 -->
-            <div class="item used" data-bs-toggle="modal" data-bs-target="#nft-modal">
-              <img src="./assets/image/nft_card_unopened.png" alt="nft">
-              <div>
-                <img src="./assets/image/icon_nft_used.svg" alt="nft">
-              </div>
+            <!-- 空白樣式，填補單行剩餘item -->
+            <div class="item empty">
+              <div></div>
             </div>
           </div>
           <a href="/nft" class="find-more d-block">
@@ -708,7 +692,11 @@
     transform: translate(0px, -36px);
   }
 
-  .nft .list .used>div {
+  .nft .list .empty:hover {
+    cursor: default;
+  }
+
+  .nft .list .empty>div {
     position: absolute;
     inset: 0;
     border-radius: 4px;
@@ -724,14 +712,8 @@
     background-color: rgba(255, 255, 255, 0.05);
   }
 
-  .nft .list .used>img {
-    opacity: 0.6;
-    filter: grayscale(1);
-  }
-
-  .nft .list .used>div img {
-    width: 80%;
-    margin: auto;
+  .nft .list .empty:hover::before {
+    background: linear-gradient(108deg, rgba(255, 255, 255, 0.49) 0%, rgba(255, 255, 255, 0.2) 54%, rgba(255, 255, 255, 0.85) 100%);
   }
 
   .nft .list .item img {
@@ -792,7 +774,7 @@
     transform: scale(1.1);
   }
 
-  /* nft-dialog */
+  /* nft dialog */
   #nft-modal .btn-close {
     position: fixed;
     left: 48px;
@@ -884,7 +866,7 @@
     padding: 0 0 0 8px;
   }
 
-  /* share-dialog */
+  /* share dialog */
   #share-modal .custom-modal-body {
     display: flex;
     gap: 20px;
@@ -1170,7 +1152,7 @@
       display: none;
     }
 
-    /* nft-dialog */
+    /* nft dialog */
     #nft-modal {
       height: 100vh;
       overflow: hidden;

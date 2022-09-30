@@ -71,6 +71,83 @@
     </div>
   </div>
 
+  <!-- NFT dialog -->
+  <div class="modal fade" id="nft-modal" tabindex="-1" aria-labelledby="nftModalLabel" aria-hidden="true">
+    <div class="btn-close btn-close-white" role="button" data-bs-dismiss="modal" aria-label="Close"></div>
+    <div class="modal-dialog modal-dialog-centered custom-dialog">
+      <div class="modal-content">
+        <div class="nft-card">
+          <!-- 已開盲盒樣式 -->
+          <img src="./assets/image/nft_card_unopened.png" alt="nft">
+          <!-- 未開盲盒樣式 -->
+          <!-- <img src="./assets/image/nft_card_opened.png" alt="nft"> -->
+        </div>
+        <div class="nft-text">
+          <div class="title">LUXGEN NFT</div>
+          <div class="horizontal-line"></div>
+          <div class="content">
+            <div>
+              <span>專案訂單編號：</span>
+              <span>ECW20220707000002</span>
+            </div>
+            <div>
+              <span>NFT領取時間：</span>
+              <span>2022/10/14</span>
+            </div>
+            <!-- 未開盲盒MGM樣式 -->
+            <!-- <div class="d-flex align-items-center">
+                <span>MGM邀請碼：</span>
+                <span id="mgm-code">●●●●●●●●●●（開啟盲盒後獲得）</span>
+              </div> -->
+            <br>
+            <div>此LUXGEN NFT所享有的賦能：</div>
+            <!-- 已開盲盒MGM樣式 -->
+            <div class="d-flex align-items-center">
+              <span>MGM邀請碼：</span>
+              <span id="mgm-code">MWg1928402</span>
+              <button id="copy-mgm-code" type="button"><img src="./assets/image/icon_copy.svg" alt=""></button>
+              <span id="copy-mgm-remind">已複製</span>
+            </div>
+            <div>
+              *您可在入主純電未來下訂區使用此組邀請碼
+              <!-- 開啟盲盒後，即可得知這張NFT所享有的負能喔 -->
+            </div>
+          </div>
+          <div class="button">
+            <button class="btn btn-lg btn-tertiary" disabled>10/27開啟盲盒</button>
+            <button id="show-share-btn" class="btn btn-lg btn-tertiary">我要分享</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <!-- share dialog -->
+  <div class="modal fade" id="share-modal" tabindex="-1" aria-labelledby="shareModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered custom-dialog">
+      <div class="modal-content p-3">
+        <div class="btn-close btn-close-white" role="button" data-bs-dismiss="modal" aria-label="Close">
+        </div>
+        <h5 class="custom-modal-title text-white p-2">分享至以下社群</h5>
+        <div class="custom-modal-body mt-1 mt-md-4 mb-2">
+          <img src="./assets/image/facebook.webp" alt="facebook">
+          <img src="./assets/image/line.webp" alt="line">
+        </div>
+        <div class="custom-modal-footer p-1 py-3 p-md-3">
+          <div class="share-url d-flex flex-row justify-content-between">
+            <div class="text-a1a1a1" id="url">https://www.luxgen-motor.com.tw</div>
+            <button type="button" id="copy-btn"><img src="./assets/image/icon_copy.svg" alt=""></button>
+          </div>
+          <div class="remind text-caff86 text-center" hidden>
+            <img src="./assets/image/icon_check.svg" alt="">
+            &nbsp已複製網址
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <main class="nft text-white">
     <div class="container">
       <ul class="breadcrumb">
@@ -84,12 +161,12 @@
       <div class="sub-title">
         <div class="vertical-line"></div>
         <h2>NFT功能介紹</h2>
-        <!-- <div class="btn-collapse ms-1" data-bs-toggle="collapse" data-bs-target="#collapse" aria-expanded="true"> -->
       </div>
       <div class="sub-content">
         功能：未來NFT將在領車後成為您專屬的私人車籍身份憑證，從出廠開始，包含原廠檢修履歷、零配件更換選購紀錄與事故出險資訊通通透過去中心化的多方加密技術進行擔保，讓愛車更加保值。賦能：您的NFT將可能在不同階段為您取得獨特賦能，讓您獲得意想不到的好禮。
       </div>
-      <div class="collapse show">
+      <!-- 預設展開時加show class -->
+      <div id="collapse" class="collapse">
         <div class="nft-icon-area">
           <div>
             <div>
@@ -123,6 +200,110 @@
           <span class="top-left"></span>
           <span class="top-right"></span>
         </div>
+
+        <div class="sub-title">
+          <div class="vertical-line"></div>
+          <h2>NFT領取流程說明</h2>
+        </div>
+        <div class="sub-content">
+          <div>1.領取流程：10/20 10:00開始領取盲盒；10/27 10:00起可以開啟盲盒，領取專屬於您獨一無二的 NFT，並且可以領取NFT的專屬賦能。</div>
+          <div>2. 錢包綁定：本次NFT活動支援所有人領取，擁有錢包的NFT玩家可以綁定您的錢包，沒有區塊鏈錢 包的消費者，則直接選擇納智捷代管錢包，即可領取您的NFT。</div>
+          <div>3. 交易說明：10/20綁定外部錢包後，盲盒可直接上鏈交易；若10/20綁定的是納智捷代管錢包，則需至11/20才可移轉至自有錢包於鏈上進行交易。</div>
+          <div>4. 其他：若您的NFT為二級市場買入，請先註冊成為LUXGEN會員，再點選領取/查看我的NFT，綁定您的錢包後，我們將會把您的NFT放入展示架上，您也可以使用相關賦能。</div>
+        </div>
+        <div class="sub-title">
+          <div class="vertical-line"></div>
+          <h2>NFT賦能說明</h2>
+        </div>
+        <div class="sub-content">
+          <!-- 預計10/18公告MGM邀請規則後更新上去=>18號新聞稿也會發 -->
+          Coming soom....
+        </div>
+        <div class="nft-ad">
+          <!-- <video class="d-block my-4" playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop"><source src="https://www.toyota.com.tw/event/grnft/assets/video/step-1.mp4" type="video/mp4"></video> -->
+          <img src="./assets/image/nft_card_unopened.png" alt="nft">
+        </div>
+      </div>
+
+      <div class="collapse-btn collapsed" data-bs-toggle="collapse" data-bs-target="#collapse" aria-expanded="false">
+        <div></div>
+        <div>
+          <img src="./assets/image/icon_collapse_arrow_down.svg" alt="">
+        </div>
+        <div></div>
+      </div>
+    </div>
+
+    <!-- nft展示牆 -->
+    <div class="nft-art">
+      <div class="container">
+        <div class="title">
+          <h2>我的NFT展示牆</h2>
+        </div>
+        <!-- 未登入 -->
+        <!-- <div class="glass">
+          <div class="login">
+            <div class="login-title">
+              <div>登入查看我的專屬NFT</div>
+            </div>
+            <div class="button-area">
+              <button class="btn btn-lg btn-tertiary" disabled>10/20開放登入</button>
+              <a href="/" class="d-block">
+                <button class="btn btn-lg btn-tertiary">加入n⁷專案</button>
+              </a>
+            </div>
+          </div>
+        </div> -->
+        <!-- 已登入，未加入專案 -->
+        <!-- <div class="glass">
+          <div class="login">
+            <div class="login-title">
+              <div>
+                您還未加入專案唷
+              </div>
+              <div>加入後即可擁有您的專屬NFT</div>
+            </div>
+            <div class="button-area">
+              <a href="/" class="d-block">
+                <button class="btn btn-lg btn-primary">加入n⁷專案</button>
+              </a>
+            </div>
+          </div>
+        </div> -->
+        <!-- 已登入，已加入專案 -->
+        <div class="list">
+          <!-- 已開盲盒樣式 -->
+          <div class="item translate" data-bs-toggle="modal" data-bs-target="#nft-modal">
+            <img src="./assets/image/nft_card_unopened.png" alt="nft">
+            <div class="hover-filter">
+            </div>
+          </div>
+          <!-- 未開盲盒樣式 -->
+          <div class="item translate" data-bs-toggle="modal" data-bs-target="#nft-modal">
+            <img src="./assets/image/nft_card_opened.png" alt="nft">
+            <div class="hover-filter">
+            </div>
+          </div>
+          <div class="item translate" data-bs-toggle="modal" data-bs-target="#nft-modal">
+            <img src="./assets/image/nft_card_opened.png" alt="nft">
+            <div class="hover-filter">
+            </div>
+          </div>
+          <div class="item translate" data-bs-toggle="modal" data-bs-target="#nft-modal">
+            <img src="./assets/image/nft_card_opened.png" alt="nft">
+            <div class="hover-filter">
+            </div>
+          </div>
+          <div class="item translate" data-bs-toggle="modal" data-bs-target="#nft-modal">
+            <img src="./assets/image/nft_card_opened.png" alt="nft">
+            <div class="hover-filter">
+            </div>
+          </div>
+          <!-- 空白樣式，填補單行剩餘item -->
+          <div class="item empty">
+            <div></div>
+          </div>
+        </div>
       </div>
     </div>
     </div>
@@ -148,7 +329,23 @@
 
 <script>
   $(document).ready(function () {
+    $('#copy-btn').on('click', function () {
+      urlStr = document.getElementById('url');
+      window.getSelection().selectAllChildren(urlStr);
+      document.execCommand("Copy");
+      $('.remind').removeAttr('hidden');
+    })
 
+    $('#copy-mgm-code').on('click', function () {
+      urlStr = document.getElementById('mgm-code');
+      window.getSelection().selectAllChildren(urlStr);
+      document.execCommand("Copy");
+      $('#copy-mgm-remind').addClass('d-inline-flex');
+    })
+
+    $('#show-share-btn').on('click', function () {
+      $('#share-modal').modal('show');
+    })
   });
 </script>
 
@@ -184,8 +381,8 @@
     background-color: #0a0a0a;
     min-height: 100vh;
     width: 100%;
-    background-image: url(./assets/image/activity_bg_light.svg), url(./assets/image/activity_bg_nft.svg), url(./assets/image/activity_bg_light_1.png), url(./assets/image/activity_bg_light_2.png);
-    background-position: left 0 top 0, right 28px top 184px, left 0 bottom 300px, right 0 bottom 0;
+    background-image: url(./assets/image/activity_bg_light.svg), url(./assets/image/activity_bg_nft.svg);
+    background-position: left 0 top 0, right 28px top 184px;
     background-repeat: no-repeat;
   }
 
@@ -224,14 +421,25 @@
 
   .nft .sub-title {
     display: flex;
+    padding: 0 0 20px 0;
+  }
+
+  .nft .sub-title h2 {
     font-size: 30px;
     font-weight: bold;
-    padding: 0 0 20px 0;
   }
 
   .nft .sub-content {
     color: #cfcfcf;
     font-size: 20px;
+  }
+
+  .nft .container>.sub-content {
+    padding: 0 0 36px 0;
+  }
+
+  .nft .container .collapse .sub-content {
+    padding: 0 0 64px 0;
   }
 
   .nft-icon-area {
@@ -242,7 +450,7 @@
     border-width: 1px 0 0 1px;
     border-image-source: linear-gradient(99deg, #d7ffa4 0%, rgba(255, 255, 255, 0.47) 34%, rgba(255, 255, 255, 0.31) 71%, rgba(230, 255, 199, 0.56) 100%);
     border-image-slice: 1;
-    margin: 36px 0 64px 0;
+    margin: 0 0 64px 0;
   }
 
   .nft-icon-area>div:nth-child(1) {
@@ -328,7 +536,341 @@
     width: calc(100% - 70px);
     bottom: 0;
     left: 0;
-    border-bottom: 1px solid #d7ffa4;
+    border-bottom: 1px solid rgba(230, 255, 199, 0.56);
+  }
+
+  .collapse-btn {
+    width: 100%;
+    display: flex;
+    cursor: pointer;
+  }
+
+  .collapse-btn>div:nth-child(1),
+  .collapse-btn>div:nth-child(3) {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    width: calc(50% - 20px);
+    top: -20px;
+    position: relative;
+  }
+
+  .collapse-btn>div:nth-child(2) {
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    border: solid 1px rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .collapse-btn>div:nth-child(2) img {
+    width: 32px;
+    height: 32px;
+    transition: all 0.3s ease-out;
+  }
+
+  .collapse-btn:not(.collapsed)>div:nth-child(2) img {
+    transform: rotate(180deg);
+  }
+
+  .nft-ad {
+    text-align: center;
+  }
+
+  .nft-art {
+    padding: 80px 0 160px 0;
+    background-image: url(./assets/image/activity_bg_light_1.png), url(./assets/image/activity_bg_light_2.png);
+    background-position: left 0 top 80px, right 0 bottom 0;
+    background-repeat: no-repeat;
+  }
+
+  .nft-art .title {
+    padding: 0 0 40px 0;
+  }
+
+  .nft-art .title h2 {
+    font-size: 40px;
+    font-weight: bold;
+  }
+
+  .nft .glass {
+    display: grid;
+    position: relative;
+    border-radius: 4px;
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), linear-gradient(108deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 54%, rgba(255, 255, 255, 0.08) 100%);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    -webkit-backdrop-filter: blur(60px);
+    backdrop-filter: blur(60px);
+  }
+
+  .nft .glass::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 4px;
+    padding: 1px;
+    background: linear-gradient(108deg, rgba(255, 255, 255, 0.49) 0%, rgba(255, 255, 255, 0.2) 54%, rgba(255, 255, 255, 0.85) 100%);
+    -webkit-mask:
+      linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+  }
+
+  .nft .glass .login {
+    margin: 110px auto;
+    text-align: center;
+  }
+
+  .nft .glass .login-title {
+    padding: 0 0 32px 0;
+  }
+
+  .nft .glass .login-title div:nth-child(1) {
+    font-size: 30px;
+    font-weight: bold;
+  }
+
+  .nft .glass .login-title div:nth-child(2) {
+    font-size: 20px;
+    padding: 8px 0 0 0;
+  }
+
+  .nft .glass .button-area {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-gap: 10px;
+  }
+
+  .nft .list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 40px 20px;
+  }
+
+  .nft .list .item {
+    position: relative;
+    padding: 8px;
+    border-radius: 4px;
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(108deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.04) 54%, rgba(255, 255, 255, 0.16) 100%);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    cursor: pointer;
+  }
+
+  .nft .list .item::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 4px;
+    padding: 1px;
+    background: linear-gradient(108deg, rgba(255, 255, 255, 0.49) 0%, rgba(255, 255, 255, 0.2) 54%, rgba(255, 255, 255, 0.85) 100%);
+    -webkit-mask:
+      linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+  }
+
+  .nft .list .item:hover::before {
+    background: linear-gradient(108deg, #caff86 0%, #caff86 54%, #caff86 100%);
+  }
+
+  .nft .list .item .hover-filter {
+    display: none;
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 4px;
+    padding: 1px;
+    flex-direction: column;
+    justify-content: end;
+    text-align: center;
+    width: calc(100% - 2px);
+    height: calc(100% - 2px);
+    left: 1px;
+    top: 1px;
+    background-image: linear-gradient(to bottom, rgba(202, 255, 134, 0) 50%, rgba(202, 255, 134, 0.5) 100%);
+    transition: all 0.3s ease-out;
+  }
+
+  .nft .list .item .hover-filter a {
+    margin: 0 auto;
+    padding: 0 0 24px 0;
+  }
+
+  .nft .list .item:hover .hover-filter {
+    display: flex;
+  }
+
+  .nft .list .translate:hover img {
+    transform: translate(0px, -36px);
+  }
+
+  .nft .list .empty:hover {
+    cursor: default;
+  }
+
+  .nft .list .empty>div {
+    position: absolute;
+    inset: 0;
+    border-radius: 4px;
+    padding: 1px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: calc(100% - 2px);
+    height: calc(100% - 2px);
+    left: 1px;
+    top: 1px;
+    background-color: rgba(255, 255, 255, 0.05);
+  }
+
+  .nft .list .empty:hover::before {
+    background: linear-gradient(108deg, rgba(255, 255, 255, 0.49) 0%, rgba(255, 255, 255, 0.2) 54%, rgba(255, 255, 255, 0.85) 100%);
+  }
+
+  .nft .list .item img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+    transition: all 0.3s ease-out;
+  }
+
+  /* nft dialog */
+  #nft-modal .btn-close {
+    position: fixed;
+    left: 48px;
+    top: 48px;
+    border: 1px solid #4e4e4e;
+    border-radius: 30px;
+    width: 30px;
+    height: 30px;
+    z-index: 1;
+  }
+
+  #nft-modal .modal-dialog {
+    max-width: 80%;
+    color: white;
+  }
+
+  #nft-modal .modal-content {
+    flex-direction: row;
+    gap: 24px;
+    padding: 16px;
+  }
+
+  #nft-modal .nft-card {
+    text-align: center;
+  }
+
+  #nft-modal .nft-card>img {
+    width: 35vw;
+  }
+
+  #nft-modal .nft-text {
+    flex: 1;
+  }
+
+  #nft-modal .title {
+    font-size: 40px;
+    font-weight: bold;
+    padding: 0;
+  }
+
+  #nft-modal .content {
+    color: #cfcfcf;
+    font-size: 16px;
+    height: calc(35vw - 160px);
+    overflow: scroll;
+    margin: 20px 0 0 0;
+  }
+
+  #nft-modal .content::-webkit-scrollbar {
+    display: block;
+    width: 4px;
+  }
+
+  #nft-modal .content::-webkit-scrollbar-thumb {
+    background: #4e4e4e;
+    border-radius: 2px;
+  }
+
+  #nft-modal .content::-webkit-scrollbar-corner {
+    background-color: transparent;
+  }
+
+  #nft-modal .button {
+    padding: 12px 0;
+    display: flex;
+    gap: 8px;
+    width: calc(100% - 4px);
+  }
+
+  #nft-modal .button button {
+    flex: 1;
+    padding: 16px 0px !important;
+  }
+
+  #copy-mgm-code {
+    display: inline-flex;
+    align-items: center;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    padding: 0 0 0 4px;
+    width: 20px;
+    height: 20px;
+  }
+
+  #copy-mgm-remind {
+    display: none;
+    color: #caff86;
+    padding: 0 0 0 8px;
+  }
+
+  /* share dialog */
+  #share-modal .custom-modal-body {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .share-url {
+    background-color: #000;
+    border-radius: 4px;
+    padding: 9.5px 10px 8.5px 12px;
+    white-space: nowrap;
+    align-items: center;
+  }
+
+  .share-url>div {
+    width: calc(100% - 30px);
+    overflow: hidden;
+  }
+
+  .share-url>button {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    width: 20px;
+    height: 20px;
+  }
+
+  .remind {
+    margin: 12px auto 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   @media (min-width: 1200px) {
@@ -358,7 +900,7 @@
       font-size: 32px;
     }
 
-    .nft-icon-area>div:nth-child(2){
+    .nft-icon-area>div:nth-child(2) {
       padding: 0 30px 0 0;
     }
 
@@ -433,9 +975,17 @@
       font-size: 16px;
     }
 
+    .nft .container>.sub-content {
+      padding: 0 0 8px 0;
+    }
+
+    .nft .container .collapse .sub-content {
+      padding: 0 0 40px 0;
+    }
+
     .nft-icon-area {
       border-width: 0 0 0 1px;
-      margin: 48px 0 64px 0;
+      margin: 48px 0 40px 0;
     }
 
     .nft-icon-area>div:nth-child(1) {
@@ -511,6 +1061,114 @@
 
     .nft-icon-area>div:nth-child(2)>div:nth-child(even) {
       padding: 0 8px 0 0;
+    }
+
+    .nft-art {
+      padding: 46px 0 40px 0;
+      background-position: left 0 top 0, right 0 bottom 0;
+    }
+
+    .nft .glass .login {
+      margin: 100px auto;
+    }
+
+    .nft .glass .login-title {
+      padding: 0 0 20px 0;
+    }
+
+    .nft .glass .login-title div:nth-child(1) {
+      font-size: 20px;
+    }
+
+    .nft .glass .button-area {
+      flex-direction: column;
+    }
+
+    .nft .glass .button-area button,
+    .nft .glass .button-area a {
+      width: 180px;
+    }
+
+    .nft .list {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 16px;
+    }
+
+    .nft .list .item:hover::before {
+      background: linear-gradient(108deg, rgba(255, 255, 255, 0.49) 0%, rgba(255, 255, 255, 0.2) 54%, rgba(255, 255, 255, 0.85) 100%);
+    }
+
+    .nft .list .item:hover .hover-filter {
+      display: none;
+    }
+
+    .nft .list .translate:hover img {
+      transform: translate(0px, 0px);
+    }
+
+    .nft .list .empty {
+      display: none;
+    }
+
+    /* nft dialog */
+    #nft-modal {
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    #nft-modal .btn-close {
+      position: relative;
+      width: 20px;
+      height: 20px;
+      left: unset;
+      top: unset;
+      margin: 10px 0 10px 8px;
+    }
+
+    #nft-modal .modal-dialog {
+      max-width: 100%;
+      min-height: unset;
+      height: calc(100vh - 100px);
+    }
+
+    #nft-modal .modal-content {
+      flex-direction: column;
+      gap: 8px;
+      padding: 8px;
+      height: 100%;
+    }
+
+    #nft-modal .nft-card>img {
+      width: auto;
+      max-width: 100%;
+      height: 100%;
+    }
+
+    #nft-modal .content {
+      height: auto;
+      max-height: calc(100% - 140px);
+      margin: 16px 0 0 4px;
+    }
+
+    #nft-modal .title {
+      text-align: center;
+      font-size: 30px;
+      padding: 0 0 8px 0;
+    }
+
+    #nft-modal .nft-card {
+      height: 50%;
+    }
+
+    #nft-modal .nft-text {
+      height: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    #nft-modal .button button {
+      padding: 4px 24px !important;
     }
   }
 </style>
