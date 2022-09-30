@@ -336,6 +336,8 @@
       .then(blob => {
         const url = window.URL.createObjectURL(blob);
         const a = document.createElement('a');
+        const content = document.getElementById('nft-modal');
+        content.appendChild(a);
         a.style.display = 'none';
         a.href = url;
         a.download = 'nft.png';
@@ -1102,7 +1104,7 @@
     #nft-modal .modal-dialog {
       max-width: 100%;
       min-height: unset;
-      height: calc(100vh - 100px);
+      height: calc(100vh - 130px);
     }
 
     #nft-modal .modal-content {
