@@ -114,38 +114,12 @@
             </div>
           </div>
           <div class="button">
-            <button class="btn btn-lg btn-tertiary" disabled>10/27開啟盲盒</button>
-            <button id="show-share-btn" class="btn btn-lg btn-tertiary">我要分享</button>
+            <button id="show-share-btn" class="btn btn-lg btn-primary" onclick="downloadNFT()">儲存我的NFT</button>
           </div>
         </div>
       </div>
     </div>
   </div>
-  </div>
-
-  <!-- share dialog -->
-  <div class="modal fade" id="share-modal" tabindex="-1" aria-labelledby="shareModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered custom-dialog">
-      <div class="modal-content p-3">
-        <div class="btn-close btn-close-white" role="button" data-bs-dismiss="modal" aria-label="Close">
-        </div>
-        <h5 class="custom-modal-title text-white p-2">分享至以下社群</h5>
-        <div class="custom-modal-body mt-1 mt-md-4 mb-2">
-          <img src="./assets/image/facebook.webp" alt="facebook">
-          <img src="./assets/image/line.webp" alt="line">
-        </div>
-        <div class="custom-modal-footer p-1 py-3 p-md-3">
-          <div class="share-url d-flex flex-row justify-content-between">
-            <div class="text-a1a1a1" id="url">https://www.luxgen-motor.com.tw</div>
-            <button type="button" id="copy-btn"><img src="./assets/image/icon_copy.svg" alt=""></button>
-          </div>
-          <div class="remind text-caff86 text-center" hidden>
-            <img src="./assets/image/icon_check.svg" alt="">
-            &nbsp已複製網址
-          </div>
-        </div>
-      </div>
-    </div>
   </div>
 
   <main class="nft text-white">
@@ -281,22 +255,30 @@
           <!-- 未開盲盒樣式 -->
           <div class="item translate" data-bs-toggle="modal" data-bs-target="#nft-modal">
             <img src="./assets/image/nft_card_opened.png" alt="nft">
-            <div class="hover-filter">
+            <div class="hover-filter"></div>
+            <div class="open-nft">
+              <button class="btn btn-lg btn-tertiary" disabled>10/27開啟盲盒</button>
             </div>
           </div>
           <div class="item translate" data-bs-toggle="modal" data-bs-target="#nft-modal">
             <img src="./assets/image/nft_card_opened.png" alt="nft">
-            <div class="hover-filter">
+            <div class="hover-filter"></div>
+            <div class="open-nft">
+              <button class="btn btn-lg btn-tertiary" disabled>10/27開啟盲盒</button>
             </div>
           </div>
           <div class="item translate" data-bs-toggle="modal" data-bs-target="#nft-modal">
             <img src="./assets/image/nft_card_opened.png" alt="nft">
-            <div class="hover-filter">
+            <div class="hover-filter"></div>
+            <div class="open-nft">
+              <button class="btn btn-lg btn-tertiary" disabled>10/27開啟盲盒</button>
             </div>
           </div>
           <div class="item translate" data-bs-toggle="modal" data-bs-target="#nft-modal">
             <img src="./assets/image/nft_card_opened.png" alt="nft">
-            <div class="hover-filter">
+            <div class="hover-filter"></div>
+            <div class="open-nft">
+              <button class="btn btn-lg btn-tertiary" disabled>10/27開啟盲盒</button>
             </div>
           </div>
           <!-- 空白樣式，填補單行剩餘item -->
@@ -347,6 +329,24 @@
       $('#share-modal').modal('show');
     })
   });
+
+  const downloadNFT = () => {
+    fetch('/assets/image/nft_card_opened.png')
+      .then(resp => resp.blob())
+      .then(blob => {
+        const url = window.URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.style.display = 'none';
+        a.href = url;
+        a.download = 'nft.png';
+        document.body.appendChild(a);
+        a.click();
+        window.URL.revokeObjectURL(url);
+      })
+      .catch((e) => {
+        console.log(e);
+      });
+  }
 </script>
 
 <style>
@@ -432,6 +432,7 @@
   .nft .sub-content {
     color: #cfcfcf;
     font-size: 20px;
+    line-height: 1.7;
   }
 
   .nft .container>.sub-content {
@@ -735,6 +736,17 @@
     background: linear-gradient(108deg, rgba(255, 255, 255, 0.49) 0%, rgba(255, 255, 255, 0.2) 54%, rgba(255, 255, 255, 0.85) 100%);
   }
 
+  .nft .list .open-nft {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .nft .list .open-nft button {
+    opacity: 1;
+  }
+
   .nft .list .item img {
     position: relative;
     width: 100%;
@@ -833,44 +845,6 @@
     display: none;
     color: #caff86;
     padding: 0 0 0 8px;
-  }
-
-  /* share dialog */
-  #share-modal .custom-modal-body {
-    display: flex;
-    gap: 20px;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .share-url {
-    background-color: #000;
-    border-radius: 4px;
-    padding: 9.5px 10px 8.5px 12px;
-    white-space: nowrap;
-    align-items: center;
-  }
-
-  .share-url>div {
-    width: calc(100% - 30px);
-    overflow: hidden;
-  }
-
-  .share-url>button {
-    display: flex;
-    align-items: center;
-    padding: 0;
-    background-color: transparent;
-    border: none;
-    width: 20px;
-    height: 20px;
-  }
-
-  .remind {
-    margin: 12px auto 2px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
   }
 
   @media (min-width: 1200px) {
