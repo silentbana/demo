@@ -64,7 +64,8 @@
           <div class="v-code-input flex-grow-1 position-relative">
             <label for="password" class="form-label">密碼</label>
             <input id="password" class="form-control" placeholder="請輸入8-32位英數字" type="password" required>
-            <button class="btn position-absolute end-0" type="button" onclick="togglePassword()"><img src="./assets/image/icon_close_eye.svg" alt="" id="toggle-img"></button>
+            <button class="btn position-absolute end-0" type="button" onclick="togglePassword()"><img
+                src="./assets/image/icon_close_eye.svg" alt="" id="toggle-img"></button>
             <div class="invalid-feedback">*請輸入密碼</div>
           </div>
           <div class="v-code-btn">
@@ -101,11 +102,19 @@
   <!-- menu offcanvas -->
   <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
     <div class="custom-offcanvas-header">
-      <h5 class="offcanvas-title text-center" id="offcanvasNavbarLabel">主選單</h5>
+      <img class="logo" src="./assets/image/logo@3x.png" alt="logo">
       <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
     <div class="custom-offcanvas-body">
-      <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 text-center">
+      <ul class="navbar-nav text-center">
+        <div class="login-btn-m">
+          <a href="/login">
+            <button class="btn btn-tertiary">
+              <img src="./assets/image/icon_user_white.svg" alt="">
+              <span>會員登入</span>
+            </button>
+          </a>
+        </div>
         <li class="nav-item">
           <a class="nav-link d-inline-block" aria-current="page" href="/">入主純電未來</a>
         </li>
@@ -119,7 +128,7 @@
           <a class="nav-link" href="/order">專案查詢</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active d-inline-block" href="/login">會員登入</a>
+          <a class="nav-link active" href="/login">會員登入</a>
         </li>
       </ul>
     </div>
@@ -137,7 +146,7 @@
   }
 
   const togglePassword = () => {
-    const type = $('#password').attr('type') == 'password' ? 'text' :'password'
+    const type = $('#password').attr('type') == 'password' ? 'text' : 'password'
     const src = $('#password').attr('type') == 'password' ? './assets/image/icon_view.svg' : './assets/image/icon_close_eye.svg'
     $('#password').attr('type', type)
     $('#toggle-img').attr('src', src)
@@ -166,19 +175,6 @@
   .navbar {
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
-  }
-
-  .nav-item .nav-link {
-    color: #fff;
-    font-weight: 400;
-    padding: 4px 4px;
-    margin: 8px 16px;
-    cursor: pointer;
-  }
-
-  .nav-item .active {
-    font-weight: 600;
-    border-bottom: 2px solid #caff86;
   }
 
   .logo {

@@ -53,25 +53,30 @@
   <!-- menu offcanvas -->
   <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
     <div class="custom-offcanvas-header">
-      <h5 class="offcanvas-title text-center" id="offcanvasNavbarLabel">主選單</h5>
+      <img class="logo" src="./assets/image/logo@3x.png" alt="logo">
       <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
     <div class="custom-offcanvas-body">
-      <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 text-center">
+      <ul class="navbar-nav text-center">
+        <div class="login-btn-m">
+          <a href="/login">
+            <button class="btn btn-tertiary">
+              <img src="./assets/image/icon_user_white.svg" alt="">
+              <span>會員登入</span>
+            </button>
+          </a>
+        </div>
         <li class="nav-item">
           <a class="nav-link" href="/">入主純電未來</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active d-inline-block" href="/activity">活動專區</a>
+          <a class="nav-link active" href="/activity">活動專區</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="/news">最新消息</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="/order">專案查詢</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/login">會員登入</a>
         </li>
       </ul>
     </div>
@@ -264,19 +269,6 @@
   .navbar {
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
-  }
-
-  .nav-item .nav-link {
-    color: #fff;
-    font-weight: 400;
-    padding: 4px 4px;
-    margin: 8px 16px;
-    cursor: pointer;
-  }
-
-  .nav-item .active {
-    font-weight: 600;
-    border-bottom: 2px solid #caff86;
   }
 
   .logo {
@@ -570,7 +562,7 @@
       margin-right: 8px;
     }
 
-    .diary .title h2{
+    .diary .title h2 {
       font-size: 30px;
     }
 

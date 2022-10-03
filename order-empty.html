@@ -36,7 +36,7 @@
             <a class="nav-link" href="/news">最新消息</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active d-inline-block" href="/order">專案查詢</a>
+            <a class="nav-link active" href="/order">專案查詢</a>
           </li>
         </ul>
       </div>
@@ -50,7 +50,7 @@
 
     </div>
   </nav>
-  
+
   <main class="order text-white">
     <div class="fw-bold order-title">我的訂單</div>
     <div class="no-order position-absolute top-50 start-50 translate-middle">
@@ -67,13 +67,21 @@
   <!-- menu offcanvas -->
   <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
     <div class="custom-offcanvas-header">
-      <h5 class="offcanvas-title text-center" id="offcanvasNavbarLabel">主選單</h5>
+      <img class="logo" src="./assets/image/logo@3x.png" alt="logo">
       <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
     <div class="custom-offcanvas-body">
-      <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 text-center">
+      <ul class="navbar-nav text-center">
+        <div class="login-btn-m">
+          <a href="/login">
+            <button class="btn btn-tertiary">
+              <img src="./assets/image/icon_user_white.svg" alt="">
+              <span>會員登入</span>
+            </button>
+          </a>
+        </div>
         <li class="nav-item">
-          <a class="nav-link active d-inline-block" aria-current="page" href="#">入主純電未來</a>
+          <a class="nav-link" aria-current="page" href="#">入主純電未來</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="/activity">活動專區</a>
@@ -82,11 +90,9 @@
           <a class="nav-link" href="/news">最新消息</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active d-inline-block" href="/order">專案查詢</a>
+          <a class="nav-link active" href="/order">專案查詢</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/login">會員登入</a>
-        </li>
+
       </ul>
     </div>
   </div>
@@ -105,7 +111,7 @@
       </div>
     </div>
   </div>
-  
+
 </body>
 
 </html>
@@ -122,19 +128,6 @@
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
     border-bottom: 1px solid #4e4e4e;
-  }
-
-  .nav-item .nav-link {
-    color: #fff;
-    font-weight: 400;
-    padding: 4px 4px;
-    margin: 8px 16px;
-    cursor: pointer;
-  }
-
-  .nav-item .active {
-    font-weight: 600;
-    border-bottom: 2px solid #caff86;
   }
 
   .logo {
@@ -215,13 +208,14 @@
     .calc {
       padding: 20px 100px;
     }
-    
+
     .calc {
       padding: 20px 5%;
       font-size: 24px;
     }
   }
-  @media (max-width: 767px) { 
+
+  @media (max-width: 767px) {
     .order {
       background-size: 30%, 30%;
     }
@@ -231,6 +225,7 @@
       left: 20px;
       font-size: 20px;
     }
+
     .no-order>img {
       width: 140px;
       height: 140px;
