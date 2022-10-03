@@ -250,11 +250,11 @@ button:disabled {
 }
 
 .login-area:hover .login-icon {
-  background-image: url(../image/icon_order_gray.svg);
+  background-image: url(../image/icon_user_gray.svg);
 }
 
 .login-icon {
-  background-image: url(../image/icon_order_white.svg);
+  background-image: url(../image/icon_user_white.svg);
   width: 18px;
   height: 18px;
   margin-right: 10px;
