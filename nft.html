@@ -136,7 +136,8 @@
         <div class="vertical-line"></div>
         <h2>NFT功能介紹</h2>
       </div>
-      <div class="sub-content">
+      <!-- 預設關閉時加collapse-filter class -->
+      <div class="sub-content collapse-filter">
         功能：未來NFT將在領車後成為您專屬的私人車籍身份憑證，從出廠開始，包含原廠檢修履歷、零配件更換選購紀錄與事故出險資訊通通透過去中心化的多方加密技術進行擔保，讓愛車更加保值。賦能：您的NFT將可能在不同階段為您取得獨特賦能，讓您獲得意想不到的好禮。
       </div>
       <!-- 預設展開時加show class -->
@@ -328,6 +329,14 @@
     $('#show-share-btn').on('click', function () {
       $('#share-modal').modal('show');
     })
+
+    $('.collapse-btn').click(function () {
+      if ($('.collapse-btn').hasClass('collapsed')) {
+        $('.nft .container>.sub-content').addClass('collapse-filter');
+      } else {
+        $('.nft .container>.sub-content').removeClass('collapse-filter');
+      }
+    });
   });
 
   const downloadNFT = () => {
@@ -441,6 +450,13 @@
     padding: 0 0 36px 0;
   }
 
+  .nft .collapse-filter {
+    color: transparent;
+    background-image: linear-gradient(180deg, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
+
   .nft .container .collapse .sub-content {
     padding: 0 0 64px 0;
   }
@@ -546,6 +562,7 @@
     width: 100%;
     display: flex;
     cursor: pointer;
+    position: relative;
   }
 
   .collapse-btn>div:nth-child(1),
@@ -949,7 +966,7 @@
       font-size: 30px;
     }
 
-    .nft .sub-title h2{
+    .nft .sub-title h2 {
       font-size: 20px;
     }
 
