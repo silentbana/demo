@@ -330,7 +330,7 @@
       $('#share-modal').modal('show');
     })
 
-    $('.collapse-btn').click(function () {
+    $('.collapse-btn').on('click', function () {
       if ($('.collapse-btn').hasClass('collapsed')) {
         $('.nft .container>.sub-content').addClass('collapse-filter');
       } else {
@@ -340,6 +340,7 @@
   });
 
   const downloadNFT = () => {
+    // 根據不同狀態下載對應圖片
     fetch('/assets/image/nft_card_opened.png')
       .then(resp => resp.blob())
       .then(blob => {
