@@ -81,7 +81,11 @@
 
       <div class="order-items">
         <div class="item d-flex flex-column flex-md-row">
-          <img src="./assets/image/order_car.png" alt="">
+          <div>
+            <img src="./assets/image/order_car.png" alt="">
+            <button class="btn btn-lg btn-tertiary d-none d-md-block">查看我的NFT</button>
+          </div>
+
           <div class="des d-flex d-md-block flex-column flex-grow-1">
 
             <div class="title order-1 d-md-flex flex-row justify-content-between">
@@ -148,7 +152,10 @@
                   </li>
                 </ul>
               </div>
-              <div class="price">$1,000</div>
+              <div class="price">
+                $1,000
+                <button class="btn btn-lg btn-tertiary d-block d-md-none w-100">查看我的NFT</button>
+              </div>
             </div>
 
             <div class="pro order-2 d-none d-md-block">
@@ -172,7 +179,9 @@
         </div>
 
         <div class="item error d-flex flex-column flex-md-row">
-          <img src="./assets/image/order_car.png" alt="">
+          <div>
+            <img src="./assets/image/order_car.png" alt="">
+          </div>
           <div class="des d-flex d-md-block flex-column flex-grow-1">
 
             <div class="title order-1 d-md-flex flex-row justify-content-between">
@@ -421,6 +430,7 @@
     border-left: #caff86 solid 10px;
     margin-bottom: 20px;
     box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.1);
+    gap: 36px;
   }
 
   .item.error {
@@ -431,9 +441,20 @@
     margin: 20px 0 0 0;
   }
 
-  .item>img {
-    margin: 40px 36px auto 0;
+  .item>div:nth-child(1) {
+    margin: 40px 0 0 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .item>div:nth-child(1) img {
     width: 231px;
+  }
+
+  .item>div:nth-child(1) button {
+    width: 100%;
   }
 
   .des>.title {
