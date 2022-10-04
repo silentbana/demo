@@ -207,7 +207,7 @@
         </div>
         <div class="nft-ad">
           <!-- <video class="d-block my-4" playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop"><source src="https://www.toyota.com.tw/event/grnft/assets/video/step-1.mp4" type="video/mp4"></video> -->
-          <img src="./assets/image/nft_card_unopened.png" alt="nft">
+          <img src="./assets/image/nft_card_opened.png" alt="nft">
         </div>
       </div>
 
@@ -225,6 +225,11 @@
       <div class="container">
         <div class="title">
           <h2>我的NFT展示牆</h2>
+          <div>
+            <!-- 串接EchoX -->
+            <button class="btn btn-lg btn-primary">領取盲盒</button>
+            <button class="btn btn-lg btn-outline-primary">管理我的NFT</button>
+          </div>
         </div>
         <!-- 未登入 -->
         <!-- <div class="glass">
@@ -594,6 +599,11 @@
 
   .nft-ad {
     text-align: center;
+    padding: 0 0 64px 0;
+  }
+
+  .nft-ad img {
+    width: 50%;
   }
 
   .nft-art {
@@ -605,6 +615,12 @@
 
   .nft-art .title {
     padding: 0 0 40px 0;
+    justify-content: space-between;
+  }
+
+  .nft-art .title>div {
+    display: flex;
+    gap: 12px;
   }
 
   .nft-art .title h2 {
@@ -1073,6 +1089,20 @@
       padding: 46px 0 40px 0;
       background-position: left 0 top 0, right 0 bottom 0;
       background-size: 97px, 133px;
+    }
+
+    .nft-art .title {
+      display: block;
+      text-align: center;
+      padding: 0 0 28px 0;
+    }
+
+    .nft-art .title>div {
+      padding: 16px 0 0 0;
+    }
+
+    .nft-art .title>div>* {
+      flex: 1
     }
 
     .nft .glass .login {
