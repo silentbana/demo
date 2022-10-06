@@ -29,9 +29,21 @@
           <li class="nav-item">
             <a class="nav-link" href="/">入主純電未來</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link active" href="/activity">活動專區</a>
+          <li class="nav-item dropdown">
+            <a class="nav-link active" type="button">
+              活動專區
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item">報名LUXGEN新起點</a></li>
+              <li><a class="dropdown-item" href="/diary">n7開發日誌</a></li>
+              <li><a class="dropdown-item" href="/nft">我的專屬NFT</a></li>
+            </ul>
           </li>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+            <li><button class="dropdown-item" type="button">Action</button></li>
+            <li><button class="dropdown-item" type="button">Another action</button></li>
+            <li><button class="dropdown-item" type="button">Something else here</button></li>
+          </ul>
           <li class="nav-item">
             <a class="nav-link" href="/news">最新消息</a>
           </li>
@@ -70,7 +82,22 @@
           <a class="nav-link" href="/">入主純電未來</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" href="/activity">活動專區</a>
+          <a class="nav-link active collapse-link collapsed" data-bs-toggle="collapse"
+            data-bs-target=".activity-collapse" aria-expanded="false">活動專區</a>
+          <ul class="activity-collapse collapse" style="text-align: left; list-style: none; padding: 10px 0 0 50px;">
+            <li style="padding: 6px 0;">
+              <a class="collapse-item"
+                style="display: block; font-size: 18px; color: #fff; text-decoration: none;">報名LUXGEN新起點</a>
+            </li>
+            <li style="padding: 6px 0;">
+              <a class="collapse-item" style="display: block; font-size: 18px; color: #fff; text-decoration: none;"
+                href="/diary">n7開發日誌</a>
+            </li>
+            <li style="padding: 6px 0;">
+              <a class="collapse-item" style="display: block; font-size: 18px; color: #fff; text-decoration: none;"
+                href="/nft">我的專屬NFT</a>
+            </li>
+          </ul>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="/news">最新消息</a>
@@ -140,7 +167,7 @@
   <main class="nft text-white">
     <div class="container">
       <ul class="breadcrumb">
-        <li><a href="/activity">活動專區</a></li>
+        <li>活動專區</li>
         <li>&nbsp>&nbsp我的專屬NFT</li>
       </ul>
       <div class="title">
@@ -207,9 +234,9 @@
           <h2>10/20開始領取專屬於您獨一無二的NFT！</h2>
         </div>
         <div class="nft-ad">
-          <!-- 等Luxgen動圖 -->
-          <!-- <video class="d-block my-4" playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop"><source src="https://www.toyota.com.tw/event/grnft/assets/video/step-1.mp4" type="video/mp4"></video> -->
-          <img src="./assets/image/nft_card_opened.png" alt="nft">
+          <video class="d-block my-4" playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+            <source src="./assets/video/nft_card_loop.mp4" type="video/mp4">
+          </video>
         </div>
       </div>
 
@@ -246,19 +273,31 @@
             </div>
           </div>
         </div> -->
-        <!-- 已登入，未加入專案 -->
+        <!-- 已登入，未加入專案，沒有NFT -->
         <!-- <div class="glass">
           <div class="login">
             <div class="login-title">
               <div>
-                您還未加入專案唷
+                您目前尚未擁有NFT喔
               </div>
-              <div>加入後即可擁有您的專屬NFT</div>
+              <div>請「加入n7專案」獲得NFT，或是點擊「前往EchoX購買」按鈕進行購買</div>
             </div>
             <div class="button-area">
               <a href="/" class="d-block">
-                <button class="btn btn-lg btn-primary">加入n⁷專案</button>
+                <button class="btn btn-lg btn-outline-primary">加入n⁷專案</button>
               </a>
+              <a class="d-block">
+                <button class="btn btn-lg btn-outline-primary">前往EchoX購買</button>
+              </a>
+            </div>
+          </div>
+        </div> -->
+        <!-- 已登入，已加入專案，未領取NFT -->
+        <!-- <div class="glass">
+          <div class="login">
+            <div class="login-title">
+              <div>您目前尚未領取NFT盲盒喔</div>
+              <div>請點選「領取盲盒」按鈕</div>
             </div>
           </div>
         </div> -->
@@ -611,8 +650,9 @@
     padding: 0 0 64px 0;
   }
 
-  .nft-ad img {
+  .nft-ad video {
     width: 50%;
+    margin: auto;
   }
 
   .nft-art {
@@ -687,6 +727,11 @@
     align-items: center;
     justify-content: center;
     grid-gap: 10px;
+  }
+
+  .nft .glass .button-area button {
+    width: 190px;
+    padding: 16px 0 !important;
   }
 
   .nft .list {
@@ -1124,7 +1169,7 @@
     }
 
     .nft .glass .login-title {
-      padding: 0 0 20px 0;
+      padding: 0 20px 20px 20px;
     }
 
     .nft .glass .login-title div:nth-child(1) {
@@ -1138,6 +1183,10 @@
     .nft .glass .button-area button,
     .nft .glass .button-area a {
       width: 180px;
+    }
+
+    .nft .glass .button-area button {
+      padding: 4px 24px !important;
     }
 
     .nft .list {
