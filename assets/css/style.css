@@ -511,7 +511,7 @@ button:disabled {
 
 .was-validated:not(.form-select) .form-control:valid:not(.form-select),
 .form-control.is-valid:not(.form-select) {
-  background-image: url('/assets/image/icon_check.svg') !important;
+  background-image: url('../image/icon_check.svg') !important;
 }
 
 .form-control {
@@ -628,13 +628,13 @@ h1,
   .nav-item .collapse-link {
     border-bottom: 2px solid #caff86;
     font-weight: 600;
-    background-image: url(/assets/image/icon_arrow_up_green.svg);
+    background-image: url(../image/icon_arrow_up_green.svg);
     background-position: right 0 top 16px;
     background-repeat: no-repeat;
   }
 
   .nav-item .collapse-link.collapsed {
-    background-image: url(/assets/image/icon_arrow_down_green.svg);
+    background-image: url(../image/icon_arrow_down_green.svg);
   }
 
   .btn-collapse {
