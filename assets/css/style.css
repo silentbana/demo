@@ -537,6 +537,11 @@ button:disabled {
   cursor: pointer;
 }
 
+.form-check-input[type='radio'] {
+  background-color: unset;
+  border-color: #7e7e7e;
+}
+
 .form-check-input[type='checkbox'] {
   background-color: unset;
   border-color: #7e7e7e;

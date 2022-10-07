@@ -77,8 +77,8 @@
           <a class="nav-link d-inline-block" aria-current="page" href="/">入主純電未來</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link collapse-link collapsed" data-bs-toggle="collapse"
-            data-bs-target=".activity-collapse" aria-expanded="false">活動專區</a>
+          <a class="nav-link collapse-link collapsed" data-bs-toggle="collapse" data-bs-target=".activity-collapse"
+            aria-expanded="false">活動專區</a>
           <ul class="activity-collapse collapse" style="text-align: left; list-style: none; padding: 10px 0 0 50px;">
             <li style="padding: 6px 0;">
               <a class="collapse-item"
@@ -108,7 +108,73 @@
   </div>
 
   <main class="form text-white d-flex">
-
+    <form class="container">
+      <h1 class="title">問卷獲票選活動標題</h1>
+      <h2 class="sub-title">
+        問卷或票選活動說明問卷或票選活動說明問卷或票選活動說明問卷或票選活動說明問卷或票選活動說明問卷或票選活動說明問卷或票選活動說明問卷或票選活動說明問卷或票選活動說明問卷或票選活動說明問卷或票選活動說明問卷或票選活動說明問卷或票選活動說明問卷或票選活動說明問卷或票選活動說明問卷或票選活動說明。
+      </h2>
+      <div class="form-item">
+        <div class="question">
+          問卷題目(單選)<span class="text-ff7e7e">*</span>
+        </div>
+        <div class="answer">
+          <div class="radio">
+            <input id="radio1" class="form-check-input" type="radio" name="salary" value="1">
+            <label for="radio1">
+              1000000
+            </label>
+          </div>
+          <div class="radio">
+            <input id="radio2" class="form-check-input" type="radio" name="salary" value="2">
+            <label for="radio2">
+              2000000
+            </label>
+          </div>
+          <div class="radio">
+            <input id="radio3" class="form-check-input" type="radio" name="salary" value="3">
+            <label for="radio3">
+              3000000
+            </label>
+          </div>
+        </div>
+      </div>
+      <!-- 檢核錯誤加error class -->
+      <div class="form-item error">
+        <div class="question">
+          問卷題目(多選)(檢核錯誤)<span class="text-ff7e7e">*</span>
+        </div>
+        <div class="answer">
+          <div class="checkbox">
+            <input id="checkbox1" class="form-check-input" type="checkbox" value="1" name="origin">
+            <label for="checkbox1">官網
+            </label>
+          </div>
+          <div class="checkbox">
+            <input id="checkbox2" class="form-check-input" type="checkbox" value="2" name="origin">
+            <label for="checkbox2">親友介紹</label>
+          </div>
+          <div class="checkbox">
+            <input id="checkbox3" class="form-check-input" type="checkbox" value="3" name="origin">
+            <label for="checkbox3">粉絲團</label>
+          </div>
+          <div class="checkbox">
+            <input id="checkbox4" class="form-check-input" type="checkbox" value="4" name="origin">
+            <label for="checkbox4">其他</label>
+          </div>
+        </div>
+      </div>
+      <div class="form-item">
+        <div class="question">
+          問卷題目(問答)
+        </div>
+        <div class="answer">
+          <input class="input" placeholder="您的回答" type="text">
+        </div>
+      </div>
+      <div class="submit">
+        <button class="btn btn-lg btn-primary" type="button">提交</button>
+      </div>
+    </form>
   </main>
 
   <div class="horizontal-line"></div>
@@ -157,7 +223,94 @@
     background-image: url(./assets/image/activity_bg_light.png), url(./assets/image/form_bg_mountain_1.svg), url(./assets/image/form_bg_mountain_2.svg);
     background-position: left 0 top 0, left 0 top 100px, right 0 bottom 80px;
     background-repeat: no-repeat;
-    background-size: 1096px, 153px, 296px;
+    background-size: 1096px, 312px, 296px;
+  }
+
+  .form>.container {
+    padding-top: 128px
+  }
+
+  .title {
+    font-size: 56px;
+    font-weight: bold;
+    color: #fff;
+    padding: 0 0 24px 0;
+  }
+
+  .sub-title {
+    font-size: 20px;
+    color: #cfcfcf;
+    padding: 0 0 48px 0;
+  }
+
+  .form-item {
+    position: relative;
+    border: 1px solid #4e4e4e;
+    padding: 24px;
+    border-radius: 4px;
+    margin: 0 0 16px 0;
+    background-color: #232323;
+  }
+
+  .form-item::before {
+    content: '';
+    border-left: 5px solid #caff86;
+    position: absolute;
+    left: -1px;
+    top: -1px;
+    width: 10px;
+    height: calc(100% + 2px);
+    border-radius: 4px;
+  }
+
+  .form-item.error {
+    border: 1px solid #ff7e7e;
+  }
+
+  .form-item.error::before {
+    border-left: 5px solid #ff7e7e;
+  }
+
+  .form-item .question {
+    padding: 0 0 16px 0;
+  }
+
+  .form-item .input {
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #4e4e4e;
+    color: #fff;
+  }
+
+  .form-item .checkbox,
+  .form-item .radio {
+    display: flex;
+    align-items: center;
+    padding: 0 0 6px 0;
+  }
+
+  .form-item .checkbox input,
+  .form-item .radio input {
+    padding: 8px;
+    margin: 0;
+    cursor: pointer;
+  }
+
+  .form-item .checkbox label,
+  .form-item .radio label {
+    padding: 0 0 0 10px;
+    cursor: pointer;
+  }
+
+  .form-item input:focus-visible {
+    outline: none;
+  }
+
+  .submit {
+    padding: 20px 0 60px 0;
+    width: 100%;
+    text-align: center;
   }
 
   @media (min-width: 1200px) {
@@ -200,6 +353,20 @@
 
     .login-input>div {
       font-size: 24px;
+    }
+
+    .form>.container {
+      padding-top: 64px
+    }
+
+    .title {
+      font-size: 30px;
+      padding: 0 0 12px 0;
+    }
+
+    .sub-title {
+      font-size: 18px;
+      padding: 0 0 24px 0;
     }
   }
 </style>
