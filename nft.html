@@ -147,7 +147,7 @@
               <span>MGM邀請碼：</span>
               <span id="mgm-code">ME010Z00A（已使用）</span>
             </div> -->
-            <br> 
+            <br>
             <div class="text-ffd335">納智捷是你的第一台電動車，也是你在元宇宙的第一台車</div>
             <br>
             <div class="horizontal-line mb-2"></div>
@@ -192,7 +192,7 @@
           <div>
             <div>
               <img src="./assets/image/icon_nft_new.png" alt="">
-              <div>出廠</div>
+              <div>車籍資料</div>
             </div>
             <div>
               <img src="./assets/image/icon_nft_fix.png" alt="">
@@ -254,7 +254,7 @@
         <div class="title">
           <h2>我的NFT展示牆</h2>
           <div>
-            <!-- 串接EchoX，列表已有盲盒時顯示 -->
+            <!-- 串接EchoX，已登入時顯示 -->
             <button class="btn btn-lg btn-primary">前往領取盲盒</button>
             <button class="btn btn-lg btn-outline-primary">管理我的NFT</button>
           </div>
@@ -281,30 +281,26 @@
             </div>
           </div>
           <!-- 未開盲盒樣式 -->
-          <div class="item translate" data-bs-toggle="modal" data-bs-target="#nft-modal">
+          <div class="item unopened">
             <img src="./assets/image/nft_card_opened.png" alt="nft">
-            <div class="hover-filter"></div>
             <div class="open-nft">
               <button class="btn btn-lg btn-tertiary" disabled>10/27開啟盲盒</button>
             </div>
           </div>
-          <div class="item translate" data-bs-toggle="modal" data-bs-target="#nft-modal">
+          <div class="item unopened">
             <img src="./assets/image/nft_card_opened.png" alt="nft">
-            <div class="hover-filter"></div>
             <div class="open-nft">
               <button class="btn btn-lg btn-tertiary" disabled>10/27開啟盲盒</button>
             </div>
           </div>
-          <div class="item translate" data-bs-toggle="modal" data-bs-target="#nft-modal">
+          <div class="item unopened">
             <img src="./assets/image/nft_card_opened.png" alt="nft">
-            <div class="hover-filter"></div>
             <div class="open-nft">
               <button class="btn btn-lg btn-tertiary" disabled>10/27開啟盲盒</button>
             </div>
           </div>
-          <div class="item translate" data-bs-toggle="modal" data-bs-target="#nft-modal">
+          <div class="item unopened">
             <img src="./assets/image/nft_card_opened.png" alt="nft">
-            <div class="hover-filter"></div>
             <div class="open-nft">
               <button class="btn btn-lg btn-tertiary" disabled>10/27開啟盲盒</button>
             </div>
@@ -321,12 +317,7 @@
               <div>
                 您目前尚未擁有NFT喔
               </div>
-              <div>請點擊「前往EchoX」按鈕來獲得NFT</div>
-            </div>
-            <div class="button-area">
-              <a class="d-block">
-                <button class="btn btn-lg btn-primary">前往EchoX</button>
-              </a>
+              <div>請點擊「前往領取盲盒」按鈕來獲得NFT</div>
             </div>
           </div>
         </div> -->
@@ -737,6 +728,10 @@
     cursor: pointer;
   }
 
+  .nft .list .item.unopened {
+    cursor: default;
+  }
+
   .nft .list .item::before {
     content: "";
     position: absolute;
@@ -752,7 +747,7 @@
     pointer-events: none;
   }
 
-  .nft .list .item:hover::before {
+  .nft .list .item:not(.unopened):hover::before {
     background: linear-gradient(108deg, #caff86 0%, #caff86 54%, #caff86 100%);
   }
 
