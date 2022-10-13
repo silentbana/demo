@@ -630,8 +630,11 @@ h1,
     margin: 0 20px;
   }
 
-  .nav-item .collapse-link {
+  .nav-item .collapse-link.active{
     border-bottom: 2px solid #caff86;
+  }
+
+  .nav-item .collapse-link {
     font-weight: 600;
     background-image: url(../image/icon_arrow_up_green.svg);
     background-position: right 0 top 16px;
@@ -667,6 +670,11 @@ h1,
 }
 
 @media (max-width: 767px) {
+  .nav-item .active {
+    font-weight: 600;
+    border-bottom: 2px solid #caff86;
+  }
+
   .btn {
     font-size: 16px !important;
     padding: 2px 16px;
