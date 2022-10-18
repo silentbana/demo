@@ -269,6 +269,7 @@ button:disabled {
 
 .nav-item .nav-link {
   color: unset;
+  font-size: 18px;
 }
 
 .nav-item .nav-link:hover {
@@ -282,6 +283,10 @@ button:disabled {
 .nav-link,
 .login-icon {
   transition: all 0.3s ease-out;
+}
+
+.login-area {
+  font-size: 18px;
 }
 
 .login-area:hover div {
