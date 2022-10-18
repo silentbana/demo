@@ -270,6 +270,7 @@ button:disabled {
 .nav-item .nav-link {
   color: unset;
   font-size: 18px;
+  padding: 8px 24px;
 }
 
 .nav-item .nav-link:hover {
