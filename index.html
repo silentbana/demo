@@ -148,8 +148,25 @@
   </section>
 
   <section class="section-6">
+    <div class="container h-100">
+      <div class="row align-items-center h-100">
+        <div class="col-md-7 order-2 order-md-1 d-flex bg">
+          <div>
+            <img src="./assets/image/section_6_bg.jpg" alt="">
+          </div>
+        </div>
+        <div class="col-md-5 text-white order-1 order-md-2 section-6-content">
+          <h2 class="font-45 mb-2 mb-md-4 pb-1 pb-md-0">科技配備 質感內裝</h2>
+          <div class="font-18 mb-4 mb-md-5 pb-3 pb-md-2">中控界面模塊化設計，科技簡潔且辨識度高，搭配各種個性化系統設定，讓您行車操作更便利。</div>
+          <button type="button" class="scroll-to-order btn btn-lg btn-primary d-none d-md-inline">入主純電未來</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-7">
     <div class="container">
-      <div class="section-6-1">
+      <div class="section-7-1">
         <h1 class="text-caff86 font-50 text-center pb-3">
           預繳千元成為純電代言人 先享受再享售！
         </h1>
@@ -164,7 +181,7 @@
 
       <div class="horizontal-line"></div>
 
-      <div class="section-6-2">
+      <div class="section-7-2">
         <div class="d-flex pb-3">
           <div class="vertical-line"></div>
           <h2 class="text-white font-30">專案詳情</h2>
@@ -200,7 +217,7 @@
           <div class="vertical-line"></div>
           <h2 class="text-white font-30">專案禮遇項目</h2>
         </div>
-        <div class="section-6-2-1 d-md-flex align-items-center pt-2 pb-3">
+        <div class="section-7-2-1 d-md-flex align-items-center pt-2 pb-3">
           <article class="col">
             <img src="./assets/image/icon_news.png" alt="開發日誌">
             <div class="text-white">第一手開發日誌和最新消息</div>
@@ -223,7 +240,7 @@
           <h2 class="text-white font-30">2022/10/15以前預繳1,000元加碼以下禮遇</h2>
         </div>
         <div class="text-cfcfcf font-18 pb-4">2022/9/1~2022/10/15加入的你，將擁有「純電代言人」資格，獨享以下專屬禮遇</div> -->
-        <div class="section-6-2-2 d-md-flex align-items-center pt-2">
+        <div class="section-7-2-2 d-md-flex align-items-center pt-2">
           <article class="col">
             <img src="./assets/image/icon_key.png" alt="試駕體驗">
             <div class="text-white">首批交車權</div>
@@ -243,13 +260,13 @@
         </div>
       </div>
 
-      <div class="section-6-3">
+      <div class="section-7-3">
         <h2 class="text-ffd335 fw-bold text-center pb-3">
           現在就加入《 n⁷純電代言人 》專案，<br />入主你的純電未來！
         </h2>
       </div>
 
-      <div class="section-6-4 row">
+      <div class="section-7-4 row">
         <div class="col-12 col-md-5 p-2 p-md-4">
           <img class="w-100" src="./assets/image/section_6_NFT.png" alt="NFT">
         </div>
@@ -264,8 +281,8 @@
 
   <div class="horizontal-line horizontal-line-order"></div>
 
-  <section class="section-7">
-    <div class="section-7-bg">
+  <section class="section-8">
+    <div class="section-8-bg">
       <div class="container">
         <div></div>
         <div>
@@ -428,6 +445,7 @@
         <div class="dot"></div>
         <div class="dot"></div>
         <div class="dot"></div>
+        <div class="dot"></div>
       </div>
       <div class="navigation-right-line col"></div>
     </div>
@@ -574,8 +592,9 @@
     { section: 3, intersectionRatio: 0.5, observer: {} },
     { section: 4, intersectionRatio: 0.5, observer: {} },
     { section: 5, intersectionRatio: 0.5, observer: {} },
-    { section: 6, intersectionRatio: 0.25, observer: {} },
-    { section: 7, intersectionRatio: 0.5, observer: {} }];
+    { section: 6, intersectionRatio: 0.5, observer: {} },
+    { section: 7, intersectionRatio: 0.25, observer: {} },
+    { section: 8, intersectionRatio: 0.5, observer: {} }];
 
     sections.forEach((item) => {
       $(`.dot-area > div:nth-child(${item.section})`).click(function () {
@@ -682,9 +701,13 @@
   const handleScroll = () => {
     if (window.pageYOffset > 0) {
       $('.navbar').css('background-color', 'rgba(0, 0, 0, 0.4)');
+      $('.navbar').css("backdrop-filter", 'blur(5px)');
+      $('.navbar').css("-webkit-backdrop-filter", 'blur(5px)');
       $('.scroll-top').css({ 'opacity': '1', 'height': '60px' });
     } else {
       $('.navbar').css("background-color", 'rgba(0, 0, 0, 0)');
+      $('.navbar').css("backdrop-filter", 'blur(0px)');
+      $('.navbar').css("-webkit-backdrop-filter", 'blur(0px)');
       $('.scroll-top').css({ 'opacity': '0', 'height': '0px' });
     }
   };
@@ -740,6 +763,7 @@
     width: 0px;
     right: 40px;
     top: 15vh;
+    z-index: 10;
   }
 
   .navigation-right-line {
@@ -752,6 +776,7 @@
     position: fixed;
     bottom: 50px;
     right: 40px;
+    z-index: 10;
   }
 
   .dot-area {
@@ -868,7 +893,8 @@
 
   .section-3 .bg,
   .section-4 .bg,
-  .section-5 .bg {
+  .section-5 .bg,
+  .section-6 .bg {
     height: 100%;
     position: relative;
     align-items: center;
@@ -877,7 +903,8 @@
 
   .section-3 .bg video,
   .section-4 .bg video,
-  .section-5 .bg video {
+  .section-5 .bg video,
+  .section-6 .bg img {
     margin: auto;
     max-width: 530px;
     max-height: 530px;
@@ -885,7 +912,8 @@
 
   .section-3 .bg div,
   .section-4 .bg div,
-  .section-5 .bg div {
+  .section-5 .bg div,
+  .section-6 .bg div {
     width: auto;
     height: auto;
     position: relative;
@@ -920,7 +948,8 @@
     -webkit-backdrop-filter: blur(3px);
   }
 
-  .section-4 .bg div::before {
+  .section-4 .bg div::before,
+  .section-6 .bg div::before {
     content: '';
     position: absolute;
     left: -10%;
@@ -932,7 +961,8 @@
     z-index: -1;
   }
 
-  .section-4 .bg div::after {
+  .section-4 .bg div::after,
+  .section-6 .bg div::after {
     content: '';
     position: absolute;
     right: -10%;
@@ -984,6 +1014,18 @@
   }
 
   .section-6 {
+    height: 100vh;
+    padding: 66px 0;
+    background-image: url('./assets/image/section_4_mountain.svg');
+    background-repeat: no-repeat;
+    background-position: bottom right;
+  }
+
+  .section-6-content {
+    padding-right: 5%;
+  }
+
+  .section-7 {
     width: 100%;
     background-image: url('./assets/image/section_6_mountain.svg');
     background-repeat: no-repeat;
@@ -991,28 +1033,28 @@
     position: relative;
   }
 
-  .section-6>img {
+  .section-7>img {
     position: absolute;
     top: -400px;
     left: 0;
     z-index: -1;
   }
 
-  .section-6-1 {
+  .section-7-1 {
     padding: 144px 0 47px 0;
   }
 
-  .section-6-2 {
+  .section-7-2 {
     padding: 64px 0 88px 0;
   }
 
-  .section-6-2-1,
-  .section-6-2-2 {
+  .section-7-2-1,
+  .section-7-2-2 {
     grid-gap: 20px;
   }
 
-  .section-6-2-1>article,
-  .section-6-2-2>article {
+  .section-7-2-1>article,
+  .section-7-2-2>article {
     background-color: rgba(35, 35, 35, 0.7);
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
@@ -1027,37 +1069,37 @@
     text-align: center;
   }
 
-  .section-6-2-1 img,
-  .section-6-2-2 img {
+  .section-7-2-1 img,
+  .section-7-2-2 img {
     width: 60%;
     margin-bottom: 15px;
   }
 
-  .section-6-2-1 div,
-  .section-6-2-2 div {
+  .section-7-2-1 div,
+  .section-7-2-2 div {
     font-size: 20px;
   }
 
-  .section-6-3 {
+  .section-7-3 {
     font-size: 56px;
   }
 
-  .section-6-3 h2 {
+  .section-7-3 h2 {
     font-size: 56px;
   }
 
-  .section-6-4 {
+  .section-7-4 {
     padding-bottom: 100px;
   }
 
-  .section-7-bg {
+  .section-8-bg {
     padding: 0 0 100px 0;
     background-image: url('./assets/image/section_7_purchase.png');
     background-repeat: no-repeat;
     background-size: 100%;
   }
 
-  .section-7-bg>.container>div:first-child {
+  .section-8-bg>.container>div:first-child {
     height: 88px;
   }
 
@@ -1146,17 +1188,19 @@
 
     .section-3 .bg div,
     .section-4 .bg div,
-    .section-5 .bg div {
+    .section-5 .bg div,
+    .section-6 .bg div {
       width: 80%;
     }
 
     .section-3 .bg video,
     .section-4 .bg video,
-    .section-5 .bg video {
+    .section-5 .bg video,
+    .section-6 .bg img {
       width: 100%;
     }
 
-    .section-6>img {
+    .section-7>img {
       width: 100%;
     }
   }
@@ -1198,33 +1242,37 @@
       padding: 65px 0;
     }
 
-    .section-6-1 {
+    .section-6 {
+      padding: 65px 0;
+    }
+
+    .section-7-1 {
       padding: 78px 0 27px;
     }
 
-    .section-6-2 {
+    .section-7-2 {
       padding: 34px 0 32px;
     }
 
-    .section-6-2-1>article,
-    .section-6-2-2>article {
+    .section-7-2-1>article,
+    .section-7-2-2>article {
       margin: 12px 0px;
     }
 
-    .section-6-2-1>article>div,
-    .section-6-2-2>article>div {
+    .section-7-2-1>article>div,
+    .section-7-2-2>article>div {
       font-size: 20px;
     }
 
-    .section-6-3 {
+    .section-7-3 {
       font-size: 24px;
     }
 
-    .section-6-4 {
+    .section-7-4 {
       padding-bottom: 24px;
     }
 
-    .section-7-bg>.container>div:first-child {
+    .section-8-bg>.container>div:first-child {
       height: 44px;
     }
 
@@ -1270,20 +1318,23 @@
 
     .section-3 h2,
     .section-4 h2,
-    .section-5 h2 {
+    .section-5 h2,
+    .section-6 h2 {
       text-align: center;
     }
 
     .section-3 .bg,
     .section-4 .bg,
-    .section-5 .bg {
+    .section-5 .bg,
+    .section-6 .bg {
       width: 80%;
       margin: auto;
     }
 
     .section-3 .bg video,
     .section-4 .bg video,
-    .section-5 .bg video {
+    .section-5 .bg video,
+    .section-6 .bg img {
       width: 100%;
       height: 100%;
     }
@@ -1321,21 +1372,21 @@
       padding: 0 20px;
     }
 
-    .section-6 {
+    .section-7 {
       background-image: none;
     }
 
-    .section-6-2-1 img,
-    .section-6-2-2 img {
+    .section-7-2-1 img,
+    .section-7-2-2 img {
       width: 48%;
       margin-bottom: 4px;
     }
 
-    .section-6-3 h2 {
+    .section-7-3 h2 {
       font-size: 24px;
     }
 
-    .section-7-bg {
+    .section-8-bg {
       padding: 0 0 100px 0;
       background-image: url('./assets/image/section_7_purchase_m.png');
       background-repeat: no-repeat;
