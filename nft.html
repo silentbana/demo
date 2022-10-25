@@ -286,11 +286,11 @@
             <img src="./assets/image/nft_card_opened.png" alt="nft">
           </div>
           <!-- 鑄造中樣式 -->
-          <div class="item empty">
+          <div class="item empty in-progress">
             <img src="./assets/image/nft_card_transparent.png" alt="">
             <div>
-              <div class="font-30 fw-bold">NFT鑄造中</div>
-              <div class="font-20">請您稍候數分鐘至半小時不等</div>
+              <div>NFT鑄造中</div>
+              <div>請您稍候數分鐘至半小時不等</div>
             </div>
           </div>
           <!-- 空白樣式，填補單行剩餘item -->
@@ -809,6 +809,16 @@
   .nft .list .empty:hover::before {
     background: linear-gradient(108deg, rgba(255, 255, 255, 0.49) 0%, rgba(255, 255, 255, 0.2) 54%, rgba(255, 255, 255, 0.85) 100%);
   }
+  
+  .nft .list .in-progress>div>div:nth-child(1){
+    font-size: 30px;
+    font-weight: bold;
+  }
+
+  .nft .list .in-progress>div>div:nth-child(2){
+    font-size: 20px;
+    margin-top: 8px;
+  }
 
   .nft .list .open-nft {
     position: absolute;
@@ -1204,7 +1214,7 @@
       transform: translate(0px, 0px);
     }
 
-    .nft .list .empty {
+    .nft .list .empty:not(.in-progress) {
       display: none;
     }
 
