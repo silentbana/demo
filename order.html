@@ -339,33 +339,76 @@
   </div>
 
   <!-- returned purchase dialog -->
-  <div class="modal" id="returnModal" tabindex="-1" aria-labelledby="returnModalLabel" aria-hidden="true">
+  <div class="modal return-modal" id="returnModal" tabindex="-1" aria-labelledby="returnModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered custom-dialog">
-      <div class="modal-content p-4 text-white">
-        <h5 class="custom-modal-title">請問是否要進行退訂？</h5>
+      <div class="modal-content text-white">
+        <h5 class="custom-modal-title">
+          您確定要就此放棄成為<br>
+          新世代純電休旅LUXGEN n⁷首批車主的唯一機會嗎？
+        </h5>
         <div class="custom-modal-body">
-          提醒您，您所要退訂的訂單編號為「ECW20220707000002」，車款為「全新上市 Luxgen Model C」。請確認您是否要退訂？
+          <div class="info">
+            專案成立日期：2022/09/01｜全額退款期限：2022/12/01<br>
+            您還未超過全額退款期限，因此將會進行全額退款。<br>
+            您所要退款的專案編號為「xxxxxxxxxx」，專案為「《xxxxxxx》專案」。<br>
+          </div>
+          <div class="divider"></div>
+          <div class="feedback">
+            <div class="fw-bold q">*若您確認要退款，還請讓我們知道最主要的因素，哪裡可以做得更好🙏 <span> (單選/必填) </span></div>
+            <div class="radio fw-semibold">
+              <label><input type="radio" name="feedback1" value="1">太晚公佈正式價格</label>
+              <label><input type="radio" name="feedback1" value="2">遲遲不清楚完整規格</label>
+              <label><input type="radio" name="feedback1" value="3">我看到更喜歡的產品了</label>
+              <label><input type="radio" name="feedback1" value="4">交期太長</label>
+              <label><input type="radio" name="feedback1" value="5">半年內急需用車無法等待</label>
+              <label><input type="radio" name="feedback1" value="6">發現自己比較想購入油車</label>
+              <label><input type="radio" name="feedback1" value="7">擔心充電困難</label>
+              <label><input type="radio" name="feedback1" value="8">里程不足：420km里程即使性價比高仍不符合自身的使用情境</label>
+            </div>
+            <div class="disclaimer">為加速退款作業，確認退款將視同同意由納智捷代為處理發票急銷貨退回證明單。</div>
+          </div>
         </div>
         <div class="custom-modal-footer justify-content-between d-flex flex-row">
-          <button type="button" class="btn btn-md btn-secondary" onclick="returnedPurchase()">我要退訂</button>
-          <button type="button" class="btn btn-md btn-primary" data-bs-dismiss="modal">取消</button>
+          <button type="button" class="btn btn-md btn-secondary" onclick="returnedPurchase1()" disabled>忍痛確認退款</button>
+          <button type="button" class="btn btn-md btn-primary" data-bs-dismiss="modal" disabled>我再考慮一下</button>
         </div>
       </div>
     </div>
   </div>
 
   <!-- expired dialog -->
-  <div class="modal" id="expiredModal" tabindex="-1" aria-labelledby="expiredModalLabel" aria-hidden="true">
+  <div class="modal return-modal" id="expiredModal" tabindex="-1" aria-labelledby="expiredModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered custom-dialog">
-      <div class="modal-content p-4 text-white">
-        <h5 class="custom-modal-title">已超過退訂期限</h5>
+      <div class="modal-content text-white">
+        <h5 class="custom-modal-title">
+          您確定要就此放棄成為<br>
+          新世代純電休旅LUXGEN n⁷首批車主的唯一機會嗎？
+        </h5>
         <div class="custom-modal-body">
-          下訂日期：2022/09/14<br>
-          退訂期限：2022/12/14<br>
-          已超過退訂期限，很抱歉無法進行退訂，感謝您對綠能未來的支持
+          <div class="info">
+            專案成立日期：2022/09/01｜全額退款期限：2022/12/01<br>
+            您還未超過全額退款期限，因此將會進行全額退款。<br>
+            您所要退款的專案編號為「xxxxxxxxxx」，專案為「《xxxxxxx》專案」。<br>
+          </div>
+          <div class="divider"></div>
+          <div class="feedback">
+            <div class="fw-bold q">*若您確認要退款，還請讓我們知道最主要的因素，哪裡可以做得更好🙏 <span> (單選/必填) </span></div>
+            <div class="radio fw-semibold">
+              <label><input type="radio" name="feedback2" value="1">太晚公佈正式價格</label>
+              <label><input type="radio" name="feedback2" value="2">遲遲不清楚完整規格</label>
+              <label><input type="radio" name="feedback2" value="3">我看到更喜歡的產品了</label>
+              <label><input type="radio" name="feedback2" value="4">交期太長</label>
+              <label><input type="radio" name="feedback2" value="5">半年內急需用車無法等待</label>
+              <label><input type="radio" name="feedback2" value="6">發現自己比較想購入油車</label>
+              <label><input type="radio" name="feedback2" value="7">擔心充電困難</label>
+              <label><input type="radio" name="feedback2" value="8">里程不足：420km里程即使性價比高仍不符合自身的使用情境</label>
+            </div>
+            <div class="disclaimer">為加速退款作業，確認退款將視同同意由納智捷代為處理發票急銷貨退回證明單。</div>
+          </div>
         </div>
-        <div class="custom-modal-footer">
-          <button type="button" class="btn btn-primary w-100" data-bs-dismiss="modal">我瞭解了</button>
+        <div class="custom-modal-footer justify-content-between d-flex flex-row">
+          <button type="button" class="btn btn-md btn-secondary" onclick="returnedPurchase2()" disabled>忍痛確認退款</button>
+          <button type="button" class="btn btn-md btn-primary" data-bs-dismiss="modal" disabled>我再考慮一下</button>
         </div>
       </div>
     </div>
@@ -385,9 +428,22 @@
 
   });
 
-  const returnedPurchase = () => {
-    console.log('我要退訂');
+  const returnedPurchase1 = () => {
+    console.log('我要退訂: '+ $('input:radio[name="feedback1"]:checked').val());
   }
+
+  const returnedPurchase2 = () => {
+    console.log('我要退訂: '+ $('input:radio[name="feedback2"]:checked').val());
+  }
+
+  $('input:radio[name="feedback1"]').on('change', function (e) {
+    $($('.return-modal .custom-modal-footer button')[0]).attr('disabled', false);
+    $($('.return-modal .custom-modal-footer button')[1]).attr('disabled', false);
+  })
+  $('input:radio[name="feedback2"]').on('change', function (e) {
+    $($('.return-modal .custom-modal-footer button')[2]).attr('disabled', false);
+    $($('.return-modal .custom-modal-footer button')[3]).attr('disabled', false);
+  })
 </script>
 
 <style>
@@ -606,6 +662,60 @@
     justify-content: center;
   }
 
+  /* returnModal */
+  .return-modal .modal-content {
+    padding: 24px;
+  }
+
+  .return-modal .modal-dialog {
+    max-width: 70%;
+  }
+
+  .return-modal .info {
+    width: 85%;
+    margin: 8px auto 0;
+    padding: 24px 0;
+    font-size: 18px;
+    background-color: rgba(161, 161, 161, 0.2);
+  }
+
+  .return-modal .divider {
+    border-top: 1px solid #4e4e4e;
+    margin: 36px 0;
+  }
+
+  .return-modal .feedback {
+    width: 85%;
+    margin: 0 auto 64px;
+    text-align: start;
+  }
+
+  .return-modal .feedback .q {
+    font-size: 20px;
+  }
+
+  .return-modal .feedback span {
+    font-size: 16px;
+    font-weight: normal;
+  }
+
+  .return-modal .feedback .radio {
+    font-size: 18px;
+    margin: 20px auto;
+  }
+
+  .return-modal .feedback .radio label {
+    margin: 0 30px 0 0;
+  }
+
+  .return-modal .feedback .radio input {
+    margin: 0 10px 16px 3px;
+  }
+
+  .return-modal .feedback .disclaimer {
+    font-size: 16px;
+  }
+
   .footer-container {
     padding: 24px;
   }
@@ -647,6 +757,10 @@
   .chip>input:checked+label {
     color: #232323;
     background-color: #caff86;
+  }
+
+  button:disabled {
+    border: none !important;
   }
 
   @media (min-width: 1200px) {
@@ -757,5 +871,63 @@
     .item.error .price {
       margin-bottom: 12px;
     }
+
+    /* returnModal */
+    .return-modal .modal-content {
+      position: relative;
+      padding: 16px;
+      height: 600px;
+      overflow: scroll;
+    }
+
+    .return-modal .modal-dialog {
+      max-width: 100%;
+    }
+
+    .return-modal .info {
+      width: 100%;
+      margin: 8px auto 0;
+      padding: 12px;
+      font-size: 16px;
+      background-color: rgba(161, 161, 161, 0.2);
+    }
+
+    .return-modal .divider {
+      border-top: 1px solid #4e4e4e;
+      margin: 36px 0;
+    }
+
+    .return-modal .feedback {
+      width: 100%;
+      margin: 0 auto;
+      text-align: start;
+    }
+
+    .return-modal .feedback .q {
+      font-size: 16px;
+    }
+
+    .return-modal .feedback span {
+      font-size: 12px;
+      font-weight: normal;
+    }
+
+    .return-modal .feedback .radio {
+      font-size: 16px;
+      margin: 20px auto;
+    }
+
+    .return-modal .feedback .radio label {
+      margin: 0 30px 0 0;
+    }
+
+    .return-modal .feedback .radio input {
+      margin: 0 10px 16px 3px;
+    }
+
+    .return-modal .feedback .disclaimer {
+      font-size: 12px;
+    }
+
   }
 </style>
