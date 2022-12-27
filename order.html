@@ -342,19 +342,19 @@
   <div class="modal return-modal" id="returnModal" tabindex="-1" aria-labelledby="returnModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered custom-dialog">
       <div class="modal-content text-white">
-        <h5 class="custom-modal-title">
+        <h5 class="custom-modal-title p-md-3">
           您確定要就此放棄成為<br>
           新世代純電休旅LUXGEN n⁷首批車主的唯一機會嗎？
         </h5>
         <div class="custom-modal-body">
           <div class="info">
-            專案成立日期：2022/09/01｜全額退款期限：2022/12/01<br>
-            您還未超過全額退款期限，因此將會進行全額退款。<br>
+            專案成立日期：2022/09/01<span class="d-none d-lg-inline">｜</span><br class="d-lg-none">全額退款期限：2022/12/01<br>
+            您還未超過全額退款期限，因此將會進行全額退款。<br class="d-none d-lg-block">
             您所要退款的專案編號為「xxxxxxxxxx」，專案為「《xxxxxxx》專案」。<br>
           </div>
           <div class="divider"></div>
           <div class="feedback">
-            <div class="fw-bold q">*若您確認要退款，還請讓我們知道最主要的因素，哪裡可以做得更好🙏 <span> (單選/必填) </span></div>
+            <div class="fw-bold q">若您確認要退款，還請讓我們知道最主要的因素，哪裡可以做得更好🙏 <span> (單選/必填) </span></div>
             <div class="radio fw-semibold">
               <label><input type="radio" name="feedback1" value="1">太晚公佈正式價格</label>
               <label><input type="radio" name="feedback1" value="2">遲遲不清楚完整規格</label>
@@ -387,12 +387,12 @@
         <div class="custom-modal-body">
           <div class="info">
             專案成立日期：2022/09/01｜全額退款期限：2022/12/01<br>
-            您還未超過全額退款期限，因此將會進行全額退款。<br>
+            提醒您，已超過全額退款期限，退款將會收取20%專案手續費。<br>
             您所要退款的專案編號為「xxxxxxxxxx」，專案為「《xxxxxxx》專案」。<br>
           </div>
           <div class="divider"></div>
           <div class="feedback">
-            <div class="fw-bold q">*若您確認要退款，還請讓我們知道最主要的因素，哪裡可以做得更好🙏 <span> (單選/必填) </span></div>
+            <div class="fw-bold q">若您確認要退款，還請讓我們知道最主要的因素，哪裡可以做得更好🙏 <span> (單選/必填) </span></div>
             <div class="radio fw-semibold">
               <label><input type="radio" name="feedback2" value="1">太晚公佈正式價格</label>
               <label><input type="radio" name="feedback2" value="2">遲遲不清楚完整規格</label>
@@ -436,10 +436,13 @@
     console.log('我要退訂: '+ $('input:radio[name="feedback2"]:checked').val());
   }
 
+  // 退款未過期限
   $('input:radio[name="feedback1"]').on('change', function (e) {
     $($('.return-modal .custom-modal-footer button')[0]).attr('disabled', false);
     $($('.return-modal .custom-modal-footer button')[1]).attr('disabled', false);
   })
+
+  // 退款已過期限
   $('input:radio[name="feedback2"]').on('change', function (e) {
     $($('.return-modal .custom-modal-footer button')[2]).attr('disabled', false);
     $($('.return-modal .custom-modal-footer button')[3]).attr('disabled', false);
@@ -682,11 +685,14 @@
   .return-modal .divider {
     border-top: 1px solid #4e4e4e;
     margin: 36px 0;
+    position: absolute;
+    left: 0;
+    right: 0;
   }
 
   .return-modal .feedback {
     width: 85%;
-    margin: 0 auto 64px;
+    margin: 72px auto 0;
     text-align: start;
   }
 
@@ -701,7 +707,7 @@
 
   .return-modal .feedback .radio {
     font-size: 18px;
-    margin: 20px auto;
+    margin: 20px auto 40px;
   }
 
   .return-modal .feedback .radio label {
@@ -714,6 +720,12 @@
 
   .return-modal .feedback .disclaimer {
     font-size: 16px;
+    margin-top: 72px;
+  }
+
+  .return-modal .custom-modal-footer {
+    width: 85%;
+    margin: 0 auto;
   }
 
   .footer-container {
@@ -876,12 +888,15 @@
     .return-modal .modal-content {
       position: relative;
       padding: 16px;
-      height: 600px;
-      overflow: scroll;
+      height: 90vh;
     }
 
     .return-modal .modal-dialog {
       max-width: 100%;
+    }
+
+    .return-modal .custom-modal-body {
+      height: 70%;
     }
 
     .return-modal .info {
@@ -894,12 +909,15 @@
 
     .return-modal .divider {
       border-top: 1px solid #4e4e4e;
-      margin: 36px 0;
+      margin: 28px 0;
     }
 
     .return-modal .feedback {
+      height: auto;
+      max-height: calc(100% - 220px);
+      overflow: scroll;
       width: 100%;
-      margin: 0 auto;
+      margin: 56px auto 0;
       text-align: start;
     }
 
@@ -918,15 +936,22 @@
     }
 
     .return-modal .feedback .radio label {
-      margin: 0 30px 0 0;
+      margin: 0 0 12px;
+      display: flex;
+      align-items: flex-start;
     }
 
     .return-modal .feedback .radio input {
-      margin: 0 10px 16px 3px;
+      margin: 6px 10px 0 3px;
     }
 
     .return-modal .feedback .disclaimer {
       font-size: 12px;
+      margin-top: 12px;
+    }
+
+    .return-modal  .custom-modal-footer {
+      width: 100%;
     }
 
   }
