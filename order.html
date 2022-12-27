@@ -278,8 +278,8 @@
           <a class="nav-link" href="./news">最新消息</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link collapse-link collapsed" data-bs-toggle="collapse"
-            data-bs-target=".activity-collapse" aria-expanded="false">探索體驗n⁷</a>
+          <a class="nav-link collapse-link collapsed" data-bs-toggle="collapse" data-bs-target=".activity-collapse"
+            aria-expanded="false">探索體驗n⁷</a>
           <ul class="activity-collapse collapse" style="text-align: left; list-style: none; padding: 10px 0 0 50px;">
             <li style="padding: 10px 0;">
               <a class="collapse-item"
@@ -339,13 +339,19 @@
   </div>
 
   <!-- returned purchase dialog -->
-  <div class="modal return-modal" id="returnModal" tabindex="-1" aria-labelledby="returnModalLabel" aria-hidden="true">
+  <div class="modal fade return-modal" id="returnModal" tabindex="-1" aria-labelledby="returnModalLabel"
+    aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered custom-dialog">
       <div class="modal-content text-white">
-        <h5 class="custom-modal-title p-md-3">
+        <h2 class="custom-modal-title">
           您確定要就此放棄成為<br>
           新世代純電休旅LUXGEN n⁷首批車主的唯一機會嗎？
-        </h5>
+        </h2>
+        <h2 class="custom-modal-title-m">
+          您確定要就此放棄成為<br>
+          新世代純電休旅LUXGEN n⁷<br>
+          首批車主的唯一機會嗎？
+        </h2>
         <div class="custom-modal-body">
           <div class="info">
             專案成立日期：2022/09/01<span class="d-none d-lg-inline">｜</span><br class="d-lg-none">全額退款期限：2022/12/01<br>
@@ -356,58 +362,44 @@
           <div class="feedback">
             <div class="fw-bold q">若您確認要退款，還請讓我們知道最主要的因素，哪裡可以做得更好🙏 <span> (單選/必填) </span></div>
             <div class="radio fw-semibold">
-              <label><input type="radio" name="feedback1" value="1">太晚公佈正式價格</label>
-              <label><input type="radio" name="feedback1" value="2">遲遲不清楚完整規格</label>
-              <label><input type="radio" name="feedback1" value="3">我看到更喜歡的產品了</label>
-              <label><input type="radio" name="feedback1" value="4">交期太長</label>
-              <label><input type="radio" name="feedback1" value="5">半年內急需用車無法等待</label>
-              <label><input type="radio" name="feedback1" value="6">發現自己比較想購入油車</label>
-              <label><input type="radio" name="feedback1" value="7">擔心充電困難</label>
-              <label><input type="radio" name="feedback1" value="8">里程不足：420km里程即使性價比高仍不符合自身的使用情境</label>
+              <label>
+                <input class="form-check-input" type="radio" name="feedback" value="1">
+                <span>太晚公佈正式價格</span>
+              </label>
+              <label>
+                <input class="form-check-input" type="radio" name="feedback" value="2">
+                <span>遲遲不清楚完整規格</span>
+              </label>
+              <label>
+                <input class="form-check-input" type="radio" name="feedback" value="3">
+                <span>我看到更喜歡的產品了</span>
+              </label>
+              <label>
+                <input class="form-check-input" type="radio" name="feedback" value="4">
+                <span>交期太長</span>
+              </label>
+              <label>
+                <input class="form-check-input" type="radio" name="feedback" value="5">
+                <span>半年內急需用車無法等待</span>
+              </label>
+              <label>
+                <input class="form-check-input" type="radio" name="feedback" value="6">
+                <span>發現自己比較想購入油車</span>
+              </label>
+              <label>
+                <input class="form-check-input" type="radio" name="feedback" value="7">
+                <span>擔心充電困難</span>
+              </label>
+              <label>
+                <input class="form-check-input" type="radio" name="feedback" value="8">
+                <span>里程不足：420km里程即使性價比高仍不符合自身的使用情境</span>
+              </label>
             </div>
             <div class="disclaimer">為加速退款作業，確認退款將視同同意由納智捷代為處理發票急銷貨退回證明單。</div>
           </div>
         </div>
         <div class="custom-modal-footer justify-content-between d-flex flex-row">
-          <button type="button" class="btn btn-md btn-secondary" onclick="returnedPurchase1()" disabled>忍痛確認退款</button>
-          <button type="button" class="btn btn-md btn-primary" data-bs-dismiss="modal" disabled>我再考慮一下</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- expired dialog -->
-  <div class="modal return-modal" id="expiredModal" tabindex="-1" aria-labelledby="expiredModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered custom-dialog">
-      <div class="modal-content text-white">
-        <h5 class="custom-modal-title">
-          您確定要就此放棄成為<br>
-          新世代純電休旅LUXGEN n⁷首批車主的唯一機會嗎？
-        </h5>
-        <div class="custom-modal-body">
-          <div class="info">
-            專案成立日期：2022/09/01｜全額退款期限：2022/12/01<br>
-            提醒您，已超過全額退款期限，退款將會收取20%專案手續費。<br>
-            您所要退款的專案編號為「xxxxxxxxxx」，專案為「《xxxxxxx》專案」。<br>
-          </div>
-          <div class="divider"></div>
-          <div class="feedback">
-            <div class="fw-bold q">若您確認要退款，還請讓我們知道最主要的因素，哪裡可以做得更好🙏 <span> (單選/必填) </span></div>
-            <div class="radio fw-semibold">
-              <label><input type="radio" name="feedback2" value="1">太晚公佈正式價格</label>
-              <label><input type="radio" name="feedback2" value="2">遲遲不清楚完整規格</label>
-              <label><input type="radio" name="feedback2" value="3">我看到更喜歡的產品了</label>
-              <label><input type="radio" name="feedback2" value="4">交期太長</label>
-              <label><input type="radio" name="feedback2" value="5">半年內急需用車無法等待</label>
-              <label><input type="radio" name="feedback2" value="6">發現自己比較想購入油車</label>
-              <label><input type="radio" name="feedback2" value="7">擔心充電困難</label>
-              <label><input type="radio" name="feedback2" value="8">里程不足：420km里程即使性價比高仍不符合自身的使用情境</label>
-            </div>
-            <div class="disclaimer">為加速退款作業，確認退款將視同同意由納智捷代為處理發票急銷貨退回證明單。</div>
-          </div>
-        </div>
-        <div class="custom-modal-footer justify-content-between d-flex flex-row">
-          <button type="button" class="btn btn-md btn-secondary" onclick="returnedPurchase2()" disabled>忍痛確認退款</button>
+          <button type="button" class="btn btn-md btn-tertiary" onclick="returnedPurchase()" disabled>忍痛確認退款</button>
           <button type="button" class="btn btn-md btn-primary" data-bs-dismiss="modal" disabled>我再考慮一下</button>
         </div>
       </div>
@@ -428,24 +420,14 @@
 
   });
 
-  const returnedPurchase1 = () => {
-    console.log('我要退訂: '+ $('input:radio[name="feedback1"]:checked').val());
-  }
-
-  const returnedPurchase2 = () => {
-    console.log('我要退訂: '+ $('input:radio[name="feedback2"]:checked').val());
+  const returnedPurchase = () => {
+    console.log('我要退訂: ' + $('input:radio[name="feedback"]:checked').val());
   }
 
   // 退款未過期限
-  $('input:radio[name="feedback1"]').on('change', function (e) {
+  $('input:radio[name="feedback"]').on('change', function (e) {
     $($('.return-modal .custom-modal-footer button')[0]).attr('disabled', false);
     $($('.return-modal .custom-modal-footer button')[1]).attr('disabled', false);
-  })
-
-  // 退款已過期限
-  $('input:radio[name="feedback2"]').on('change', function (e) {
-    $($('.return-modal .custom-modal-footer button')[2]).attr('disabled', false);
-    $($('.return-modal .custom-modal-footer button')[3]).attr('disabled', false);
   })
 </script>
 
@@ -667,15 +649,29 @@
 
   /* returnModal */
   .return-modal .modal-content {
-    padding: 24px;
+    padding: 48px 72px 0 48px;
+    max-height: 80vh;
+    overflow: scroll;
   }
 
   .return-modal .modal-dialog {
-    max-width: 70%;
+    max-width: 75%;
+  }
+
+  .return-modal .custom-modal-title {
+    display: block;
+    font-size: 30px;
+  }
+
+  .return-modal .custom-modal-title-m {
+    display: none;
+    font-size: 20px;
+    text-align: center;
+    padding: 0 0 16px 0;
   }
 
   .return-modal .info {
-    width: 85%;
+    width: 100%;
     margin: 8px auto 0;
     padding: 24px 0;
     font-size: 18px;
@@ -691,7 +687,7 @@
   }
 
   .return-modal .feedback {
-    width: 85%;
+    width: 100%;
     margin: 72px auto 0;
     text-align: start;
   }
@@ -711,11 +707,12 @@
   }
 
   .return-modal .feedback .radio label {
-    margin: 0 30px 0 0;
+    margin: 0 28px 16px 0;
+    cursor: pointer;
   }
 
   .return-modal .feedback .radio input {
-    margin: 0 10px 16px 3px;
+    margin: 4px 10px 0 0;
   }
 
   .return-modal .feedback .disclaimer {
@@ -724,8 +721,17 @@
   }
 
   .return-modal .custom-modal-footer {
-    width: 85%;
+    width: 100%;
     margin: 0 auto;
+    position: sticky;
+    bottom: 0;
+    left: 0;
+    padding: 0;
+    background-color: #232323
+  }
+
+  .return-modal .custom-modal-footer .btn {
+    margin: 16px 0 48px 0;
   }
 
   .footer-container {
@@ -811,6 +817,28 @@
     .price {
       font-size: 32px;
     }
+
+    /* returnModal */
+    .return-modal .modal-dialog {
+      max-width: 90%;
+    }
+
+    .return-modal .modal-content {
+      padding: 24px 24px 0 24px;
+    }
+
+    .return-modal .custom-modal-title {
+      display: block;
+      font-size: 20px;
+    }
+
+    .return-modal .custom-modal-title-m {
+      display: none;
+    }
+
+    .return-modal .custom-modal-footer .btn {
+      margin: 24px 0;
+    }
   }
 
   @media (max-width: 767px) {
@@ -885,14 +913,24 @@
     }
 
     /* returnModal */
+    .return-modal .modal-dialog {
+      max-width: 90%;
+    }
+
     .return-modal .modal-content {
-      position: relative;
-      padding: 16px;
-      height: 90vh;
+      padding: 24px 16px 0 16px;
     }
 
     .return-modal .modal-dialog {
       max-width: 100%;
+    }
+
+    .return-modal .custom-modal-title {
+      display: none;
+    }
+
+    .return-modal .custom-modal-title-m {
+      display: block;
     }
 
     .return-modal .custom-modal-body {
@@ -941,8 +979,8 @@
       align-items: flex-start;
     }
 
-    .return-modal .feedback .radio input {
-      margin: 6px 10px 0 3px;
+    .return-modal .feedback .radio span {
+      flex: 1;
     }
 
     .return-modal .feedback .disclaimer {
@@ -950,9 +988,13 @@
       margin-top: 12px;
     }
 
-    .return-modal  .custom-modal-footer {
+    .return-modal .custom-modal-footer {
       width: 100%;
     }
 
+    .return-modal .custom-modal-footer .btn {
+      margin: 16px 0 24px 0;
+      font-size: 14px !important;
+    }
   }
 </style>
